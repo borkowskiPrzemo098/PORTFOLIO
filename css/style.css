@@ -446,3 +446,20 @@ html { -webkit-tap-highlight-color: transparent; }
   .opt__ic { width: 40px; height: 40px; }
   .opt__value { font-size: 1.02rem; word-break: normal; overflow-wrap: anywhere; }
 }
+
+/* ---------- One grid axis for the whole page: every two-column split sits on the 50% line ---------- */
+:root { --gg: clamp(20px, 2.6vw, 32px); }
+.sec-head, .group__head { grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); column-gap: var(--gg); }
+.sec-head p, .group__head p { padding-left: 0; }
+.cases .grid, .services, .grid { gap: var(--gg); }
+.card--wide { display: grid; grid-template-columns: calc(50% - var(--gg) / 2) minmax(0, 1fr); }
+.card--wide .card__media { flex: none; }
+.card--wide .card__body { padding: clamp(28px, 3.4vw, 48px) clamp(28px, 3.4vw, 48px) clamp(28px, 3.4vw, 48px) calc(var(--gg) + clamp(20px, 3vw, 32px)); }
+.about__in, .contact__in, .faq__in { grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); column-gap: var(--gg); }
+.about__text, .contact__card, .faq .qa { padding-left: 0; }
+.steps { gap: var(--gg); }
+@media (max-width: 860px) {
+  .sec-head, .group__head, .about__in, .contact__in, .faq__in { grid-template-columns: minmax(0, 1fr); }
+  .card--wide { grid-template-columns: minmax(0, 1fr); }
+  .card--wide .card__body { padding: clamp(36px, 4vw, 44px) 20px 24px; }
+}
