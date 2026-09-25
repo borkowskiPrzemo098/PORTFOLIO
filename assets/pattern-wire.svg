@@ -1,0 +1,56 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="560" height="560" viewBox="0 0 560 560" fill="none" stroke="#F6F3EC" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round">
+  <!-- browser window: landing page wireframe -->
+  <g transform="translate(24 36)">
+    <rect width="220" height="150" rx="10"/>
+    <path d="M0 22h220"/>
+    <circle cx="13" cy="11" r="3"/><circle cx="24" cy="11" r="3"/><circle cx="35" cy="11" r="3"/>
+    <rect x="70" y="6" width="110" height="10" rx="5"/>
+    <rect x="16" y="38" width="96" height="12" rx="3"/>
+    <path d="M16 62h110M16 72h92M16 82h100"/>
+    <rect x="16" y="98" width="56" height="18" rx="9"/>
+    <rect x="134" y="38" width="70" height="78" rx="6"/>
+    <path d="M134 116l24-30 16 18 12-12 18 24"/>
+    <circle cx="186" cy="56" r="7"/>
+    <path d="M16 132h60M92 132h60M168 132h36"/>
+  </g>
+  <!-- phone -->
+  <g transform="translate(300 24)">
+    <rect width="86" height="164" rx="16"/>
+    <path d="M32 10h22"/>
+    <rect x="10" y="24" width="66" height="44" rx="5"/>
+    <path d="M10 80h58M10 90h44M10 100h52"/>
+    <rect x="10" y="114" width="66" height="16" rx="8"/>
+    <path d="M30 150h26"/>
+  </g>
+  <!-- code fragment -->
+  <g transform="translate(420 70)">
+    <path d="M10 0L0 12l10 12M34 0l10 12-10 12M26 -2l-8 28"/>
+  </g>
+  <g transform="translate(424 120)">
+    <path d="M0 0h70M14 14h54M14 28h40M0 42h66M14 56h30"/>
+  </g>
+  <!-- cursor -->
+  <path d="M232 250l0 26 7-7 6 12 5-2-6-12h10z"/>
+  <!-- card grid window -->
+  <g transform="translate(270 300)">
+    <rect width="250" height="170" rx="10"/>
+    <path d="M0 22h250"/>
+    <circle cx="13" cy="11" r="3"/><circle cx="24" cy="11" r="3"/><circle cx="35" cy="11" r="3"/>
+    <rect x="16" y="36" width="68" height="56" rx="6"/><rect x="92" y="36" width="68" height="56" rx="6"/><rect x="168" y="36" width="68" height="56" rx="6"/>
+    <path d="M16 104h56M92 104h50M168 104h60M16 114h40M92 114h46M168 114h34"/>
+    <rect x="16" y="136" width="220" height="20" rx="4"/>
+  </g>
+  <!-- color swatches + type specimen -->
+  <g transform="translate(40 280)">
+    <circle cx="14" cy="14" r="14"/><circle cx="46" cy="14" r="14"/><circle cx="78" cy="14" r="14"/>
+    <path d="M0 58h40M0 58l20-34 20 34M8 44h24"/>
+    <path d="M60 58V30h12a8 8 0 0 1 0 16H60"/>
+  </g>
+  <!-- layout grid sketch -->
+  <g transform="translate(36 400)">
+    <rect width="180" height="120" rx="8"/>
+    <path d="M60 0v120M120 0v120M0 40h180M0 80h180" stroke-dasharray="3 6"/>
+  </g>
+  <!-- small sparkles / grid dots -->
+  <circle cx="260" cy="210" r="2"/><circle cx="520" cy="250" r="2"/><circle cx="250" cy="520" r="2"/><circle cx="530" cy="530" r="2"/>
+</svg>
