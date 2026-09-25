@@ -210,7 +210,7 @@ html { scrollbar-color: var(--line-2) var(--canvas); scrollbar-width: thin; }
 .hero__desk { position: relative; z-index: 1; transition: transform .5s var(--ease); }
 .hero__desk .board { aspect-ratio: 16 / 10; }
 .hero__desk img, .hero__phone img { width: 100%; height: 100%; object-fit: cover; object-position: top; }
-.hero__phone { position: absolute; z-index: 2; width: 37%; left: -9%; bottom: 0; transition: transform .5s var(--ease); }
+.hero__phone { position: absolute; z-index: 2; width: 31%; right: -3%; bottom: 0; transition: transform .5s var(--ease); }
 .hero__phone .board { aspect-ratio: 390 / 700; border: 5px solid var(--ink); border-radius: 18px; box-shadow: var(--shadow-lift); }
 .hero__desk:hover { transform: translateY(-4px); }
 .hero__phone:hover { transform: translateY(-6px); }
@@ -227,8 +227,8 @@ html { scrollbar-color: var(--line-2) var(--canvas); scrollbar-width: thin; }
 
 @media (max-width: 1020px) {
   .hero__grid { grid-template-columns: 1fr; }
-  .hero__stack { max-width: 640px; margin-inline: auto; width: 100%; padding-left: 12%; }
-  .hero__phone { left: 0; width: 30%; }
+  .hero__stack { max-width: 640px; margin-inline: auto; width: 100%; padding-right: 8%; }
+  .hero__phone { right: 0; width: 30%; }
 }
 @media (max-width: 900px) {
   .ruler { display: none; }
@@ -508,3 +508,4 @@ html { scrollbar-color: var(--line-2) var(--canvas); scrollbar-width: thin; }
   75% { opacity: 1; }
   100% { opacity: 0; }
 }
+.hero__phone .frame__name { display: inline-block; background: var(--board); padding: 3px 7px; border-radius: 3px; box-shadow: var(--shadow); }
