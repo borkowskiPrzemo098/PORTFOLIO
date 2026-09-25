@@ -29,28 +29,11 @@
 
   /* ---------- Motion (quick, never blocks scrolling) ---------- */
   if (reduce || !window.gsap) return;
-  if (window.ScrollTrigger) gsap.registerPlugin(ScrollTrigger);
   const ease = 'power3.out';
 
   gsap.timeline({ defaults: { ease } })
     .from('.hero__title .ln > span', { yPercent: 105, duration: 1, stagger: .09 })
     .from(['.hero__who', '.hero__cta', '.hero__scroll'], { y: 20, opacity: 0, duration: .8, stagger: .08 }, .35);
 
-  if (!window.ScrollTrigger) return;
-  const rise = (targets, trigger, opts = {}) => gsap.from(targets, { y: 32, opacity: 0, duration: .75, ease, stagger: .07, scrollTrigger: { trigger, start: 'top 86%', once: true }, ...opts });
 
-  $$('.sec-head').forEach((h) => rise(h.children, h));
-  rise('.svc', '.services');
-  rise(['.about__photo', '.about__text > *'], '.about');
-  rise('.qa details', '.qa');
-  $$('.case').forEach((c) => {
-    rise($('.case__head', c).children, c);
-    rise($$('.case__main, .case__phones .phone, .case__wide', c), $('.case__gallery', c), { y: 48 });
-    rise($$('.case__story > div', c), $('.case__story', c));
-  });
-  rise('.card', '.grid', { y: 48 });
-  rise('.steps li', '.steps');
-  rise(['.contact__main > *', '.contact__card'], '.contact');
-
-  addEventListener('load', () => ScrollTrigger.refresh());
 })();

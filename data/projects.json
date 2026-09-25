@@ -2,31 +2,101 @@
   "_info": "Projekty w grupach. Kolejność = kolejność na stronie. Po zmianie uruchom: node build.mjs. 'shot' = nazwa pliku w shots/ (bez .jpg), wersja mobilna to <shot>-m.jpg",
   "groups": [
     {
-      "id": "strony",
-      "title": "Gotowa strona",
-      "lead": "Strona zrealizowana dla klienta i działająca pod jego własną domeną.",
+      "id": "klienci",
+      "title": "Realizacje dla klientów",
+      "lead": "Strona firmowa i landing page’e kampanii sprzedażowych, działające pod domenami klientów.",
       "projects": [
-        { "shot": "salonpieknoscinikola", "url": "https://salonpieknoscinikola.pl/", "title": "Salon Piękności Nikola", "category": "Strona firmowa · Kościerzyna", "desc": "Strona salonu kosmetycznego: manicure, pedicure, pielęgnacja twarzy, rzęsy i depilacja laserowa. Przejrzysty cennik, galeria, opinie i szybkie umawianie wizyt. Projektowana najpierw pod telefon, bo stamtąd przychodzi większość klientek.", "tags": ["Strona firmowa", "Rezerwacje", "Cennik", "SEO lokalne"] }
+        {
+          "shot": "salonpieknoscinikola",
+          "url": "https://salonpieknoscinikola.pl/",
+          "title": "Salon Piękności Nikola",
+          "category": "Strona firmowa · Kościerzyna",
+          "desc": "Strona salonu kosmetycznego: manicure, pedicure, pielęgnacja twarzy, rzęsy i depilacja laserowa. Przejrzysty cennik, galeria, opinie i szybkie umawianie wizyt. Projektowana najpierw pod telefon, bo stamtąd przychodzi większość klientek.",
+          "tags": [
+            "Strona firmowa",
+            "Rezerwacje",
+            "Cennik",
+            "SEO lokalne"
+          ]
+        },
+        {
+          "shot": "az-historia-zlotych-euro",
+          "url": "https://azaurum.pl/historia_zlotych_euro,35",
+          "title": "Historia Złotych Euro",
+          "category": "Landing page · AZ Aurum",
+          "desc": "Kampania kolekcji złotych monet euro, otwierana monetą z Janem Pawłem II. Cena specjalna i zamówienie widoczne od razu, a niżej historia monety, parametry i gwarancje.",
+          "tags": [
+            "Landing page",
+            "Kampania",
+            "E-commerce"
+          ]
+        },
+        {
+          "shot": "az-250-lat-usa",
+          "url": "https://azaurum.pl/250_lat_usa,37",
+          "title": "250 lat USA",
+          "category": "Landing page · AZ Aurum",
+          "desc": "Kolekcja złotych monet na 250. rocznicę powstania USA, otwierana Statuą Wolności. Oferta promocyjna, oś czasu historii i prezentacja całej kolekcji.",
+          "tags": [
+            "Landing page",
+            "Kampania",
+            "Storytelling"
+          ]
+        }
       ]
     },
     {
-      "id": "landing",
-      "title": "Gotowe landing page",
-      "lead": "Strony kampanii sprzedażowych dla AZ Aurum, działające w sklepie klienta.",
+      "id": "autorskie",
+      "title": "Projekty autorskie",
+      "lead": "Serwisy, które zaprojektowałem i zbudowałem od zera: narzędzia online, portal z danymi i strona marki.",
       "projects": [
-        { "shot": "az-historia-zlotych-euro", "url": "https://azaurum.pl/historia_zlotych_euro,35", "title": "Historia Złotych Euro", "category": "Landing page · AZ Aurum", "desc": "Kampania kolekcji złotych monet euro, otwierana monetą z Janem Pawłem II. Cena specjalna i zamówienie widoczne od razu, a niżej historia monety, parametry i gwarancje.", "tags": ["Landing page", "Kampania", "E-commerce"] },
-        { "shot": "az-250-lat-usa", "url": "https://azaurum.pl/250_lat_usa,37", "title": "250 lat USA", "category": "Landing page · AZ Aurum", "desc": "Kolekcja złotych monet na 250. rocznicę powstania USA, otwierana Statuą Wolności. Oferta promocyjna, oś czasu historii i prezentacja całej kolekcji.", "tags": ["Landing page", "Kampania", "Storytelling"] }
-      ]
-    },
-    {
-      "id": "wlasne",
-      "title": "Własne projekty",
-      "lead": "Serwisy, które zaprojektowałem i zbudowałem od zera z własnej inicjatywy.",
-      "projects": [
-        { "shot": "miastometr", "url": "https://borkowskiprzemo098.github.io/miastometr/", "title": "Miastometr", "category": "Portal z danymi", "desc": "Porównywarka polskich miast oparta na publicznych danych GUS i GIOŚ: wynagrodzenia, ludność, bezrobocie i jakość powietrza.", "tags": ["Dane publiczne", "API", "Wizualizacja"] },
-        { "shot": "generator-dokumentow-online", "url": "https://borkowskiprzemo098.github.io/generator-dokumentow-online/index.html", "title": "Generator dokumentów", "category": "Narzędzie online", "desc": "30 wzorów pism i dokumentów: CV, wypowiedzenia, pełnomocnictwa. Wypełniasz formularz i od razu pobierasz gotowy PDF.", "tags": ["Generator PDF", "30 szablonów", "SEO"] },
-        { "shot": "kalkulatory", "url": "https://borkowskiprzemo098.github.io/kalkulatory/", "title": "Kalkulatory Online", "category": "Portal z narzędziami", "desc": "Darmowe kalkulatory do codziennych obliczeń. Cała logika działa w przeglądarce, bez rejestracji.", "tags": ["Next.js", "TypeScript", "SEO"] },
-        { "shot": "STRONA-SZYCIE", "url": "https://borkowskiprzemo098.github.io/STRONA-SZYCIE/", "title": "Szyte z Sercem", "category": "Strona marki rękodzielniczej", "desc": "Ręcznie szyte siatki i fartuszki na zamówienie. Ciepła identyfikacja i formularz, w którym klient opisuje własny projekt.", "tags": ["Strona marki", "Formularz"] }
+        {
+          "shot": "miastometr",
+          "url": "https://borkowskiprzemo098.github.io/miastometr/",
+          "title": "Miastometr",
+          "category": "Portal z danymi",
+          "desc": "Porównywarka polskich miast oparta na publicznych danych GUS i GIOŚ: wynagrodzenia, ludność, bezrobocie i jakość powietrza.",
+          "tags": [
+            "Dane publiczne",
+            "API",
+            "Wizualizacja"
+          ]
+        },
+        {
+          "shot": "generator-dokumentow-online",
+          "url": "https://borkowskiprzemo098.github.io/generator-dokumentow-online/index.html",
+          "title": "Generator dokumentów",
+          "category": "Narzędzie online",
+          "desc": "30 wzorów pism i dokumentów: CV, wypowiedzenia, pełnomocnictwa. Wypełniasz formularz i od razu pobierasz gotowy PDF.",
+          "tags": [
+            "Generator PDF",
+            "30 szablonów",
+            "SEO"
+          ]
+        },
+        {
+          "shot": "kalkulatory",
+          "url": "https://borkowskiprzemo098.github.io/kalkulatory/",
+          "title": "Kalkulatory Online",
+          "category": "Portal z narzędziami",
+          "desc": "Darmowe kalkulatory do codziennych obliczeń. Cała logika działa w przeglądarce, bez rejestracji.",
+          "tags": [
+            "Next.js",
+            "TypeScript",
+            "SEO"
+          ]
+        },
+        {
+          "shot": "STRONA-SZYCIE",
+          "url": "https://borkowskiprzemo098.github.io/STRONA-SZYCIE/",
+          "title": "Szyte z Sercem",
+          "category": "Strona marki rękodzielniczej",
+          "desc": "Ręcznie szyte siatki i fartuszki na zamówienie. Ciepła identyfikacja i formularz, w którym klient opisuje własny projekt.",
+          "tags": [
+            "Strona marki",
+            "Formularz"
+          ]
+        }
       ]
     }
   ]

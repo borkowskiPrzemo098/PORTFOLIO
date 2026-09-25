@@ -31,14 +31,13 @@ const card = (p, layout) => `
             </span>
           </a>`;
 const projectsHtml = groups.map((g) => {
-  const layout = g.projects.length === 1 ? 'wide' : 'half';
   return `
       <div class="group" id="${g.id}">
         <div class="group__head">
-          <h3>${esc(g.title)}<span>${g.projects.length}</span></h3>
+          <h3>${esc(g.title)}</h3>
           <p>${esc(g.lead)}</p>
         </div>
-        <div class="grid">${g.projects.map((p) => card(p, layout)).join('')}
+        <div class="grid">${g.projects.map((p, i) => card(p, i === 0 && g.projects.length % 2 ? 'wide' : 'half')).join('')}
         </div>
       </div>`;
 }).join('');

@@ -376,3 +376,5 @@ button { font: inherit; color: inherit; }
   .card--wide .card__body { padding: clamp(36px, 4vw, 44px) 20px 24px; }
 }
 @media (max-width: 560px) { .cases .phone--sm { width: 23%; border-width: 3px; border-radius: 12px; } }
+.card--wide .card__media .browser { width: 100%; flex: 1 1 auto; }
+.card__media .browser img { background: #EFEDE7; }
