@@ -284,7 +284,7 @@ html { scrollbar-color: var(--line-2) var(--canvas); scrollbar-width: thin; }
 .group + .group { padding-top: clamp(40px, 5vw, 64px); border-top: 1px solid var(--line-2); }
 .group__head { display: grid; gap: 10px; margin-bottom: 36px; max-width: 760px; }
 .group__head h3 { font-size: clamp(1.9rem, 3.2vw, 2.7rem); font-weight: 750; line-height: 1; letter-spacing: -.03em; font-stretch: 104%; }
-.group__head h3 span { font: 500 .4em/1 var(--f-mono); color: var(--accent); vertical-align: super; margin-left: 4px; letter-spacing: 0; }
+.group__head h3 span { font: 500 .4em/1 var(--f-mono); color: var(--accent-deep); vertical-align: super; margin-left: 4px; letter-spacing: 0; }
 .group__head p { color: var(--ink-2); font-size: 17px; max-width: 60ch; }
 .group__grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 56px 36px; }
 
