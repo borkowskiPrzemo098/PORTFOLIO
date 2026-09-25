@@ -1,0 +1,480 @@
+<!doctype html>
+<html lang="pl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>PBDesign — Przemysław Borkowski, web designer & developer</title>
+<meta name="description" content="Portfolio PBDesign: landing page'e, strony firmowe, narzędzia online i aplikacje dla biznesu. Każdy projekt działa online — sprawdź na żywo.">
+<meta name="theme-color" content="#FFFFFF">
+<meta property="og:type" content="website">
+<meta property="og:title" content="PBDesign — od szkicu do strony live">
+<meta property="og:description" content="Przemysław Borkowski, web designer & developer. 16 projektów działających online.">
+<meta property="og:image" content="https://borkowskiprzemo098.github.io/PORTFOLIO/assets/og.png">
+<meta property="og:url" content="https://borkowskiprzemo098.github.io/PORTFOLIO/">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+<link rel="icon" href="assets/favicon-32.png" sizes="32x32" type="image/png">
+<link rel="apple-touch-icon" href="assets/apple-touch-icon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Anybody:wdth,wght@50..150,400..900&family=Spline+Sans+Mono:wght@400;500&family=Schibsted+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<!--
+THESIS: The portfolio is a designer's canvas, not a brochure: the visitor watches a page go from wireframe to live, then walks through real artboards of real, working sites. Refuses the dark hero-with-big-name + uniform card grid.
+OWN-WORLD: light tool canvas #EFEFEC, pure-white artboards, ink #0E0E10, one magenta #D6006F for selection, redlines and action. Anybody (variable width) display, Schibsted Grotesk text, Geist Mono only for measurements. Rulers, frame names, 8-handle selection boxes, dimension badges, prototype connectors.
+STORY: Who he is and that he ships (first viewport) → every project live, grouped in four kinds → who stands behind it → how he works → contact in one tap.
+FIRST VIEWPORT: rulers top/left; a white "Strona główna" frame holds the headline "Od szkicu do strony live." inside a live selection box that a cursor resizes (font width follows); lede + two actions below it; right, a desktop and a phone artboard of real projects.
+FORM: design-tool canvas, candidate 2 of 7 (user steered to light, on-topic); seed 25b7e526.
+FINISH: unreviewed and undocumented is unfinished; this build ends with the finish review, the verdict, and DESIGN.md
+-->
+<a class="skip" href="#projekty">Przejdź do projektów</a>
+
+<header class="bar" id="top">
+  <a class="brand" href="#top" aria-label="PBDesign — na początek strony">
+    <img src="assets/mark.svg" alt="" width="34" height="34">
+    <span class="brand__word">PB<b>Design</b></span>
+  </a>
+  <nav class="bar__nav" aria-label="Główna nawigacja">
+    <a href="#projekty">Projekty</a>
+    <a href="#o-mnie">O mnie</a>
+    <a href="#proces">Jak pracuję</a>
+  </nav>
+  <a class="btn btn--accent btn--sm" href="#kontakt">Porozmawiajmy</a>
+</header>
+
+<main>
+  <section class="hero canvas" aria-labelledby="hero-title">
+    <div class="ruler ruler--x" aria-hidden="true"><span class="ruler__mark"></span></div>
+    <div class="ruler ruler--y" aria-hidden="true"><span class="ruler__mark"></span></div>
+
+    <div class="hero__grid">
+      <div class="frame hero__frame">
+        <p class="frame__name" aria-hidden="true">Strona główna</p>
+        <div class="board hero__board">
+          <div class="sel" id="sel">
+            <h1 class="hero__title" id="hero-title"><span>Od szkicu</span> <span>do strony</span> <span class="hero__live">live.</span></h1>
+            <div class="sel__wire" aria-hidden="true"><i></i><i></i><i></i></div>
+            <span class="sel__h sel__h--tl" aria-hidden="true"></span><span class="sel__h sel__h--tr" aria-hidden="true"></span>
+            <span class="sel__h sel__h--bl" aria-hidden="true"></span><span class="sel__h sel__h--br" aria-hidden="true"></span>
+            <span class="sel__h sel__h--l" aria-hidden="true"></span>
+            <button class="sel__h sel__h--r" id="grip" type="button" aria-label="Zmień szerokość nagłówka — przeciągnij lub użyj strzałek"></button>
+            <span class="sel__badge" aria-hidden="true"><span id="selW">0</span> × <span id="selH">0</span></span>
+            <span class="cursor" id="cursor" aria-hidden="true">
+              <svg viewBox="0 0 16 20" width="16" height="20"><path d="M1 1l13 10.5-6 .6 3.6 6.8-2.6 1.3-3.6-6.9L1 17z"/></svg>
+              <span class="cursor__tag">Przemysław</span>
+            </span>
+          </div>
+          <p class="hero__lede">Jestem <strong>Przemysław Borkowski</strong>, web designer &amp; developer. Projektuję i sam koduję landing page’e, strony firmowe, narzędzia online i aplikacje dla biznesu. Każdy projekt poniżej działa: kliknij i sprawdź.</p>
+          <div class="hero__actions">
+            <a class="btn btn--accent" href="#projekty">Zobacz projekty
+              <svg class="i" viewBox="0 0 20 20" aria-hidden="true"><path d="M10 3v13M4.5 10.5L10 16l5.5-5.5"/></svg></a>
+            <a class="btn btn--ghost" href="#kontakt">Napisz do mnie</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="hero__stack" aria-label="Przykładowe realizacje">
+        <a class="frame hero__desk" href="https://borkowskiprzemo098.github.io/miastometr/" target="_blank" rel="noopener">
+          <p class="frame__name">Miastometr · 1440</p>
+          <span class="board board--img"><img src="shots/miastometr.jpg" alt="Miastometr — porównywarka polskich miast, widok desktop" width="1200" height="750" fetchpriority="high"></span>
+        </a>
+        <a class="frame hero__phone" href="https://borkowskiprzemo098.github.io/salon-kosmetyczny-nikola/" target="_blank" rel="noopener">
+          <p class="frame__name">Salon Nikola · 390</p>
+          <span class="board board--img"><img src="shots/salon-kosmetyczny-nikola-m.jpg" alt="Salon Piękności Nikola — widok na telefonie" width="390" height="844"></span>
+        </a>
+      </div>
+    </div>
+
+    <ul class="facts" aria-label="W skrócie">
+      <li><b>16</b> projektów działających online</li>
+      <li><b>4</b> rodzaje realizacji: od kampanii po aplikacje</li>
+      <li>Projekt, kod i publikacja <b>w jednych rękach</b></li>
+    </ul>
+  </section>
+
+  <section class="work" id="projekty" aria-labelledby="work-title">
+    <div class="work__head wrap">
+      <h2 id="work-title">Projekty</h2>
+      <p>Szesnaście realizacji, wszystkie dostępne pod prawdziwym adresem. Każdą możesz otworzyć na żywo, na komputerze i na telefonie.</p>
+    </div>
+
+    <div class="work__body wrap">
+      <nav class="layers" aria-label="Kategorie projektów">
+        <p class="layers__title">Warstwy</p>
+        <!-- LAYERS:START -->
+        <div class="layers__group">
+          <a class="layers__cat" href="#landing"><svg class="i" viewBox="0 0 20 20" aria-hidden="true"><path d="M3 3h14v14H3zM3 7h14"/></svg>Landing page sprzedażowe<span>4</span></a>
+          <ul><li><a href="#p-lp-10przykazan">Dziesięć Przykazań</a></li><li><a href="#p-hz-nowy-lp1">Standard Złota</a></li><li><a href="#p-lp-magia-1">Bursztynowa Komnata</a></li><li><a href="#p-lp-test1hze">Jan Paweł II, złote Euro</a></li></ul>
+        </div>
+        <div class="layers__group">
+          <a class="layers__cat" href="#tools"><svg class="i" viewBox="0 0 20 20" aria-hidden="true"><path d="M3 3h14v14H3zM3 7h14"/></svg>Narzędzia i portale online<span>3</span></a>
+          <ul><li><a href="#p-miastometr">Miastometr</a></li><li><a href="#p-generator-dokumentow-online">Generator dokumentów</a></li><li><a href="#p-kalkulatory">Kalkulatory Online</a></li></ul>
+        </div>
+        <div class="layers__group">
+          <a class="layers__cat" href="#brands"><svg class="i" viewBox="0 0 20 20" aria-hidden="true"><path d="M3 3h14v14H3zM3 7h14"/></svg>Strony firm i marek<span>6</span></a>
+          <ul><li><a href="#p-salon-kosmetyczny-nikola">Salon Piękności Nikola</a></li><li><a href="#p-barbershop">SFM Salon Fryzur Męskich</a></li><li><a href="#p-krowki">Moje Krówki</a></li><li><a href="#p-alutka-wizyt1-ladowarki">AIRLOAD</a></li><li><a href="#p-strona-szycie">Szyte z Sercem</a></li><li><a href="#p-trenertest">ŻELAZO, trener personalny</a></li></ul>
+        </div>
+        <div class="layers__group">
+          <a class="layers__cat" href="#apps"><svg class="i" viewBox="0 0 20 20" aria-hidden="true"><path d="M3 3h14v14H3zM3 7h14"/></svg>Aplikacje dla biznesu<span>3</span></a>
+          <ul><li><a href="#p-generator-ofert">Generator Ofert</a></li><li><a href="#p-html-card-creator">HTML Card Creator</a></li><li><a href="#p-workflow-v1">Workflow</a></li></ul>
+        </div>
+        <!-- LAYERS:END -->
+      </nav>
+
+      <div class="work__groups">
+        <!-- PROJECTS:START -->
+        <section class="group" id="landing" aria-labelledby="landing-t">
+          <header class="group__head">
+            <h3 id="landing-t">Landing page sprzedażowe <span>4</span></h3>
+            <p>Strony kampanii dla kolekcjonerskich monet i sztabek złota. Jedna oferta, jasna ścieżka do zamówienia.</p>
+          </header>
+          <div class="group__grid">
+          <article class="art art--lead" id="p-lp-10przykazan">
+            <p class="frame__name" aria-hidden="true">borkowskiprzemo098.github.io/LP-10PRZYKAZAN/</p>
+            <a class="art__board" href="https://borkowskiprzemo098.github.io/LP-10PRZYKAZAN/" target="_blank" rel="noopener" aria-label="Dziesięć Przykazań: otwórz stronę w nowej karcie">
+              <span class="art__shot"><img src="shots/LP-10PRZYKAZAN.jpg" alt="" width="1200" height="750" loading="lazy" decoding="async"></span>
+              <span class="art__phone"><img src="shots/LP-10PRZYKAZAN-m.jpg" alt="" width="390" height="844" loading="lazy" decoding="async"></span>
+              <span class="art__sel" aria-hidden="true"><i></i><i></i><i></i><i></i><em>1440 × 900</em></span>
+            </a>
+            <div class="art__meta">
+              <h4><a href="https://borkowskiprzemo098.github.io/LP-10PRZYKAZAN/" target="_blank" rel="noopener">Dziesięć Przykazań</a></h4>
+              <p class="art__client">AZ Aurum</p>
+              <p class="art__desc">Kolekcja dziesięciu numizmatów ze złota próby 999,9. Oferta pierwszego egzemplarza, certyfikat i zestaw kolekcjonerski.</p>
+              <ul class="tags"><li>Landing page</li><li>Kampania</li><li>Kolekcjonerstwo</li></ul>
+              <a class="art__open" href="https://borkowskiprzemo098.github.io/LP-10PRZYKAZAN/" target="_blank" rel="noopener" tabindex="-1" aria-hidden="true">Otwórz stronę <svg class="i" viewBox="0 0 20 20" aria-hidden="true"><path d="M6 14L14 6M7.5 6H14v6.5"/></svg></a>
+            </div>
+          </article>
+          <article class="art" id="p-hz-nowy-lp1">
+            <p class="frame__name" aria-hidden="true">borkowskiprzemo098.github.io/HZ-NOWY-LP1/</p>
+            <a class="art__board" href="https://borkowskiprzemo098.github.io/HZ-NOWY-LP1/" target="_blank" rel="noopener" aria-label="Standard Złota: otwórz stronę w nowej karcie">
+              <span class="art__shot"><img src="shots/HZ-NOWY-LP1.jpg" alt="" width="1200" height="750" loading="lazy" decoding="async"></span>
+              <span class="art__phone"><img src="shots/HZ-NOWY-LP1-m.jpg" alt="" width="390" height="844" loading="lazy" decoding="async"></span>
+              <span class="art__sel" aria-hidden="true"><i></i><i></i><i></i><i></i><em>1440 × 900</em></span>
+            </a>
+            <div class="art__meta">
+              <h4><a href="https://borkowskiprzemo098.github.io/HZ-NOWY-LP1/" target="_blank" rel="noopener">Standard Złota</a></h4>
+              <p class="art__client">Historia Złota</p>
+              <p class="art__desc">Sztabka inaugurująca kolekcję: mikrotekst grawerowany laserowo, certyfikat autentyczności, cena inauguracyjna.</p>
+              <ul class="tags"><li>Landing page</li><li>Produkt premium</li></ul>
+              <a class="art__open" href="https://borkowskiprzemo098.github.io/HZ-NOWY-LP1/" target="_blank" rel="noopener" tabindex="-1" aria-hidden="true">Otwórz stronę <svg class="i" viewBox="0 0 20 20" aria-hidden="true"><path d="M6 14L14 6M7.5 6H14v6.5"/></svg></a>
+            </div>
+          </article>
+          <article class="art" id="p-lp-magia-1">
+            <p class="frame__name" aria-hidden="true">borkowskiprzemo098.github.io/LP-MAGIA-1/</p>
+            <a class="art__board" href="https://borkowskiprzemo098.github.io/LP-MAGIA-1/" target="_blank" rel="noopener" aria-label="Bursztynowa Komnata: otwórz stronę w nowej karcie">
+              <span class="art__shot"><img src="shots/LP-MAGIA-1.jpg" alt="" width="1200" height="750" loading="lazy" decoding="async"></span>
+              <span class="art__phone"><img src="shots/LP-MAGIA-1-m.jpg" alt="" width="390" height="844" loading="lazy" decoding="async"></span>
+              <span class="art__sel" aria-hidden="true"><i></i><i></i><i></i><i></i><em>1440 × 900</em></span>
+            </a>
+            <div class="art__meta">
+              <h4><a href="https://borkowskiprzemo098.github.io/LP-MAGIA-1/" target="_blank" rel="noopener">Bursztynowa Komnata</a></h4>
+              <p class="art__client">Magia Złota</p>
+              <p class="art__desc">Złota moneta otwierająca kolekcję. Opowieść o emisji, parametry, gwarancja i zamówienie.</p>
+              <ul class="tags"><li>Landing page</li><li>Storytelling</li></ul>
+              <a class="art__open" href="https://borkowskiprzemo098.github.io/LP-MAGIA-1/" target="_blank" rel="noopener" tabindex="-1" aria-hidden="true">Otwórz stronę <svg class="i" viewBox="0 0 20 20" aria-hidden="true"><path d="M6 14L14 6M7.5 6H14v6.5"/></svg></a>
+            </div>
+          </article>
+          <article class="art art--lead art--flip" id="p-lp-test1hze">
+            <p class="frame__name" aria-hidden="true">borkowskiprzemo098.github.io/LP-test1HZE/</p>
+            <a class="art__board" href="https://borkowskiprzemo098.github.io/LP-test1HZE/" target="_blank" rel="noopener" aria-label="Jan Paweł II, złote Euro: otwórz stronę w nowej karcie">
+              <span class="art__shot"><img src="shots/LP-test1HZE.jpg" alt="" width="1200" height="750" loading="lazy" decoding="async"></span>
+              <span class="art__phone"><img src="shots/LP-test1HZE-m.jpg" alt="" width="390" height="844" loading="lazy" decoding="async"></span>
+              <span class="art__sel" aria-hidden="true"><i></i><i></i><i></i><i></i><em>1440 × 900</em></span>
+            </a>
+            <div class="art__meta">
+              <h4><a href="https://borkowskiprzemo098.github.io/LP-test1HZE/" target="_blank" rel="noopener">Jan Paweł II, złote Euro</a></h4>
+              <p class="art__client">Historia Złotych Euro</p>
+              <p class="art__desc">Watykańska moneta kolekcjonerska z limitowanej emisji. Strona nastawiona na zaufanie i szybką decyzję.</p>
+              <ul class="tags"><li>Landing page</li><li>Limitowana emisja</li></ul>
+              <a class="art__open" href="https://borkowskiprzemo098.github.io/LP-test1HZE/" target="_blank" rel="noopener" tabindex="-1" aria-hidden="true">Otwórz stronę <svg class="i" viewBox="0 0 20 20" aria-hidden="true"><path d="M6 14L14 6M7.5 6H14v6.5"/></svg></a>
+            </div>
+          </article>
+          </div>
+        </section>
+        <section class="group" id="tools" aria-labelledby="tools-t">
+          <header class="group__head">
+            <h3 id="tools-t">Narzędzia i portale online <span>3</span></h3>
+            <p>Darmowe serwisy, które liczą, generują i porównują w przeglądarce. Bez rejestracji, bez czekania.</p>
+          </header>
+          <div class="group__grid">
+          <article class="art art--lead" id="p-miastometr">
+            <p class="frame__name" aria-hidden="true">borkowskiprzemo098.github.io/miastometr/</p>
+            <a class="art__board" href="https://borkowskiprzemo098.github.io/miastometr/" target="_blank" rel="noopener" aria-label="Miastometr: otwórz stronę w nowej karcie">
+              <span class="art__shot"><img src="shots/miastometr.jpg" alt="" width="1200" height="750" loading="lazy" decoding="async"></span>
+              <span class="art__phone"><img src="shots/miastometr-m.jpg" alt="" width="390" height="844" loading="lazy" decoding="async"></span>
+              <span class="art__sel" aria-hidden="true"><i></i><i></i><i></i><i></i><em>1440 × 900</em></span>
+            </a>
+            <div class="art__meta">
+              <h4><a href="https://borkowskiprzemo098.github.io/miastometr/" target="_blank" rel="noopener">Miastometr</a></h4>
+              <p class="art__client">Projekt własny</p>
+              <p class="art__desc">Porównywarka polskich miast na publicznych danych GUS i GIOŚ: wynagrodzenia, ludność, bezrobocie, jakość powietrza.</p>
+              <ul class="tags"><li>Dane publiczne</li><li>API</li><li>Wizualizacja</li></ul>
+              <a class="art__open" href="https://borkowskiprzemo098.github.io/miastometr/" target="_blank" rel="noopener" tabindex="-1" aria-hidden="true">Otwórz stronę <svg class="i" viewBox="0 0 20 20" aria-hidden="true"><path d="M6 14L14 6M7.5 6H14v6.5"/></svg></a>
+            </div>
+          </article>
+          <article class="art" id="p-generator-dokumentow-online">
+            <p class="frame__name" aria-hidden="true">borkowskiprzemo098.github.io/generator-dokumentow-online/</p>
+            <a class="art__board" href="https://borkowskiprzemo098.github.io/generator-dokumentow-online/" target="_blank" rel="noopener" aria-label="Generator dokumentów: otwórz stronę w nowej karcie">
+              <span class="art__shot"><img src="shots/generator-dokumentow-online.jpg" alt="" width="1200" height="750" loading="lazy" decoding="async"></span>
+              <span class="art__phone"><img src="shots/generator-dokumentow-online-m.jpg" alt="" width="390" height="844" loading="lazy" decoding="async"></span>
+              <span class="art__sel" aria-hidden="true"><i></i><i></i><i></i><i></i><em>1440 × 900</em></span>
+            </a>
+            <div class="art__meta">
+              <h4><a href="https://borkowskiprzemo098.github.io/generator-dokumentow-online/" target="_blank" rel="noopener">Generator dokumentów</a></h4>
+              <p class="art__client">Projekt własny</p>
+              <p class="art__desc">30 wzorów pism: CV, wypowiedzenia, pełnomocnictwa, wezwania do zapłaty. Formularz i gotowy PDF od ręki.</p>
+              <ul class="tags"><li>Generator PDF</li><li>SEO</li><li>30 szablonów</li></ul>
+              <a class="art__open" href="https://borkowskiprzemo098.github.io/generator-dokumentow-online/" target="_blank" rel="noopener" tabindex="-1" aria-hidden="true">Otwórz stronę <svg class="i" viewBox="0 0 20 20" aria-hidden="true"><path d="M6 14L14 6M7.5 6H14v6.5"/></svg></a>
+            </div>
+          </article>
+          <article class="art" id="p-kalkulatory">
+            <p class="frame__name" aria-hidden="true">borkowskiprzemo098.github.io/kalkulatory/</p>
+            <a class="art__board" href="https://borkowskiprzemo098.github.io/kalkulatory/" target="_blank" rel="noopener" aria-label="Kalkulatory Online: otwórz stronę w nowej karcie">
+              <span class="art__shot"><img src="shots/kalkulatory.jpg" alt="" width="1200" height="750" loading="lazy" decoding="async"></span>
+              <span class="art__phone"><img src="shots/kalkulatory-m.jpg" alt="" width="390" height="844" loading="lazy" decoding="async"></span>
+              <span class="art__sel" aria-hidden="true"><i></i><i></i><i></i><i></i><em>1440 × 900</em></span>
+            </a>
+            <div class="art__meta">
+              <h4><a href="https://borkowskiprzemo098.github.io/kalkulatory/" target="_blank" rel="noopener">Kalkulatory Online</a></h4>
+              <p class="art__client">Projekt własny</p>
+              <p class="art__desc">Portal z darmowymi kalkulatorami. Cała logika działa lokalnie w przeglądarce, bez backendu.</p>
+              <ul class="tags"><li>Next.js</li><li>TypeScript</li><li>SEO</li></ul>
+              <a class="art__open" href="https://borkowskiprzemo098.github.io/kalkulatory/" target="_blank" rel="noopener" tabindex="-1" aria-hidden="true">Otwórz stronę <svg class="i" viewBox="0 0 20 20" aria-hidden="true"><path d="M6 14L14 6M7.5 6H14v6.5"/></svg></a>
+            </div>
+          </article>
+          </div>
+        </section>
+        <section class="group" id="brands" aria-labelledby="brands-t">
+          <header class="group__head">
+            <h3 id="brands-t">Strony firm i marek <span>6</span></h3>
+            <p>Strony lokalnych biznesów i marek rzemieślniczych. Cennik, galeria, rezerwacja i charakter marki.</p>
+          </header>
+          <div class="group__grid">
+          <article class="art art--lead" id="p-salon-kosmetyczny-nikola">
+            <p class="frame__name" aria-hidden="true">borkowskiprzemo098.github.io/salon-kosmetyczny-nikola/</p>
+            <a class="art__board" href="https://borkowskiprzemo098.github.io/salon-kosmetyczny-nikola/" target="_blank" rel="noopener" aria-label="Salon Piękności Nikola: otwórz stronę w nowej karcie">
+              <span class="art__shot"><img src="shots/salon-kosmetyczny-nikola.jpg" alt="" width="1200" height="750" loading="lazy" decoding="async"></span>
+              <span class="art__phone"><img src="shots/salon-kosmetyczny-nikola-m.jpg" alt="" width="390" height="844" loading="lazy" decoding="async"></span>
+              <span class="art__sel" aria-hidden="true"><i></i><i></i><i></i><i></i><em>1440 × 900</em></span>
+            </a>
+            <div class="art__meta">
+              <h4><a href="https://borkowskiprzemo098.github.io/salon-kosmetyczny-nikola/" target="_blank" rel="noopener">Salon Piękności Nikola</a></h4>
+              <p class="art__client">Kościerzyna</p>
+              <p class="art__desc">Manicure, rzęsy, depilacja laserowa. Przejrzysty cennik i umawianie wizyt online.</p>
+              <ul class="tags"><li>Strona firmowa</li><li>Rezerwacje</li></ul>
+              <a class="art__open" href="https://borkowskiprzemo098.github.io/salon-kosmetyczny-nikola/" target="_blank" rel="noopener" tabindex="-1" aria-hidden="true">Otwórz stronę <svg class="i" viewBox="0 0 20 20" aria-hidden="true"><path d="M6 14L14 6M7.5 6H14v6.5"/></svg></a>
+            </div>
+          </article>
+          <article class="art" id="p-barbershop">
+            <p class="frame__name" aria-hidden="true">borkowskiprzemo098.github.io/BARBERSHOP/</p>
+            <a class="art__board" href="https://borkowskiprzemo098.github.io/BARBERSHOP/" target="_blank" rel="noopener" aria-label="SFM Salon Fryzur Męskich: otwórz stronę w nowej karcie">
+              <span class="art__shot"><img src="shots/BARBERSHOP.jpg" alt="" width="1200" height="750" loading="lazy" decoding="async"></span>
+              <span class="art__phone"><img src="shots/BARBERSHOP-m.jpg" alt="" width="390" height="844" loading="lazy" decoding="async"></span>
+              <span class="art__sel" aria-hidden="true"><i></i><i></i><i></i><i></i><em>1440 × 900</em></span>
+            </a>
+            <div class="art__meta">
+              <h4><a href="https://borkowskiprzemo098.github.io/BARBERSHOP/" target="_blank" rel="noopener">SFM Salon Fryzur Męskich</a></h4>
+              <p class="art__client">Barbershop</p>
+              <p class="art__desc">Strzyżenie, golenie brzytwą, pielęgnacja brody. Rzemiosło pokazane w detalu.</p>
+              <ul class="tags"><li>Strona firmowa</li><li>Branding</li></ul>
+              <a class="art__open" href="https://borkowskiprzemo098.github.io/BARBERSHOP/" target="_blank" rel="noopener" tabindex="-1" aria-hidden="true">Otwórz stronę <svg class="i" viewBox="0 0 20 20" aria-hidden="true"><path d="M6 14L14 6M7.5 6H14v6.5"/></svg></a>
+            </div>
+          </article>
+          <article class="art" id="p-krowki">
+            <p class="frame__name" aria-hidden="true">borkowskiprzemo098.github.io/KROWKI/</p>
+            <a class="art__board" href="https://borkowskiprzemo098.github.io/KROWKI/" target="_blank" rel="noopener" aria-label="Moje Krówki: otwórz stronę w nowej karcie">
+              <span class="art__shot"><img src="shots/KROWKI.jpg" alt="" width="1200" height="750" loading="lazy" decoding="async"></span>
+              <span class="art__phone"><img src="shots/KROWKI-m.jpg" alt="" width="390" height="844" loading="lazy" decoding="async"></span>
+              <span class="art__sel" aria-hidden="true"><i></i><i></i><i></i><i></i><em>1440 × 900</em></span>
+            </a>
+            <div class="art__meta">
+              <h4><a href="https://borkowskiprzemo098.github.io/KROWKI/" target="_blank" rel="noopener">Moje Krówki</a></h4>
+              <p class="art__client">Manufaktura</p>
+              <p class="art__desc">Rzemieślnicze krówki z logo firmy. 20 smaków, zamówienia na eventy, śluby i prezenty.</p>
+              <ul class="tags"><li>Strona firmowa</li><li>B2B</li><li>Zamówienia</li></ul>
+              <a class="art__open" href="https://borkowskiprzemo098.github.io/KROWKI/" target="_blank" rel="noopener" tabindex="-1" aria-hidden="true">Otwórz stronę <svg class="i" viewBox="0 0 20 20" aria-hidden="true"><path d="M6 14L14 6M7.5 6H14v6.5"/></svg></a>
+            </div>
+          </article>
+          <article class="art" id="p-alutka-wizyt1-ladowarki">
+            <p class="frame__name" aria-hidden="true">borkowskiprzemo098.github.io/ALUTKA-WIZYT1-LADOWARKI/</p>
+            <a class="art__board" href="https://borkowskiprzemo098.github.io/ALUTKA-WIZYT1-LADOWARKI/" target="_blank" rel="noopener" aria-label="AIRLOAD: otwórz stronę w nowej karcie">
+              <span class="art__shot"><img src="shots/ALUTKA-WIZYT1-LADOWARKI.jpg" alt="" width="1200" height="750" loading="lazy" decoding="async"></span>
+              <span class="art__phone"><img src="shots/ALUTKA-WIZYT1-LADOWARKI-m.jpg" alt="" width="390" height="844" loading="lazy" decoding="async"></span>
+              <span class="art__sel" aria-hidden="true"><i></i><i></i><i></i><i></i><em>1440 × 900</em></span>
+            </a>
+            <div class="art__meta">
+              <h4><a href="https://borkowskiprzemo098.github.io/ALUTKA-WIZYT1-LADOWARKI/" target="_blank" rel="noopener">AIRLOAD</a></h4>
+              <p class="art__client">Produkt autorski</p>
+              <p class="art__desc">Speedloadery do magazynków ASG drukowane w 3D. Strona produktu od pomysłu do sprzedaży.</p>
+              <ul class="tags"><li>Strona produktu</li><li>Druk 3D</li></ul>
+              <a class="art__open" href="https://borkowskiprzemo098.github.io/ALUTKA-WIZYT1-LADOWARKI/" target="_blank" rel="noopener" tabindex="-1" aria-hidden="true">Otwórz stronę <svg class="i" viewBox="0 0 20 20" aria-hidden="true"><path d="M6 14L14 6M7.5 6H14v6.5"/></svg></a>
+            </div>
+          </article>
+          <article class="art" id="p-strona-szycie">
+            <p class="frame__name" aria-hidden="true">borkowskiprzemo098.github.io/STRONA-SZYCIE/</p>
+            <a class="art__board" href="https://borkowskiprzemo098.github.io/STRONA-SZYCIE/" target="_blank" rel="noopener" aria-label="Szyte z Sercem: otwórz stronę w nowej karcie">
+              <span class="art__shot"><img src="shots/STRONA-SZYCIE.jpg" alt="" width="1200" height="750" loading="lazy" decoding="async"></span>
+              <span class="art__phone"><img src="shots/STRONA-SZYCIE-m.jpg" alt="" width="390" height="844" loading="lazy" decoding="async"></span>
+              <span class="art__sel" aria-hidden="true"><i></i><i></i><i></i><i></i><em>1440 × 900</em></span>
+            </a>
+            <div class="art__meta">
+              <h4><a href="https://borkowskiprzemo098.github.io/STRONA-SZYCIE/" target="_blank" rel="noopener">Szyte z Sercem</a></h4>
+              <p class="art__client">Rękodzieło</p>
+              <p class="art__desc">Ręcznie szyte siatki i fartuszki na zamówienie, z formularzem opisu własnego projektu.</p>
+              <ul class="tags"><li>Strona firmowa</li><li>Formularz</li></ul>
+              <a class="art__open" href="https://borkowskiprzemo098.github.io/STRONA-SZYCIE/" target="_blank" rel="noopener" tabindex="-1" aria-hidden="true">Otwórz stronę <svg class="i" viewBox="0 0 20 20" aria-hidden="true"><path d="M6 14L14 6M7.5 6H14v6.5"/></svg></a>
+            </div>
+          </article>
+          <article class="art art--lead art--flip" id="p-trenertest">
+            <p class="frame__name" aria-hidden="true">borkowskiprzemo098.github.io/TRENERTEST/</p>
+            <a class="art__board" href="https://borkowskiprzemo098.github.io/TRENERTEST/" target="_blank" rel="noopener" aria-label="ŻELAZO, trener personalny: otwórz stronę w nowej karcie">
+              <span class="art__shot"><img src="shots/TRENERTEST.jpg" alt="" width="1200" height="750" loading="lazy" decoding="async"></span>
+              <span class="art__phone"><img src="shots/TRENERTEST-m.jpg" alt="" width="390" height="844" loading="lazy" decoding="async"></span>
+              <span class="art__sel" aria-hidden="true"><i></i><i></i><i></i><i></i><em>1440 × 900</em></span>
+            </a>
+            <div class="art__meta">
+              <h4><a href="https://borkowskiprzemo098.github.io/TRENERTEST/" target="_blank" rel="noopener">ŻELAZO, trener personalny</a></h4>
+              <p class="art__client">Szablon</p>
+              <p class="art__desc">Szablon strony dla trenera personalnego: mocna typografia, mierzalne efekty, zapis na trening.</p>
+              <ul class="tags"><li>Szablon</li><li>Fitness</li></ul>
+              <a class="art__open" href="https://borkowskiprzemo098.github.io/TRENERTEST/" target="_blank" rel="noopener" tabindex="-1" aria-hidden="true">Otwórz stronę <svg class="i" viewBox="0 0 20 20" aria-hidden="true"><path d="M6 14L14 6M7.5 6H14v6.5"/></svg></a>
+            </div>
+          </article>
+          </div>
+        </section>
+        <section class="group" id="apps" aria-labelledby="apps-t">
+          <header class="group__head">
+            <h3 id="apps-t">Aplikacje dla biznesu <span>3</span></h3>
+            <p>Narzędzia robocze, które skracają codzienną pracę: oferty, opisy produktów, zadania zespołu.</p>
+          </header>
+          <div class="group__grid">
+          <article class="art art--lead" id="p-generator-ofert">
+            <p class="frame__name" aria-hidden="true">borkowskiprzemo098.github.io/GENERATOR-OFERT/</p>
+            <a class="art__board" href="https://borkowskiprzemo098.github.io/GENERATOR-OFERT/" target="_blank" rel="noopener" aria-label="Generator Ofert: otwórz stronę w nowej karcie">
+              <span class="art__shot"><img src="shots/GENERATOR-OFERT.jpg" alt="" width="1200" height="750" loading="lazy" decoding="async"></span>
+              <span class="art__phone"><img src="shots/GENERATOR-OFERT-m.jpg" alt="" width="390" height="844" loading="lazy" decoding="async"></span>
+              <span class="art__sel" aria-hidden="true"><i></i><i></i><i></i><i></i><em>1440 × 900</em></span>
+            </a>
+            <div class="art__meta">
+              <h4><a href="https://borkowskiprzemo098.github.io/GENERATOR-OFERT/" target="_blank" rel="noopener">Generator Ofert</a></h4>
+              <p class="art__client">Narzędzie wewnętrzne</p>
+              <p class="art__desc">Szybkie składanie ofert mailowych z gotowych bloków. Mniej kopiowania, mniej pomyłek.</p>
+              <ul class="tags"><li>Aplikacja</li><li>Sprzedaż</li></ul>
+              <a class="art__open" href="https://borkowskiprzemo098.github.io/GENERATOR-OFERT/" target="_blank" rel="noopener" tabindex="-1" aria-hidden="true">Otwórz stronę <svg class="i" viewBox="0 0 20 20" aria-hidden="true"><path d="M6 14L14 6M7.5 6H14v6.5"/></svg></a>
+            </div>
+          </article>
+          <article class="art" id="p-html-card-creator">
+            <p class="frame__name" aria-hidden="true">borkowskiprzemo098.github.io/HTML-CARD-CREATOR/</p>
+            <a class="art__board" href="https://borkowskiprzemo098.github.io/HTML-CARD-CREATOR/" target="_blank" rel="noopener" aria-label="HTML Card Creator: otwórz stronę w nowej karcie">
+              <span class="art__shot"><img src="shots/HTML-CARD-CREATOR.jpg" alt="" width="1200" height="750" loading="lazy" decoding="async"></span>
+              <span class="art__phone"><img src="shots/HTML-CARD-CREATOR-m.jpg" alt="" width="390" height="844" loading="lazy" decoding="async"></span>
+              <span class="art__sel" aria-hidden="true"><i></i><i></i><i></i><i></i><em>1440 × 900</em></span>
+            </a>
+            <div class="art__meta">
+              <h4><a href="https://borkowskiprzemo098.github.io/HTML-CARD-CREATOR/" target="_blank" rel="noopener">HTML Card Creator</a></h4>
+              <p class="art__client">Narzędzie e-commerce</p>
+              <p class="art__desc">Generator opisów produktów w HTML dla sklepów internetowych.</p>
+              <ul class="tags"><li>Aplikacja</li><li>E-commerce</li></ul>
+              <a class="art__open" href="https://borkowskiprzemo098.github.io/HTML-CARD-CREATOR/" target="_blank" rel="noopener" tabindex="-1" aria-hidden="true">Otwórz stronę <svg class="i" viewBox="0 0 20 20" aria-hidden="true"><path d="M6 14L14 6M7.5 6H14v6.5"/></svg></a>
+            </div>
+          </article>
+          <article class="art" id="p-workflow-v1">
+            <p class="frame__name" aria-hidden="true">borkowskiprzemo098.github.io/WORKFLOW-V1/</p>
+            <a class="art__board" href="https://borkowskiprzemo098.github.io/WORKFLOW-V1/" target="_blank" rel="noopener" aria-label="Workflow: otwórz stronę w nowej karcie">
+              <span class="art__shot"><img src="shots/WORKFLOW-V1.jpg" alt="" width="1200" height="750" loading="lazy" decoding="async"></span>
+              <span class="art__phone"><img src="shots/WORKFLOW-V1-m.jpg" alt="" width="390" height="844" loading="lazy" decoding="async"></span>
+              <span class="art__sel" aria-hidden="true"><i></i><i></i><i></i><i></i><em>1440 × 900</em></span>
+            </a>
+            <div class="art__meta">
+              <h4><a href="https://borkowskiprzemo098.github.io/WORKFLOW-V1/" target="_blank" rel="noopener">Workflow</a></h4>
+              <p class="art__client">Panel zadań</p>
+              <p class="art__desc">Panel do planowania i śledzenia zadań zespołu.</p>
+              <ul class="tags"><li>Aplikacja</li><li>Produktywność</li></ul>
+              <a class="art__open" href="https://borkowskiprzemo098.github.io/WORKFLOW-V1/" target="_blank" rel="noopener" tabindex="-1" aria-hidden="true">Otwórz stronę <svg class="i" viewBox="0 0 20 20" aria-hidden="true"><path d="M6 14L14 6M7.5 6H14v6.5"/></svg></a>
+            </div>
+          </article>
+          </div>
+        </section>
+        <!-- PROJECTS:END -->
+      </div>
+    </div>
+  </section>
+
+  <section class="about-band" id="o-mnie" aria-labelledby="about-title">
+   <div class="about wrap">
+    <div class="frame about__photo">
+      <p class="frame__name" aria-hidden="true">portret.jpg</p>
+      <div class="board about__img">
+        <!-- PHOTO: podmień na <img src="assets/portret.jpg" alt="Przemysław Borkowski"> -->
+        <div class="placeholder" role="img" aria-label="Miejsce na zdjęcie Przemysława Borkowskiego">
+          <svg viewBox="0 0 48 48" aria-hidden="true"><rect x="6" y="9" width="36" height="30" rx="2"/><circle cx="18" cy="20" r="4"/><path d="M6 34l11-10 8 7 6-5 11 9"/></svg>
+          <span>Zdjęcie wkrótce</span>
+        </div>
+      </div>
+    </div>
+    <div class="about__text">
+      <h2 id="about-title">Przemysław Borkowski</h2>
+      <p class="about__lead">Projektuję strony tak, żeby odwiedzający od razu wiedział, gdzie jest i co ma zrobić. Potem sam je koduję i publikuję.</p>
+      <p>Pracuję na całym procesie: od rozmowy o celu, przez projekt i dopracowaną typografię, po szybki, responsywny kod i publikację. Robiłem kampanie sprzedażowe dla kolekcji złota, strony lokalnych firm, darmowe portale z narzędziami i aplikacje, które skracają pracę zespołu.</p>
+      <dl class="spec">
+        <div><dt>Projektowanie</dt><dd>UI/UX, typografia, systemy kolorów, projekt pod telefon od pierwszego szkicu</dd></div>
+        <div><dt>Kod</dt><dd>HTML, CSS, JavaScript, TypeScript, React, Next.js, Tailwind CSS</dd></div>
+        <div><dt>Publikacja</dt><dd>GitHub Pages, SEO techniczne, wydajność, dostępność</dd></div>
+        <div><dt>Dane</dt><dd>Integracja z publicznymi API (GUS BDL, GIOŚ), generowanie PDF</dd></div>
+      </dl>
+    </div>
+   </div>
+  </section>
+
+  <section class="process" id="proces" aria-labelledby="process-title">
+    <div class="wrap">
+      <h2 id="process-title">Jak pracuję</h2>
+      <p class="process__lead">Cztery kroki, jedna osoba odpowiedzialna za całość. Bez przekazywania projektu między agencjami.</p>
+      <ol class="flow">
+        <li class="flow__node">
+          <h3>Rozmowa i cel</h3>
+          <p>Ustalamy, kto ma trafić na stronę i co ma na niej zrobić. Z tego wynika cała reszta.</p>
+        </li>
+        <li class="flow__node">
+          <h3>Projekt</h3>
+          <p>Układ, typografia i kolory dopasowane do marki. Najpierw widok na telefonie, potem na dużym ekranie.</p>
+        </li>
+        <li class="flow__node">
+          <h3>Kod</h3>
+          <p>Lekki, szybki kod pisany ręcznie. Strona działa płynnie na każdym urządzeniu i w każdej przeglądarce.</p>
+        </li>
+        <li class="flow__node">
+          <h3>Publikacja</h3>
+          <p>Strona trafia pod prawdziwy adres. Poprawki po starcie wprowadzam szybko, bez biurokracji.</p>
+        </li>
+      </ol>
+    </div>
+  </section>
+
+  <section class="contact" id="kontakt" aria-labelledby="contact-title">
+    <div class="wrap contact__in">
+      <h2 id="contact-title">Masz projekt? <span>Zróbmy go live.</span></h2>
+      <p>Napisz, czego potrzebujesz. Odpowiem z propozycją, jak to zrobić.</p>
+      <div class="contact__links">
+        <!-- CONTACT: e-mail / telefon / LinkedIn do uzupełnienia -->
+        <a class="btn btn--accent btn--lg" href="https://github.com/borkowskiPrzemo098" target="_blank" rel="noopener">
+          <svg class="i" viewBox="0 0 24 24" aria-hidden="true"><path class="fill" d="M12 .5a11.5 11.5 0 0 0-3.64 22.41c.58.1.79-.25.79-.56v-2c-3.2.7-3.88-1.37-3.88-1.37-.52-1.33-1.28-1.69-1.28-1.69-1.04-.71.08-.7.08-.7 1.16.08 1.77 1.19 1.77 1.19 1.03 1.76 2.7 1.25 3.36.96.1-.75.4-1.25.73-1.54-2.56-.29-5.25-1.28-5.25-5.69 0-1.26.45-2.29 1.19-3.1-.12-.29-.52-1.46.11-3.05 0 0 .97-.31 3.17 1.18a11 11 0 0 1 5.77 0c2.2-1.49 3.17-1.18 3.17-1.18.63 1.59.23 2.76.11 3.05.74.81 1.19 1.84 1.19 3.1 0 4.42-2.7 5.39-5.27 5.68.41.36.78 1.06.78 2.14v3.17c0 .31.21.67.8.56A11.5 11.5 0 0 0 12 .5Z"/></svg>
+          Wszystkie projekty na GitHub</a>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer class="foot wrap">
+  <a class="brand brand--foot" href="#top" aria-label="PBDesign — na górę strony">
+    <img src="assets/mark.svg" alt="" width="28" height="28">
+    <span class="brand__word">PB<b>Design</b></span>
+  </a>
+  <p>© 2026 Przemysław Borkowski · Strona zaprojektowana i zakodowana przez PBDesign</p>
+</footer>
+
+<script src="js/main.js" defer></script>
+</body>
+</html>
