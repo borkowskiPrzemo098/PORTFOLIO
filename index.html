@@ -4,11 +4,11 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <title>PBDesign — Przemysław Borkowski, web designer & developer</title>
-<meta name="description" content="Przemysław Borkowski — PBDesign. Projektuję i koduję strony internetowe, landing page’e i narzędzia online dla firm. Zobacz wybrane realizacje.">
-<meta name="theme-color" content="#111317">
+<meta name="description" content="Przemysław Borkowski, PBDesign. Projektuję i koduję landing page’e, strony firmowe i narzędzia online. Zobacz ofertę, studia przypadków i realizacje.">
+<meta name="theme-color" content="#FFFFFF">
 <meta property="og:type" content="website">
 <meta property="og:title" content="PBDesign — Przemysław Borkowski">
-<meta property="og:description" content="Projektuję strony, które sprzedają. Wybrane realizacje: landing page’e, strony firmowe, narzędzia online.">
+<meta property="og:description" content="Strony, które pracują na Twoją markę. Oferta, studia przypadków i realizacje.">
 <meta property="og:image" content="https://borkowskiprzemo098.github.io/PORTFOLIO/assets/og.png">
 <meta property="og:url" content="https://borkowskiprzemo098.github.io/PORTFOLIO/">
 <meta name="twitter:card" content="summary_large_image">
@@ -17,219 +17,293 @@
 <link rel="apple-touch-icon" href="assets/apple-touch-icon.png">
 <link rel="preconnect" href="https://api.fontshare.com">
 <link rel="preconnect" href="https://cdn.fontshare.com" crossorigin>
-<link rel="stylesheet" href="https://api.fontshare.com/v2/css?f[]=cabinet-grotesk@500,700,800&f[]=general-sans@400,500,600&display=swap">
+<link rel="stylesheet" href="https://api.fontshare.com/v2/css?f[]=clash-grotesk@500,600&display=swap">
+<link rel="stylesheet" href="https://api.fontshare.com/v2/css?f[]=gambetta@400i,500i&display=swap">
+<link rel="stylesheet" href="https://api.fontshare.com/v2/css?f[]=satoshi@400,500,700&display=swap">
 <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
 <!--
-THESIS: A premium personal portfolio that leads with the person and the finished work: a graphite stage with his portrait, then large, calm showcase rows of selected live projects. Refuses the tool-UI look of v1 and the uniform card grid.
-OWN-WORLD: graphite #111317 stages (hero, process, contact) alternating with porcelain #F5F4F1 and white; one brass-gold accent #C8A15A (#8A6A2C for text on light). Cabinet Grotesk 800 display, General Sans text. Large radii (20–28px) on photos and screenshots, soft long shadows, thin gold hairlines.
-STORY: who he is (face + one-line promise) → selected work, one project per row → who he is and how he works → one clear way to get in touch.
-FIRST VIEWPORT: graphite, full height. Left: headline "Projektuję strony, które sprzedają." (gold last word), name + role line, lede, gold primary CTA + outline CTA. Right: large 4:5 portrait with a gold hairline frame drawing itself around it. Bottom: slow marquee of project names.
-FORM: redesign after user feedback (v1 "looked like a graphics program"); user chose graphite + gold. Seed 25b7e526 (v1 roll) superseded by user steer.
+THESIS: A bright, airy editorial portfolio built around the portrait (Dubai haze, black-and-white stripes): the person first, then what he offers, then two case studies told properly, then the rest of the work. Refuses the dark tech stage of v2 and the one-row-per-project monotony.
+OWN-WORLD: white and sky-mist #EEF2F5 grounds, ink #0E1013 type, one warm sun accent #C87A2E used only for small marks; Clash Grotesk display, Gambetta italic for single emphasized words, Satoshi text. Large 28–36px radii, soft long shadows, thin ink hairlines, black pill buttons.
+STORY: who he is and the promise (portrait) → what he can do for a company (offer) → proof in depth (2 case studies) → more work → who he is and how he works → contact details.
+FIRST VIEWPORT: left, large headline with one italic word, intro, black primary pill + outline pill, three quiet facts; right, tall portrait with a rotating PB seal and a floating "latest project" card.
+FORM: user-steered redesign v3 (light, airy premium; offer + case studies requested). v1 seed 25b7e526 superseded.
 FINISH: unreviewed and undocumented is unfinished; this build ends with the finish review, the verdict, and DESIGN.md
 -->
-<a class="skip" href="#realizacje">Przejdź do realizacji</a>
+<a class="skip" href="#oferta">Przejdź do treści</a>
 
 <header class="nav" id="nav">
   <div class="nav__in">
     <a class="brand" href="#top" aria-label="PBDesign, strona główna">
-      <img src="assets/mark.svg" alt="" width="36" height="36">
+      <img src="assets/mark.svg" alt="" width="38" height="38">
       <span>PB<em>Design</em></span>
     </a>
     <nav class="nav__links" aria-label="Główna nawigacja">
+      <a href="#oferta">Oferta</a>
+      <a href="#case-studies">Studia przypadków</a>
       <a href="#realizacje">Realizacje</a>
       <a href="#o-mnie">O mnie</a>
-      <a href="#wspolpraca">Współpraca</a>
     </nav>
-    <a class="btn btn--gold btn--sm" href="#kontakt">Kontakt</a>
+    <a class="btn btn--ink btn--sm" href="#kontakt">Kontakt</a>
+    <button class="nav__burger" type="button" aria-label="Otwórz menu" aria-expanded="false" aria-controls="menu"><span></span><span></span></button>
+  </div>
+  <div class="menu" id="menu" hidden>
+    <a href="#oferta">Oferta</a>
+    <a href="#case-studies">Studia przypadków</a>
+    <a href="#realizacje">Realizacje</a>
+    <a href="#o-mnie">O mnie</a>
+    <a href="#kontakt">Kontakt</a>
   </div>
 </header>
 
 <main id="top">
+  <!-- ============ HERO ============ -->
   <section class="hero" aria-labelledby="hero-title">
-    <div class="hero__in">
+    <div class="wrap hero__in">
       <div class="hero__text">
         <h1 id="hero-title" class="hero__title">
-          <span class="line"><span>Projektuję strony,</span></span>
-          <span class="line"><span>które <em>sprzedają.</em></span></span>
+          <span class="ln"><span>Strony, które</span></span>
+          <span class="ln"><span><em>pracują</em> na</span></span>
+          <span class="ln"><span>Twoją markę.</span></span>
         </h1>
-        <p class="hero__who"><strong>Przemysław Borkowski</strong><span>Web designer &amp; developer</span></p>
-        <p class="hero__lede">Tworzę strony i narzędzia internetowe od projektu po publikację. Szybkie, czytelne na każdym ekranie i nastawione na to, żeby klient wiedział, co ma zrobić.</p>
+        <p class="hero__lede">Jestem <strong>Przemysław Borkowski</strong>, web designer i&nbsp;developer. Projektuję i&nbsp;sam koduję landing page’e, strony firmowe i&nbsp;narzędzia online. Od pierwszego szkicu po działającą stronę pod Twoim adresem.</p>
         <div class="hero__cta">
-          <a class="btn btn--gold" href="#realizacje">Zobacz realizacje
+          <a class="btn btn--ink" href="#case-studies">Zobacz realizacje
             <svg class="i" viewBox="0 0 20 20" aria-hidden="true"><path d="M10 3.5v13M4.5 11l5.5 5.5 5.5-5.5"/></svg></a>
-          <a class="btn btn--line" href="#kontakt">Porozmawiajmy</a>
+          <a class="btn btn--outline" href="#oferta">Co mogę dla Ciebie zrobić</a>
         </div>
+        <ul class="hero__facts">
+          <li><b>16</b><span>wdrożonych projektów online</span></li>
+          <li><b>4</b><span>rodzaje usług, od landing page po narzędzia</span></li>
+          <li><b>A–Z</b><span>projekt, kod i publikacja w jednych rękach</span></li>
+        </ul>
       </div>
 
-      <figure class="hero__photo">
-        <span class="hero__frame" aria-hidden="true"></span>
-        <div class="hero__img">
+      <div class="hero__visual">
+        <figure class="portrait">
           <!-- PHOTO:START -->
-          <div class="hero__ph" role="img" aria-label="Miejsce na zdjęcie Przemysława Borkowskiego"><span>PB</span></div>
+          <img src="assets/portret.jpg" alt="Przemysław Borkowski" width="912" height="1172" fetchpriority="high">
           <!-- PHOTO:END -->
-        </div>
-      </figure>
-    </div>
-
-    <div class="marquee" aria-hidden="true">
-      <div class="marquee__track">
-        <!-- MARQUEE:START -->
-        <div class="marquee__set"><span>Miastometr</span><i></i><span>Dziesięć Przykazań</span><i></i><span>Salon Piękności Nikola</span><i></i><span>Generator dokumentów</span><i></i><span>SFM Salon Fryzur Męskich</span><i></i><span>Moje Krówki</span><i></i></div>
-        <div class="marquee__set"><span>Miastometr</span><i></i><span>Dziesięć Przykazań</span><i></i><span>Salon Piękności Nikola</span><i></i><span>Generator dokumentów</span><i></i><span>SFM Salon Fryzur Męskich</span><i></i><span>Moje Krówki</span><i></i></div>
-        <!-- MARQUEE:END -->
+        </figure>
+        <svg class="seal" viewBox="0 0 120 120" aria-hidden="true">
+          <defs><path id="sealPath" d="M60 60m-44 0a44 44 0 1 1 88 0a44 44 0 1 1-88 0"/></defs>
+          <circle cx="60" cy="60" r="58" class="seal__bg"/>
+          <text><textPath href="#sealPath">WEB DESIGN · DEVELOPMENT · </textPath></text>
+          <circle cx="60" cy="60" r="5" class="seal__dot"/>
+        </svg>
+        <a class="latest" href="https://borkowskiprzemo098.github.io/miastometr/" target="_blank" rel="noopener">
+          <img src="shots/miastometr.jpg" alt="" width="120" height="75">
+          <span><small>Ostatnia realizacja</small><strong>Miastometr</strong></span>
+          <svg class="i" viewBox="0 0 20 20" aria-hidden="true"><path d="M6 14L14 6M7.5 6H14v6.5"/></svg>
+        </a>
       </div>
     </div>
   </section>
 
-  <section class="work" id="realizacje" aria-labelledby="work-title">
-    <div class="wrap work__head">
-      <h2 id="work-title">Wybrane realizacje</h2>
-      <p>Każdy projekt działa online. Kliknij, żeby zobaczyć go na żywo, na komputerze albo w telefonie.</p>
-    </div>
-    <div class="wrap work__list">
-      <!-- PROJECTS:START -->
-      <article class="proj">
-        <a class="proj__media" href="https://borkowskiprzemo098.github.io/miastometr/" target="_blank" rel="noopener" aria-label="Miastometr: otwórz stronę w nowej karcie">
-          <span class="proj__browser">
-            <span class="proj__bar" aria-hidden="true"><i></i><i></i><i></i><b>borkowskiprzemo098.github.io/miastometr</b></span>
-            <span class="proj__shot"><img src="shots/miastometr.jpg" alt="" width="1200" height="750" loading="lazy" decoding="async"></span>
-          </span>
-          <span class="proj__phone"><img src="shots/miastometr-m.jpg" alt="" width="390" height="844" loading="lazy" decoding="async"></span>
-        </a>
-        <div class="proj__info">
-          <h3><a href="https://borkowskiprzemo098.github.io/miastometr/" target="_blank" rel="noopener">Miastometr</a></h3>
-          <p class="proj__cat">Portal z danymi</p>
-          <p class="proj__desc">Porównywarka polskich miast oparta na publicznych danych GUS i GIOŚ. Wynagrodzenia, ludność, bezrobocie i jakość powietrza podane tak, że rozumie je każdy.</p>
-          <ul class="tags"><li>Dane publiczne</li><li>API</li><li>Wizualizacja danych</li></ul>
-          <a class="link" href="https://borkowskiprzemo098.github.io/miastometr/" target="_blank" rel="noopener" tabindex="-1">Zobacz stronę na żywo <svg class="i" viewBox="0 0 20 20" aria-hidden="true"><path d="M6 14L14 6M7.5 6H14v6.5"/></svg></a>
-        </div>
-      </article>
-      <article class="proj proj--rev">
-        <a class="proj__media" href="https://borkowskiprzemo098.github.io/LP-10PRZYKAZAN/" target="_blank" rel="noopener" aria-label="Dziesięć Przykazań: otwórz stronę w nowej karcie">
-          <span class="proj__browser">
-            <span class="proj__bar" aria-hidden="true"><i></i><i></i><i></i><b>borkowskiprzemo098.github.io/LP-10PRZYKAZAN</b></span>
-            <span class="proj__shot"><img src="shots/LP-10PRZYKAZAN.jpg" alt="" width="1200" height="750" loading="lazy" decoding="async"></span>
-          </span>
-          <span class="proj__phone"><img src="shots/LP-10PRZYKAZAN-m.jpg" alt="" width="390" height="844" loading="lazy" decoding="async"></span>
-        </a>
-        <div class="proj__info">
-          <h3><a href="https://borkowskiprzemo098.github.io/LP-10PRZYKAZAN/" target="_blank" rel="noopener">Dziesięć Przykazań</a></h3>
-          <p class="proj__cat">Landing page sprzedażowy</p>
-          <p class="proj__desc">Strona kampanii kolekcji złotych numizmatów dla AZ Aurum. Jedna oferta, jasna ścieżka do zamówienia i elementy budujące zaufanie.</p>
-          <ul class="tags"><li>Kampania</li><li>E-commerce</li><li>Konwersja</li></ul>
-          <a class="link" href="https://borkowskiprzemo098.github.io/LP-10PRZYKAZAN/" target="_blank" rel="noopener" tabindex="-1">Zobacz stronę na żywo <svg class="i" viewBox="0 0 20 20" aria-hidden="true"><path d="M6 14L14 6M7.5 6H14v6.5"/></svg></a>
-        </div>
-      </article>
-      <article class="proj">
-        <a class="proj__media" href="https://borkowskiprzemo098.github.io/salon-kosmetyczny-nikola/" target="_blank" rel="noopener" aria-label="Salon Piękności Nikola: otwórz stronę w nowej karcie">
-          <span class="proj__browser">
-            <span class="proj__bar" aria-hidden="true"><i></i><i></i><i></i><b>borkowskiprzemo098.github.io/salon-kosmetyczny-nikola</b></span>
-            <span class="proj__shot"><img src="shots/salon-kosmetyczny-nikola.jpg" alt="" width="1200" height="750" loading="lazy" decoding="async"></span>
-          </span>
-          <span class="proj__phone"><img src="shots/salon-kosmetyczny-nikola-m.jpg" alt="" width="390" height="844" loading="lazy" decoding="async"></span>
-        </a>
-        <div class="proj__info">
-          <h3><a href="https://borkowskiprzemo098.github.io/salon-kosmetyczny-nikola/" target="_blank" rel="noopener">Salon Piękności Nikola</a></h3>
-          <p class="proj__cat">Strona firmowa</p>
-          <p class="proj__desc">Strona salonu w Kościerzynie: przejrzysty cennik, galeria i szybkie umawianie wizyt. Zaprojektowana najpierw pod telefon.</p>
-          <ul class="tags"><li>Rezerwacje</li><li>Mobile first</li><li>SEO lokalne</li></ul>
-          <a class="link" href="https://borkowskiprzemo098.github.io/salon-kosmetyczny-nikola/" target="_blank" rel="noopener" tabindex="-1">Zobacz stronę na żywo <svg class="i" viewBox="0 0 20 20" aria-hidden="true"><path d="M6 14L14 6M7.5 6H14v6.5"/></svg></a>
-        </div>
-      </article>
-      <article class="proj proj--rev">
-        <a class="proj__media" href="https://borkowskiprzemo098.github.io/generator-dokumentow-online/" target="_blank" rel="noopener" aria-label="Generator dokumentów: otwórz stronę w nowej karcie">
-          <span class="proj__browser">
-            <span class="proj__bar" aria-hidden="true"><i></i><i></i><i></i><b>borkowskiprzemo098.github.io/generator-dokumentow-online</b></span>
-            <span class="proj__shot"><img src="shots/generator-dokumentow-online.jpg" alt="" width="1200" height="750" loading="lazy" decoding="async"></span>
-          </span>
-          <span class="proj__phone"><img src="shots/generator-dokumentow-online-m.jpg" alt="" width="390" height="844" loading="lazy" decoding="async"></span>
-        </a>
-        <div class="proj__info">
-          <h3><a href="https://borkowskiprzemo098.github.io/generator-dokumentow-online/" target="_blank" rel="noopener">Generator dokumentów</a></h3>
-          <p class="proj__cat">Narzędzie online</p>
-          <p class="proj__desc">30 wzorów pism i dokumentów: CV, wypowiedzenia, pełnomocnictwa. Użytkownik wypełnia formularz i od razu pobiera gotowy PDF.</p>
-          <ul class="tags"><li>Generator PDF</li><li>30 szablonów</li><li>SEO</li></ul>
-          <a class="link" href="https://borkowskiprzemo098.github.io/generator-dokumentow-online/" target="_blank" rel="noopener" tabindex="-1">Zobacz stronę na żywo <svg class="i" viewBox="0 0 20 20" aria-hidden="true"><path d="M6 14L14 6M7.5 6H14v6.5"/></svg></a>
-        </div>
-      </article>
-      <article class="proj">
-        <a class="proj__media" href="https://borkowskiprzemo098.github.io/BARBERSHOP/" target="_blank" rel="noopener" aria-label="SFM Salon Fryzur Męskich: otwórz stronę w nowej karcie">
-          <span class="proj__browser">
-            <span class="proj__bar" aria-hidden="true"><i></i><i></i><i></i><b>borkowskiprzemo098.github.io/BARBERSHOP</b></span>
-            <span class="proj__shot"><img src="shots/BARBERSHOP.jpg" alt="" width="1200" height="750" loading="lazy" decoding="async"></span>
-          </span>
-          <span class="proj__phone"><img src="shots/BARBERSHOP-m.jpg" alt="" width="390" height="844" loading="lazy" decoding="async"></span>
-        </a>
-        <div class="proj__info">
-          <h3><a href="https://borkowskiprzemo098.github.io/BARBERSHOP/" target="_blank" rel="noopener">SFM Salon Fryzur Męskich</a></h3>
-          <p class="proj__cat">Strona firmowa</p>
-          <p class="proj__desc">Wizerunkowa strona barbershopu. Ciemna, rzemieślnicza identyfikacja, oferta usług i rezerwacja.</p>
-          <ul class="tags"><li>Branding</li><li>Rezerwacje</li></ul>
-          <a class="link" href="https://borkowskiprzemo098.github.io/BARBERSHOP/" target="_blank" rel="noopener" tabindex="-1">Zobacz stronę na żywo <svg class="i" viewBox="0 0 20 20" aria-hidden="true"><path d="M6 14L14 6M7.5 6H14v6.5"/></svg></a>
-        </div>
-      </article>
-      <article class="proj proj--rev">
-        <a class="proj__media" href="https://borkowskiprzemo098.github.io/KROWKI/" target="_blank" rel="noopener" aria-label="Moje Krówki: otwórz stronę w nowej karcie">
-          <span class="proj__browser">
-            <span class="proj__bar" aria-hidden="true"><i></i><i></i><i></i><b>borkowskiprzemo098.github.io/KROWKI</b></span>
-            <span class="proj__shot"><img src="shots/KROWKI.jpg" alt="" width="1200" height="750" loading="lazy" decoding="async"></span>
-          </span>
-          <span class="proj__phone"><img src="shots/KROWKI-m.jpg" alt="" width="390" height="844" loading="lazy" decoding="async"></span>
-        </a>
-        <div class="proj__info">
-          <h3><a href="https://borkowskiprzemo098.github.io/KROWKI/" target="_blank" rel="noopener">Moje Krówki</a></h3>
-          <p class="proj__cat">Strona marki</p>
-          <p class="proj__desc">Rzemieślnicze krówki z logo firmy. Strona prowadzi klienta biznesowego od wyboru smaku do zamówienia na event.</p>
-          <ul class="tags"><li>B2B</li><li>Zamówienia</li></ul>
-          <a class="link" href="https://borkowskiprzemo098.github.io/KROWKI/" target="_blank" rel="noopener" tabindex="-1">Zobacz stronę na żywo <svg class="i" viewBox="0 0 20 20" aria-hidden="true"><path d="M6 14L14 6M7.5 6H14v6.5"/></svg></a>
-        </div>
-      </article>
-      <!-- PROJECTS:END -->
-    </div>
-  </section>
-
-  <section class="about" id="o-mnie" aria-labelledby="about-title">
-    <div class="wrap about__in">
-      <h2 id="about-title" class="about__title">Łączę projektowanie z&nbsp;programowaniem, więc nic nie ginie po drodze.</h2>
-      <div class="about__body">
-        <p class="about__lead">Nazywam się Przemysław Borkowski. Projektuję strony tak, żeby odwiedzający od razu wiedział, gdzie jest i co ma zrobić, a potem sam je koduję i publikuję.</p>
-        <p>Robiłem kampanie sprzedażowe dla kolekcji złota, strony lokalnych firm, darmowe portale z narzędziami i aplikacje, które skracają pracę zespołu. Jedna osoba odpowiada za cały projekt: od rozmowy o celu po działającą stronę pod prawdziwym adresem.</p>
+  <!-- ============ OFFER ============ -->
+  <section class="offer" id="oferta" aria-labelledby="offer-title">
+    <div class="wrap">
+      <div class="sec-head">
+        <h2 id="offer-title">W czym mogę pomóc <em>Twojej</em> firmie</h2>
+        <p>Każdy projekt prowadzę sam, od rozmowy o celu po publikację. Dzięki temu nic nie ginie między projektantem a programistą.</p>
       </div>
-      <ul class="skills">
-        <li><h3>Projektowanie</h3><p>UI/UX, typografia, kolorystyka, projekt pod telefon od pierwszego szkicu.</p></li>
-        <li><h3>Programowanie</h3><p>HTML, CSS, JavaScript, TypeScript, React, Next.js, Tailwind CSS.</p></li>
-        <li><h3>Publikacja</h3><p>Hosting, SEO techniczne, wydajność, dostępność.</p></li>
-        <li><h3>Dane i narzędzia</h3><p>Publiczne API (GUS, GIOŚ), generowanie PDF, kalkulatory.</p></li>
+      <ul class="services">
+        <li class="svc" data-preview="shots/LP-10PRZYKAZAN.jpg">
+          <h3>Landing page sprzedażowy</h3>
+          <p class="svc__desc">Jedna strona pod kampanię lub produkt. Jasna oferta, argumenty w dobrej kolejności i prosta droga do zamówienia.</p>
+          <ul class="svc__list"><li>Układ i hierarchia treści</li><li>Formularz lub integracja zamówień</li><li>Wersja mobilna dopracowana w detalu</li></ul>
+        </li>
+        <li class="svc" data-preview="shots/salon-kosmetyczny-nikola.jpg">
+          <h3>Strona firmowa</h3>
+          <p class="svc__desc">Wizytówka firmy, która buduje zaufanie: oferta, cennik, galeria, opinie i szybki kontakt lub rezerwacja.</p>
+          <ul class="svc__list"><li>Identyfikacja dopasowana do marki</li><li>Rezerwacje i kontakt jednym kliknięciem</li><li>SEO lokalne i szybkie ładowanie</li></ul>
+        </li>
+        <li class="svc" data-preview="shots/generator-dokumentow-online.jpg">
+          <h3>Narzędzia i portale online</h3>
+          <p class="svc__desc">Kalkulatory, generatory dokumentów, porównywarki. Serwisy, które rozwiązują konkretny problem i przyciągają ruch z Google.</p>
+          <ul class="svc__list"><li>Logika działająca w przeglądarce</li><li>Praca z danymi i API</li><li>Generowanie PDF</li></ul>
+        </li>
+        <li class="svc" data-preview="shots/BARBERSHOP.jpg">
+          <h3>Odświeżenie istniejącej strony</h3>
+          <p class="svc__desc">Nowy wygląd i porządek w treści dla strony, która przestała pracować. Zachowuję to, co działa, poprawiam resztę.</p>
+          <ul class="svc__list"><li>Przegląd i plan zmian</li><li>Nowy projekt i wdrożenie</li><li>Poprawa szybkości i wersji mobilnej</li></ul>
+        </li>
       </ul>
     </div>
+    <div class="svc-preview" aria-hidden="true"><img src="shots/LP-10PRZYKAZAN.jpg" alt="" width="1200" height="750" loading="lazy"></div>
   </section>
 
+  <!-- ============ CASE STUDIES ============ -->
+  <section class="cases" id="case-studies" aria-labelledby="cases-title">
+    <div class="wrap">
+      <div class="sec-head">
+        <h2 id="cases-title">Studia <em>przypadków</em></h2>
+        <p>Dwa projekty rozpisane krok po kroku: od problemu, przez rozwiązanie, po to, co dokładnie zrobiłem.</p>
+      </div>
+      <!-- CASES:START -->
+      <article class="case" id="case-miastometr">
+        <header class="case__head">
+          <div>
+            <h3>Miastometr</h3>
+            <p class="case__lead">Porównywarka polskich miast oparta wyłącznie na publicznych danych.</p>
+            <a class="btn btn--ink btn--sm" href="https://borkowskiprzemo098.github.io/miastometr/" target="_blank" rel="noopener">Zobacz stronę na żywo <svg class="i" viewBox="0 0 20 20" aria-hidden="true"><path d="M6 14L14 6M7.5 6H14v6.5"/></svg></a>
+          </div>
+          <dl class="case__meta"><div><dt>Typ</dt><dd>Portal z danymi</dd></div><div><dt>Zakres</dt><dd>Projekt, programowanie, przetwarzanie danych</dd></div><div><dt>Technologie</dt><dd>HTML, CSS, JavaScript, API GUS BDL, API GIOŚ</dd></div></dl>
+        </header>
+        <div class="case__gallery">
+          <a class="case__main" href="https://borkowskiprzemo098.github.io/miastometr/" target="_blank" rel="noopener" aria-label="Miastometr: otwórz stronę">
+            <span class="browser"><span class="browser__bar" aria-hidden="true"><i></i><i></i><i></i><b>borkowskiprzemo098.github.io/miastometr</b></span><img src="shots/case/miastometr-d0.jpg" alt="Miastometr, widok na komputerze" width="1440" height="900" loading="lazy" decoding="async"></span>
+          </a>
+          <div class="case__phones"><span class="phone"><img src="shots/case/miastometr-m0.jpg" alt="Miastometr, widok na telefonie" width="390" height="844" loading="lazy" decoding="async"></span><span class="phone"><img src="shots/case/miastometr-m1.jpg" alt="Miastometr, widok na telefonie" width="390" height="844" loading="lazy" decoding="async"></span><span class="phone"><img src="shots/case/miastometr-m3.jpg" alt="Miastometr, widok na telefonie" width="390" height="844" loading="lazy" decoding="async"></span></div>
+          <span class="case__wide browser"><img src="shots/case/miastometr-d1.jpg" alt="Miastometr, kolejna sekcja strony" width="1440" height="900" loading="lazy" decoding="async"></span><span class="case__wide browser"><img src="shots/case/miastometr-d2.jpg" alt="Miastometr, kolejna sekcja strony" width="1440" height="900" loading="lazy" decoding="async"></span>
+        </div>
+        <div class="case__story">
+          <div><h4>Wyzwanie</h4><p>Dane GUS i GIOŚ są publiczne, ale rozproszone w tabelach i interfejsach API, których zwykły użytkownik nie przeczyta. Trzeba było zamienić je w coś, co da się zrozumieć w kilka sekund.</p></div>
+          <div><h4>Rozwiązanie</h4><p>Jedno pytanie na start: które miasto? Wskaźnik w formie zegara pokazuje wynik od razu, a tablica wyników, mapa odczytów i profile miast pozwalają zejść głębiej. Wyrazista, plakatowa identyfikacja odróżnia serwis od urzędowych tabel.</p></div>
+          <div><h4>Co zrobiłem</h4><p>Pobieranie i obróbka danych z API GUS BDL i GIOŚ, statyczna strona bez backendu, ranking i porównywarka miast, widok mobilny projektowany od początku pod telefon.</p></div>
+        </div>
+      </article>
+      <article class="case" id="case-az-aurum">
+        <header class="case__head">
+          <div>
+            <h3>Dziesięć Przykazań</h3>
+            <p class="case__lead">Landing page kampanii kolekcji złotych numizmatów dla AZ Aurum.</p>
+            <a class="btn btn--ink btn--sm" href="https://borkowskiprzemo098.github.io/LP-10PRZYKAZAN/" target="_blank" rel="noopener">Zobacz stronę na żywo <svg class="i" viewBox="0 0 20 20" aria-hidden="true"><path d="M6 14L14 6M7.5 6H14v6.5"/></svg></a>
+          </div>
+          <dl class="case__meta"><div><dt>Typ</dt><dd>Landing page sprzedażowy</dd></div><div><dt>Klient</dt><dd>AZ Aurum</dd></div><div><dt>Zakres</dt><dd>Układ i hierarchia treści, projekt, programowanie</dd></div><div><dt>Technologie</dt><dd>HTML, CSS, JavaScript</dd></div></dl>
+        </header>
+        <div class="case__gallery">
+          <a class="case__main" href="https://borkowskiprzemo098.github.io/LP-10PRZYKAZAN/" target="_blank" rel="noopener" aria-label="Dziesięć Przykazań: otwórz stronę">
+            <span class="browser"><span class="browser__bar" aria-hidden="true"><i></i><i></i><i></i><b>borkowskiprzemo098.github.io/LP-10PRZYKAZAN</b></span><img src="shots/case/LP-10PRZYKAZAN-d0.jpg" alt="Dziesięć Przykazań, widok na komputerze" width="1440" height="900" loading="lazy" decoding="async"></span>
+          </a>
+          <div class="case__phones"><span class="phone"><img src="shots/case/LP-10PRZYKAZAN-m0.jpg" alt="Dziesięć Przykazań, widok na telefonie" width="390" height="844" loading="lazy" decoding="async"></span><span class="phone"><img src="shots/case/LP-10PRZYKAZAN-m2.jpg" alt="Dziesięć Przykazań, widok na telefonie" width="390" height="844" loading="lazy" decoding="async"></span><span class="phone"><img src="shots/case/LP-10PRZYKAZAN-m3.jpg" alt="Dziesięć Przykazań, widok na telefonie" width="390" height="844" loading="lazy" decoding="async"></span></div>
+          <span class="case__wide browser"><img src="shots/case/LP-10PRZYKAZAN-d1.jpg" alt="Dziesięć Przykazań, kolejna sekcja strony" width="1440" height="900" loading="lazy" decoding="async"></span><span class="case__wide browser"><img src="shots/case/LP-10PRZYKAZAN-d2.jpg" alt="Dziesięć Przykazań, kolejna sekcja strony" width="1440" height="900" loading="lazy" decoding="async"></span>
+        </div>
+        <div class="case__story">
+          <div><h4>Wyzwanie</h4><p>Produkt kolekcjonerski za kilkaset złotych, kupowany prosto z reklamy. Odwiedzający musi w kilka sekund zrozumieć ofertę i uwierzyć, że to wartościowa kolekcja, a nie gadżet.</p></div>
+          <div><h4>Rozwiązanie</h4><p>Oferta pierwszego egzemplarza i cena są widoczne od razu, formularz zamówienia jest pod ręką. Niżej cała kolekcja dziesięciu motywów, zestaw kolekcjonerski, specyfikacja i certyfikat, czyli wszystko, co buduje zaufanie przed zakupem.</p></div>
+          <div><h4>Co zrobiłem</h4><p>Układ strony i kolejność argumentów, prezentacja kolekcji, specyfikacja techniczna, formularz zamówienia i dopracowana wersja na telefon.</p></div>
+        </div>
+      </article>
+      <!-- CASES:END -->
+    </div>
+  </section>
+
+  <!-- ============ MORE WORK ============ -->
+  <section class="work" id="realizacje" aria-labelledby="work-title">
+    <div class="wrap">
+      <div class="sec-head">
+        <h2 id="work-title">Pozostałe <em>realizacje</em></h2>
+        <p>Wybrane strony i narzędzia. Każda działa online, kliknij, żeby zobaczyć ją na żywo.</p>
+      </div>
+      <div class="grid">
+        <!-- WORK:START -->
+        <a class="card" href="https://borkowskiprzemo098.github.io/salon-kosmetyczny-nikola/" target="_blank" rel="noopener">
+          <span class="card__media">
+            <img src="shots/salon-kosmetyczny-nikola.jpg" alt="" width="1200" height="750" loading="lazy" decoding="async">
+            <span class="phone phone--sm"><img src="shots/salon-kosmetyczny-nikola-m.jpg" alt="" width="390" height="844" loading="lazy" decoding="async"></span>
+          </span>
+          <span class="card__body">
+            <span class="card__title">Salon Piękności Nikola</span>
+            <span class="card__cat">Strona firmowa</span>
+            <span class="card__desc">Strona salonu w Kościerzynie: przejrzysty cennik, galeria i szybkie umawianie wizyt. Zaprojektowana najpierw pod telefon.</span>
+            <span class="card__go">Zobacz stronę <svg class="i" viewBox="0 0 20 20" aria-hidden="true"><path d="M6 14L14 6M7.5 6H14v6.5"/></svg></span>
+          </span>
+        </a>
+        <a class="card" href="https://borkowskiprzemo098.github.io/generator-dokumentow-online/" target="_blank" rel="noopener">
+          <span class="card__media">
+            <img src="shots/generator-dokumentow-online.jpg" alt="" width="1200" height="750" loading="lazy" decoding="async">
+            <span class="phone phone--sm"><img src="shots/generator-dokumentow-online-m.jpg" alt="" width="390" height="844" loading="lazy" decoding="async"></span>
+          </span>
+          <span class="card__body">
+            <span class="card__title">Generator dokumentów</span>
+            <span class="card__cat">Narzędzie online</span>
+            <span class="card__desc">30 wzorów pism i dokumentów: CV, wypowiedzenia, pełnomocnictwa. Użytkownik wypełnia formularz i od razu pobiera gotowy PDF.</span>
+            <span class="card__go">Zobacz stronę <svg class="i" viewBox="0 0 20 20" aria-hidden="true"><path d="M6 14L14 6M7.5 6H14v6.5"/></svg></span>
+          </span>
+        </a>
+        <a class="card" href="https://borkowskiprzemo098.github.io/BARBERSHOP/" target="_blank" rel="noopener">
+          <span class="card__media">
+            <img src="shots/BARBERSHOP.jpg" alt="" width="1200" height="750" loading="lazy" decoding="async">
+            <span class="phone phone--sm"><img src="shots/BARBERSHOP-m.jpg" alt="" width="390" height="844" loading="lazy" decoding="async"></span>
+          </span>
+          <span class="card__body">
+            <span class="card__title">SFM Salon Fryzur Męskich</span>
+            <span class="card__cat">Strona firmowa</span>
+            <span class="card__desc">Wizerunkowa strona barbershopu. Ciemna, rzemieślnicza identyfikacja, oferta usług i rezerwacja.</span>
+            <span class="card__go">Zobacz stronę <svg class="i" viewBox="0 0 20 20" aria-hidden="true"><path d="M6 14L14 6M7.5 6H14v6.5"/></svg></span>
+          </span>
+        </a>
+        <a class="card" href="https://borkowskiprzemo098.github.io/KROWKI/" target="_blank" rel="noopener">
+          <span class="card__media">
+            <img src="shots/KROWKI.jpg" alt="" width="1200" height="750" loading="lazy" decoding="async">
+            <span class="phone phone--sm"><img src="shots/KROWKI-m.jpg" alt="" width="390" height="844" loading="lazy" decoding="async"></span>
+          </span>
+          <span class="card__body">
+            <span class="card__title">Moje Krówki</span>
+            <span class="card__cat">Strona marki</span>
+            <span class="card__desc">Rzemieślnicze krówki z logo firmy. Strona prowadzi klienta biznesowego od wyboru smaku do zamówienia na event.</span>
+            <span class="card__go">Zobacz stronę <svg class="i" viewBox="0 0 20 20" aria-hidden="true"><path d="M6 14L14 6M7.5 6H14v6.5"/></svg></span>
+          </span>
+        </a>
+        <!-- WORK:END -->
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ ABOUT ============ -->
+  <section class="about" id="o-mnie" aria-labelledby="about-title">
+    <div class="wrap about__in">
+      <div>
+        <h2 id="about-title" class="about__quote">Dobra strona nie potrzebuje <em>instrukcji</em>.</h2>
+        <p class="about__lead">Nazywam się Przemysław Borkowski. Projektuję tak, żeby odwiedzający od razu wiedział, gdzie jest i co ma zrobić, a potem sam koduję i publikuję każdą stronę.</p>
+        <p class="about__p">Robiłem kampanie sprzedażowe dla kolekcji złota, strony lokalnych firm, darmowe portale z narzędziami i aplikacje, które skracają pracę zespołu. Pracuję szybko, konkretnie i bez biurokracji.</p>
+      </div>
+      <div class="about__side">
+        <ul class="principles">
+          <li><h3>Czytelność ponad efekty</h3><p>Klient ma zrozumieć ofertę w kilka sekund. Efekty są dodatkiem, nie celem.</p></li>
+          <li><h3>Najpierw telefon</h3><p>Większość odwiedzających przychodzi z komórki, więc od niej zaczynam projekt.</p></li>
+          <li><h3>Szybkość i porządek</h3><p>Lekki, ręcznie pisany kod. Strona ładuje się szybko i dobrze wypada w Google.</p></li>
+        </ul>
+        <ul class="stack" aria-label="Technologie">
+          <li>HTML</li><li>CSS</li><li>JavaScript</li><li>TypeScript</li><li>React</li><li>Next.js</li><li>Tailwind CSS</li><li>GSAP</li><li>API i dane</li><li>SEO techniczne</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ PROCESS ============ -->
   <section class="process" id="wspolpraca" aria-labelledby="process-title">
     <div class="wrap">
-      <div class="process__head">
-        <h2 id="process-title">Jak wygląda współpraca</h2>
+      <div class="sec-head">
+        <h2 id="process-title">Jak wygląda <em>współpraca</em></h2>
         <p>Cztery etapy. Na każdym wiesz, co się dzieje i co dostaniesz.</p>
       </div>
-      <div class="steps__rail" aria-hidden="true"><span></span></div>
       <ol class="steps">
-        <li class="step"><span class="step__n">1</span><h3>Rozmowa</h3><p>Poznaję Twoją firmę, klientów i cel strony. Ustalamy zakres i termin.</p></li>
-        <li class="step"><span class="step__n">2</span><h3>Projekt</h3><p>Pokazuję układ i wygląd strony, najpierw na telefonie. Wprowadzam Twoje uwagi.</p></li>
-        <li class="step"><span class="step__n">3</span><h3>Wykonanie</h3><p>Koduję stronę ręcznie: szybką, dopracowaną w detalu i gotową pod Google.</p></li>
-        <li class="step"><span class="step__n">4</span><h3>Start i opieka</h3><p>Publikuję stronę pod Twoim adresem i szybko wprowadzam poprawki po starcie.</p></li>
+        <li><span class="steps__n">01</span><h3>Rozmowa</h3><p>Poznaję firmę, klientów i cel strony. Ustalamy zakres i termin.</p></li>
+        <li><span class="steps__n">02</span><h3>Projekt</h3><p>Pokazuję wygląd strony, najpierw na telefonie. Wprowadzam Twoje uwagi.</p></li>
+        <li><span class="steps__n">03</span><h3>Wykonanie</h3><p>Koduję stronę: szybką, dopracowaną w detalu i gotową pod Google.</p></li>
+        <li><span class="steps__n">04</span><h3>Start i opieka</h3><p>Publikuję stronę pod Twoim adresem i szybko wprowadzam poprawki.</p></li>
       </ol>
     </div>
   </section>
 
+  <!-- ============ CONTACT ============ -->
   <section class="contact" id="kontakt" aria-labelledby="contact-title">
     <div class="wrap contact__in">
-      <h2 id="contact-title">Zbudujmy stronę, z&nbsp;której będziesz dumny.</h2>
-      <p>Opisz krótko, czego potrzebujesz. Odpowiem z propozycją rozwiązania i terminem.</p>
-      <div class="contact__links">
-        <!-- CONTACT:START -->
-        <a class="btn btn--gold btn--lg" href="https://github.com/borkowskiPrzemo098" target="_blank" rel="noopener"><svg class="i" viewBox="0 0 24 24" aria-hidden="true"><path d="M9 19c-4 1.5-4-2-6-2.5m12 5v-3.5a3 3 0 0 0-.9-2.4c3-.3 6-1.4 6-6.5a5 5 0 0 0-1.4-3.5 4.7 4.7 0 0 0-.1-3.5s-1.1-.3-3.6 1.4a12.4 12.4 0 0 0-6.5 0C6.1 1.6 5 1.9 5 1.9a4.7 4.7 0 0 0-.1 3.5A5 5 0 0 0 3.5 9c0 5 3 6.2 6 6.5a3 3 0 0 0-.9 2.3V21"/></svg>GitHub</a>
-        <!-- CONTACT:END -->
+      <div class="contact__main">
+        <h2 id="contact-title">Porozmawiajmy o&nbsp;Twoim <em>projekcie</em>.</h2>
+        <p>Napisz albo zadzwoń. Opowiedz krótko, czego potrzebujesz, a wrócę z propozycją rozwiązania i terminem.</p>
+      </div>
+      <div class="contact__card">
+        <img class="contact__face" src="assets/portret.jpg" alt="" width="72" height="72">
+        <p class="contact__name"><strong>Przemysław Borkowski</strong><span>PBDesign · web designer &amp; developer</span></p>
+        <dl class="contact__list">
+          <!-- CONTACT:START -->
+          <div class="contact__soon"><dt><svg class="i" viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="M3.5 6.5L12 13l8.5-6.5"/></svg>Dane kontaktowe</dt><dd>E-mail i telefon pojawią się tutaj wkrótce.</dd></div>
+          <!-- CONTACT:END -->
+        </dl>
       </div>
     </div>
   </section>
@@ -238,14 +312,21 @@ FINISH: unreviewed and undocumented is unfinished; this build ends with the fini
 <footer class="foot">
   <div class="wrap foot__in">
     <a class="brand" href="#top" aria-label="PBDesign, na górę strony">
-      <img src="assets/mark.svg" alt="" width="30" height="30">
+      <img src="assets/mark.svg" alt="" width="32" height="32">
       <span>PB<em>Design</em></span>
     </a>
-    <p>© 2026 Przemysław Borkowski</p>
+    <nav class="foot__nav" aria-label="Stopka">
+      <a href="#oferta">Oferta</a><a href="#case-studies">Studia przypadków</a><a href="#realizacje">Realizacje</a><a href="#o-mnie">O mnie</a><a href="#kontakt">Kontakt</a>
+    </nav>
+    <div class="foot__contact">
+      <!-- FOOTCONTACT:START -->
+      <p>Przemysław Borkowski</p>
+      <!-- FOOTCONTACT:END -->
+    </div>
+    <p class="foot__copy">© 2026 Przemysław Borkowski · PBDesign</p>
   </div>
 </footer>
 
-<script src="https://cdn.jsdelivr.net/npm/lenis@1.1.13/dist/lenis.min.js" defer></script>
 <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js" defer></script>
 <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js" defer></script>
 <script src="js/main.js" defer></script>
