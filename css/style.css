@@ -463,3 +463,4 @@ html { -webkit-tap-highlight-color: transparent; }
   .card--wide { grid-template-columns: minmax(0, 1fr); }
   .card--wide .card__body { padding: clamp(36px, 4vw, 44px) 20px 24px; }
 }
+@media (max-width: 480px) { .tags { gap: 5px; } .tags span { font-size: 12px; padding: 3px 9px; } }
