@@ -1,49 +1,11 @@
 {
-  "base": "https://borkowskiprzemo098.github.io/",
-  "categories": [
-    {
-      "id": "landing",
-      "name": "Landing page sprzedażowe",
-      "lead": "Strony kampanii dla kolekcjonerskich monet i sztabek złota. Jedna oferta, jasna ścieżka do zamówienia.",
-      "projects": [
-        { "repo": "LP-10PRZYKAZAN", "title": "Dziesięć Przykazań", "client": "AZ Aurum", "desc": "Kolekcja dziesięciu numizmatów ze złota próby 999,9. Oferta pierwszego egzemplarza, certyfikat i zestaw kolekcjonerski.", "tags": ["Landing page", "Kampania", "Kolekcjonerstwo"] },
-        { "repo": "HZ-NOWY-LP1", "title": "Standard Złota", "client": "Historia Złota", "desc": "Sztabka inaugurująca kolekcję: mikrotekst grawerowany laserowo, certyfikat autentyczności, cena inauguracyjna.", "tags": ["Landing page", "Produkt premium"] },
-        { "repo": "LP-MAGIA-1", "title": "Bursztynowa Komnata", "client": "Magia Złota", "desc": "Złota moneta otwierająca kolekcję. Opowieść o emisji, parametry, gwarancja i zamówienie.", "tags": ["Landing page", "Storytelling"] },
-        { "repo": "LP-test1HZE", "title": "Jan Paweł II, złote Euro", "client": "Historia Złotych Euro", "desc": "Watykańska moneta kolekcjonerska z limitowanej emisji. Strona nastawiona na zaufanie i szybką decyzję.", "tags": ["Landing page", "Limitowana emisja"] }
-      ]
-    },
-    {
-      "id": "tools",
-      "name": "Narzędzia i portale online",
-      "lead": "Darmowe serwisy, które liczą, generują i porównują w przeglądarce. Bez rejestracji, bez czekania.",
-      "projects": [
-        { "repo": "miastometr", "title": "Miastometr", "client": "Projekt własny", "desc": "Porównywarka polskich miast na publicznych danych GUS i GIOŚ: wynagrodzenia, ludność, bezrobocie, jakość powietrza.", "tags": ["Dane publiczne", "API", "Wizualizacja"] },
-        { "repo": "generator-dokumentow-online", "title": "Generator dokumentów", "client": "Projekt własny", "desc": "30 wzorów pism: CV, wypowiedzenia, pełnomocnictwa, wezwania do zapłaty. Formularz i gotowy PDF od ręki.", "tags": ["Generator PDF", "SEO", "30 szablonów"] },
-        { "repo": "kalkulatory", "title": "Kalkulatory Online", "client": "Projekt własny", "desc": "Portal z darmowymi kalkulatorami. Cała logika działa lokalnie w przeglądarce, bez backendu.", "tags": ["Next.js", "TypeScript", "SEO"] }
-      ]
-    },
-    {
-      "id": "brands",
-      "name": "Strony firm i marek",
-      "lead": "Strony lokalnych biznesów i marek rzemieślniczych. Cennik, galeria, rezerwacja i charakter marki.",
-      "projects": [
-        { "repo": "salon-kosmetyczny-nikola", "title": "Salon Piękności Nikola", "client": "Kościerzyna", "desc": "Manicure, rzęsy, depilacja laserowa. Przejrzysty cennik i umawianie wizyt online.", "tags": ["Strona firmowa", "Rezerwacje"] },
-        { "repo": "BARBERSHOP", "title": "SFM Salon Fryzur Męskich", "client": "Barbershop", "desc": "Strzyżenie, golenie brzytwą, pielęgnacja brody. Rzemiosło pokazane w detalu.", "tags": ["Strona firmowa", "Branding"] },
-        { "repo": "KROWKI", "title": "Moje Krówki", "client": "Manufaktura", "desc": "Rzemieślnicze krówki z logo firmy. 20 smaków, zamówienia na eventy, śluby i prezenty.", "tags": ["Strona firmowa", "B2B", "Zamówienia"] },
-        { "repo": "ALUTKA-WIZYT1-LADOWARKI", "title": "AIRLOAD", "client": "Produkt autorski", "desc": "Speedloadery do magazynków ASG drukowane w 3D. Strona produktu od pomysłu do sprzedaży.", "tags": ["Strona produktu", "Druk 3D"] },
-        { "repo": "STRONA-SZYCIE", "title": "Szyte z Sercem", "client": "Rękodzieło", "desc": "Ręcznie szyte siatki i fartuszki na zamówienie, z formularzem opisu własnego projektu.", "tags": ["Strona firmowa", "Formularz"] },
-        { "repo": "TRENERTEST", "title": "ŻELAZO, trener personalny", "client": "Szablon", "desc": "Szablon strony dla trenera personalnego: mocna typografia, mierzalne efekty, zapis na trening.", "tags": ["Szablon", "Fitness"] }
-      ]
-    },
-    {
-      "id": "apps",
-      "name": "Aplikacje dla biznesu",
-      "lead": "Narzędzia robocze, które skracają codzienną pracę: oferty, opisy produktów, zadania zespołu.",
-      "projects": [
-        { "repo": "GENERATOR-OFERT", "title": "Generator Ofert", "client": "Narzędzie wewnętrzne", "desc": "Szybkie składanie ofert mailowych z gotowych bloków. Mniej kopiowania, mniej pomyłek.", "tags": ["Aplikacja", "Sprzedaż"] },
-        { "repo": "HTML-CARD-CREATOR", "title": "HTML Card Creator", "client": "Narzędzie e-commerce", "desc": "Generator opisów produktów w HTML dla sklepów internetowych.", "tags": ["Aplikacja", "E-commerce"] },
-        { "repo": "WORKFLOW-V1", "title": "Workflow", "client": "Panel zadań", "desc": "Panel do planowania i śledzenia zadań zespołu.", "tags": ["Aplikacja", "Produktywność"] }
-      ]
-    }
+  "_info": "Wybrane realizacje. Kolejność = kolejność na stronie. Po zmianie uruchom: node build.mjs",
+  "projects": [
+    { "repo": "miastometr", "url": "https://borkowskiprzemo098.github.io/miastometr/", "title": "Miastometr", "category": "Portal z danymi", "desc": "Porównywarka polskich miast oparta na publicznych danych GUS i GIOŚ. Wynagrodzenia, ludność, bezrobocie i jakość powietrza podane tak, że rozumie je każdy.", "tags": ["Dane publiczne", "API", "Wizualizacja danych"] },
+    { "repo": "LP-10PRZYKAZAN", "url": "https://borkowskiprzemo098.github.io/LP-10PRZYKAZAN/", "title": "Dziesięć Przykazań", "category": "Landing page sprzedażowy", "desc": "Strona kampanii kolekcji złotych numizmatów dla AZ Aurum. Jedna oferta, jasna ścieżka do zamówienia i elementy budujące zaufanie.", "tags": ["Kampania", "E-commerce", "Konwersja"] },
+    { "repo": "salon-kosmetyczny-nikola", "url": "https://borkowskiprzemo098.github.io/salon-kosmetyczny-nikola/", "title": "Salon Piękności Nikola", "category": "Strona firmowa", "desc": "Strona salonu w Kościerzynie: przejrzysty cennik, galeria i szybkie umawianie wizyt. Zaprojektowana najpierw pod telefon.", "tags": ["Rezerwacje", "Mobile first", "SEO lokalne"] },
+    { "repo": "generator-dokumentow-online", "url": "https://borkowskiprzemo098.github.io/generator-dokumentow-online/", "title": "Generator dokumentów", "category": "Narzędzie online", "desc": "30 wzorów pism i dokumentów: CV, wypowiedzenia, pełnomocnictwa. Użytkownik wypełnia formularz i od razu pobiera gotowy PDF.", "tags": ["Generator PDF", "30 szablonów", "SEO"] },
+    { "repo": "BARBERSHOP", "url": "https://borkowskiprzemo098.github.io/BARBERSHOP/", "title": "SFM Salon Fryzur Męskich", "category": "Strona firmowa", "desc": "Wizerunkowa strona barbershopu. Ciemna, rzemieślnicza identyfikacja, oferta usług i rezerwacja.", "tags": ["Branding", "Rezerwacje"] },
+    { "repo": "KROWKI", "url": "https://borkowskiprzemo098.github.io/KROWKI/", "title": "Moje Krówki", "category": "Strona marki", "desc": "Rzemieślnicze krówki z logo firmy. Strona prowadzi klienta biznesowego od wyboru smaku do zamówienia na event.", "tags": ["B2B", "Zamówienia"] }
   ]
 }
