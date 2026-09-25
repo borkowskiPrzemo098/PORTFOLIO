@@ -92,11 +92,10 @@
     let cx = w0 * 0.9, cy = h() + 90;
     cursor.style.transition = 'opacity .3s';
     place(cx, cy);
-    await wait(350);
     cursor.style.opacity = 1;
     // glide to the start of the first line
     const sx = cx, sy = cy;
-    await tween(700, (t) => { cx = sx + (-6 - sx) * t; cy = sy + (h() * .14 - sy) * t; place(cx, cy); });
+    await tween(320, (t) => { cx = sx + (-6 - sx) * t; cy = sy + (h() * .14 - sy) * t; place(cx, cy); });
     if (stopIntro) return finish();
     // "render" the text, cursor sweeps with the wipe
     hero.classList.add('revealing');
@@ -140,7 +139,8 @@
     if (!reduce) intro(); else finish();
   };
   if (!reduce) hero.classList.add('intro');
-  (document.fonts ? document.fonts.ready : Promise.resolve()).then(start);
+  Promise.race([document.fonts ? document.fonts.ready : Promise.resolve(), wait(500)]).then(start);
+  if (document.fonts) document.fonts.ready.then(() => { if (!drag) { const r = w / w0; measure(); if (r !== 1 && stopIntro) setW(w0 * r); } });
 
   let rT;
   addEventListener('resize', () => {
@@ -183,11 +183,15 @@
   /* ---------- Reveal ---------- */
   if (!reduce && 'IntersectionObserver' in window) {
     document.documentElement.classList.add('rv-on');
-    const targets = $$('.group__head, .art, .about__photo, .about__text, .flow');
+    const targets = $$('.about__photo, .about__text, .flow');
     targets.forEach((el) => el.classList.add('rv'));
     const io = new IntersectionObserver((es) => {
       es.forEach((e) => { if (e.isIntersecting) { e.target.classList.add('in'); io.unobserve(e.target); } });
     }, { rootMargin: '0px 0px -8% 0px', threshold: 0.08 });
     targets.forEach((el) => io.observe(el));
+    const snapIO = new IntersectionObserver((es) => {
+      es.forEach((e) => { if (e.isIntersecting) { e.target.classList.add('snap'); snapIO.unobserve(e.target); setTimeout(() => e.target.classList.remove('snap'), 1000); } });
+    }, { threshold: 0.6 });
+    $$('.art').forEach((el) => snapIO.observe(el));
   }
 })();

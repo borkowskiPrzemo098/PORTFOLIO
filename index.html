@@ -23,9 +23,9 @@
 <body>
 <!--
 THESIS: The portfolio is a designer's canvas, not a brochure: the visitor watches a page go from wireframe to live, then walks through real artboards of real, working sites. Refuses the dark hero-with-big-name + uniform card grid.
-OWN-WORLD: light tool canvas #EFEFEC, pure-white artboards, ink #0E0E10, one magenta #D6006F for selection, redlines and action. Anybody (variable width) display, Schibsted Grotesk text, Geist Mono only for measurements. Rulers, frame names, 8-handle selection boxes, dimension badges, prototype connectors.
+OWN-WORLD: light tool canvas #EFEFEC, pure-white artboards, ink #0E0E10, one magenta #D6006F for selection, redlines and action. Anybody (variable width) display, Schibsted Grotesk text, Spline Sans Mono for frame names and measurements. Rulers, frame names, 8-handle selection boxes, dimension badges, prototype connectors.
 STORY: Who he is and that he ships (first viewport) → every project live, grouped in four kinds → who stands behind it → how he works → contact in one tap.
-FIRST VIEWPORT: rulers top/left; a white "Strona główna" frame holds the headline "Od szkicu do strony live." inside a live selection box that a cursor resizes (font width follows); lede + two actions below it; right, a desktop and a phone artboard of real projects.
+FIRST VIEWPORT: rulers top/left (desktop only: below 900px they would eat a tenth of the width); a white "Strona główna" frame holds the headline "Od szkicu do strony live." inside a live selection box that a cursor resizes (font width follows); lede + two actions below it; right, a desktop and a phone artboard of real projects.
 FORM: design-tool canvas, candidate 2 of 7 (user steered to light, on-topic); seed 25b7e526.
 FINISH: unreviewed and undocumented is unfinished; this build ends with the finish review, the verdict, and DESIGN.md
 -->
@@ -66,11 +66,11 @@ FINISH: unreviewed and undocumented is unfinished; this build ends with the fini
               <span class="cursor__tag">Przemysław</span>
             </span>
           </div>
-          <p class="hero__lede">Jestem <strong>Przemysław Borkowski</strong>, web designer &amp; developer. Projektuję i sam koduję landing page’e, strony firmowe, narzędzia online i aplikacje dla biznesu. Każdy projekt poniżej działa: kliknij i sprawdź.</p>
+          <p class="hero__lede">Jestem <strong>Przemysław Borkowski</strong>, web designer &amp; developer. Projektuję i sam koduję landing page’e, strony firmowe, narzędzia online i aplikacje dla biznesu. Poniżej 16 projektów, które działają online: kliknij i sprawdź.</p>
           <div class="hero__actions">
             <a class="btn btn--accent" href="#projekty">Zobacz projekty
               <svg class="i" viewBox="0 0 20 20" aria-hidden="true"><path d="M10 3v13M4.5 10.5L10 16l5.5-5.5"/></svg></a>
-            <a class="btn btn--ghost" href="#kontakt">Napisz do mnie</a>
+            <a class="btn btn--ghost" href="#kontakt">Kontakt</a>
           </div>
         </div>
       </div>
@@ -86,12 +86,6 @@ FINISH: unreviewed and undocumented is unfinished; this build ends with the fini
         </a>
       </div>
     </div>
-
-    <ul class="facts" aria-label="W skrócie">
-      <li><b>16</b> projektów działających online</li>
-      <li><b>4</b> rodzaje realizacji: od kampanii po aplikacje</li>
-      <li>Projekt, kod i publikacja <b>w jednych rękach</b></li>
-    </ul>
   </section>
 
   <section class="work" id="projekty" aria-labelledby="work-title">
@@ -136,7 +130,7 @@ FINISH: unreviewed and undocumented is unfinished; this build ends with the fini
             <a class="art__board" href="https://borkowskiprzemo098.github.io/LP-10PRZYKAZAN/" target="_blank" rel="noopener" aria-label="Dziesięć Przykazań: otwórz stronę w nowej karcie">
               <span class="art__shot"><img src="shots/LP-10PRZYKAZAN.jpg" alt="" width="1200" height="750" loading="lazy" decoding="async"></span>
               <span class="art__phone"><img src="shots/LP-10PRZYKAZAN-m.jpg" alt="" width="390" height="844" loading="lazy" decoding="async"></span>
-              <span class="art__sel" aria-hidden="true"><i></i><i></i><i></i><i></i><em>1440 × 900</em></span>
+              <span class="art__sel" aria-hidden="true"><i></i><i></i><i></i><i></i><em><b></b>Live · otwórz</em></span>
             </a>
             <div class="art__meta">
               <h4><a href="https://borkowskiprzemo098.github.io/LP-10PRZYKAZAN/" target="_blank" rel="noopener">Dziesięć Przykazań</a></h4>
@@ -151,7 +145,7 @@ FINISH: unreviewed and undocumented is unfinished; this build ends with the fini
             <a class="art__board" href="https://borkowskiprzemo098.github.io/HZ-NOWY-LP1/" target="_blank" rel="noopener" aria-label="Standard Złota: otwórz stronę w nowej karcie">
               <span class="art__shot"><img src="shots/HZ-NOWY-LP1.jpg" alt="" width="1200" height="750" loading="lazy" decoding="async"></span>
               <span class="art__phone"><img src="shots/HZ-NOWY-LP1-m.jpg" alt="" width="390" height="844" loading="lazy" decoding="async"></span>
-              <span class="art__sel" aria-hidden="true"><i></i><i></i><i></i><i></i><em>1440 × 900</em></span>
+              <span class="art__sel" aria-hidden="true"><i></i><i></i><i></i><i></i><em><b></b>Live · otwórz</em></span>
             </a>
             <div class="art__meta">
               <h4><a href="https://borkowskiprzemo098.github.io/HZ-NOWY-LP1/" target="_blank" rel="noopener">Standard Złota</a></h4>
@@ -166,7 +160,7 @@ FINISH: unreviewed and undocumented is unfinished; this build ends with the fini
             <a class="art__board" href="https://borkowskiprzemo098.github.io/LP-MAGIA-1/" target="_blank" rel="noopener" aria-label="Bursztynowa Komnata: otwórz stronę w nowej karcie">
               <span class="art__shot"><img src="shots/LP-MAGIA-1.jpg" alt="" width="1200" height="750" loading="lazy" decoding="async"></span>
               <span class="art__phone"><img src="shots/LP-MAGIA-1-m.jpg" alt="" width="390" height="844" loading="lazy" decoding="async"></span>
-              <span class="art__sel" aria-hidden="true"><i></i><i></i><i></i><i></i><em>1440 × 900</em></span>
+              <span class="art__sel" aria-hidden="true"><i></i><i></i><i></i><i></i><em><b></b>Live · otwórz</em></span>
             </a>
             <div class="art__meta">
               <h4><a href="https://borkowskiprzemo098.github.io/LP-MAGIA-1/" target="_blank" rel="noopener">Bursztynowa Komnata</a></h4>
@@ -181,7 +175,7 @@ FINISH: unreviewed and undocumented is unfinished; this build ends with the fini
             <a class="art__board" href="https://borkowskiprzemo098.github.io/LP-test1HZE/" target="_blank" rel="noopener" aria-label="Jan Paweł II, złote Euro: otwórz stronę w nowej karcie">
               <span class="art__shot"><img src="shots/LP-test1HZE.jpg" alt="" width="1200" height="750" loading="lazy" decoding="async"></span>
               <span class="art__phone"><img src="shots/LP-test1HZE-m.jpg" alt="" width="390" height="844" loading="lazy" decoding="async"></span>
-              <span class="art__sel" aria-hidden="true"><i></i><i></i><i></i><i></i><em>1440 × 900</em></span>
+              <span class="art__sel" aria-hidden="true"><i></i><i></i><i></i><i></i><em><b></b>Live · otwórz</em></span>
             </a>
             <div class="art__meta">
               <h4><a href="https://borkowskiprzemo098.github.io/LP-test1HZE/" target="_blank" rel="noopener">Jan Paweł II, złote Euro</a></h4>
@@ -204,7 +198,7 @@ FINISH: unreviewed and undocumented is unfinished; this build ends with the fini
             <a class="art__board" href="https://borkowskiprzemo098.github.io/miastometr/" target="_blank" rel="noopener" aria-label="Miastometr: otwórz stronę w nowej karcie">
               <span class="art__shot"><img src="shots/miastometr.jpg" alt="" width="1200" height="750" loading="lazy" decoding="async"></span>
               <span class="art__phone"><img src="shots/miastometr-m.jpg" alt="" width="390" height="844" loading="lazy" decoding="async"></span>
-              <span class="art__sel" aria-hidden="true"><i></i><i></i><i></i><i></i><em>1440 × 900</em></span>
+              <span class="art__sel" aria-hidden="true"><i></i><i></i><i></i><i></i><em><b></b>Live · otwórz</em></span>
             </a>
             <div class="art__meta">
               <h4><a href="https://borkowskiprzemo098.github.io/miastometr/" target="_blank" rel="noopener">Miastometr</a></h4>
@@ -219,7 +213,7 @@ FINISH: unreviewed and undocumented is unfinished; this build ends with the fini
             <a class="art__board" href="https://borkowskiprzemo098.github.io/generator-dokumentow-online/" target="_blank" rel="noopener" aria-label="Generator dokumentów: otwórz stronę w nowej karcie">
               <span class="art__shot"><img src="shots/generator-dokumentow-online.jpg" alt="" width="1200" height="750" loading="lazy" decoding="async"></span>
               <span class="art__phone"><img src="shots/generator-dokumentow-online-m.jpg" alt="" width="390" height="844" loading="lazy" decoding="async"></span>
-              <span class="art__sel" aria-hidden="true"><i></i><i></i><i></i><i></i><em>1440 × 900</em></span>
+              <span class="art__sel" aria-hidden="true"><i></i><i></i><i></i><i></i><em><b></b>Live · otwórz</em></span>
             </a>
             <div class="art__meta">
               <h4><a href="https://borkowskiprzemo098.github.io/generator-dokumentow-online/" target="_blank" rel="noopener">Generator dokumentów</a></h4>
@@ -234,7 +228,7 @@ FINISH: unreviewed and undocumented is unfinished; this build ends with the fini
             <a class="art__board" href="https://borkowskiprzemo098.github.io/kalkulatory/" target="_blank" rel="noopener" aria-label="Kalkulatory Online: otwórz stronę w nowej karcie">
               <span class="art__shot"><img src="shots/kalkulatory.jpg" alt="" width="1200" height="750" loading="lazy" decoding="async"></span>
               <span class="art__phone"><img src="shots/kalkulatory-m.jpg" alt="" width="390" height="844" loading="lazy" decoding="async"></span>
-              <span class="art__sel" aria-hidden="true"><i></i><i></i><i></i><i></i><em>1440 × 900</em></span>
+              <span class="art__sel" aria-hidden="true"><i></i><i></i><i></i><i></i><em><b></b>Live · otwórz</em></span>
             </a>
             <div class="art__meta">
               <h4><a href="https://borkowskiprzemo098.github.io/kalkulatory/" target="_blank" rel="noopener">Kalkulatory Online</a></h4>
@@ -257,7 +251,7 @@ FINISH: unreviewed and undocumented is unfinished; this build ends with the fini
             <a class="art__board" href="https://borkowskiprzemo098.github.io/salon-kosmetyczny-nikola/" target="_blank" rel="noopener" aria-label="Salon Piękności Nikola: otwórz stronę w nowej karcie">
               <span class="art__shot"><img src="shots/salon-kosmetyczny-nikola.jpg" alt="" width="1200" height="750" loading="lazy" decoding="async"></span>
               <span class="art__phone"><img src="shots/salon-kosmetyczny-nikola-m.jpg" alt="" width="390" height="844" loading="lazy" decoding="async"></span>
-              <span class="art__sel" aria-hidden="true"><i></i><i></i><i></i><i></i><em>1440 × 900</em></span>
+              <span class="art__sel" aria-hidden="true"><i></i><i></i><i></i><i></i><em><b></b>Live · otwórz</em></span>
             </a>
             <div class="art__meta">
               <h4><a href="https://borkowskiprzemo098.github.io/salon-kosmetyczny-nikola/" target="_blank" rel="noopener">Salon Piękności Nikola</a></h4>
@@ -272,7 +266,7 @@ FINISH: unreviewed and undocumented is unfinished; this build ends with the fini
             <a class="art__board" href="https://borkowskiprzemo098.github.io/BARBERSHOP/" target="_blank" rel="noopener" aria-label="SFM Salon Fryzur Męskich: otwórz stronę w nowej karcie">
               <span class="art__shot"><img src="shots/BARBERSHOP.jpg" alt="" width="1200" height="750" loading="lazy" decoding="async"></span>
               <span class="art__phone"><img src="shots/BARBERSHOP-m.jpg" alt="" width="390" height="844" loading="lazy" decoding="async"></span>
-              <span class="art__sel" aria-hidden="true"><i></i><i></i><i></i><i></i><em>1440 × 900</em></span>
+              <span class="art__sel" aria-hidden="true"><i></i><i></i><i></i><i></i><em><b></b>Live · otwórz</em></span>
             </a>
             <div class="art__meta">
               <h4><a href="https://borkowskiprzemo098.github.io/BARBERSHOP/" target="_blank" rel="noopener">SFM Salon Fryzur Męskich</a></h4>
@@ -287,7 +281,7 @@ FINISH: unreviewed and undocumented is unfinished; this build ends with the fini
             <a class="art__board" href="https://borkowskiprzemo098.github.io/KROWKI/" target="_blank" rel="noopener" aria-label="Moje Krówki: otwórz stronę w nowej karcie">
               <span class="art__shot"><img src="shots/KROWKI.jpg" alt="" width="1200" height="750" loading="lazy" decoding="async"></span>
               <span class="art__phone"><img src="shots/KROWKI-m.jpg" alt="" width="390" height="844" loading="lazy" decoding="async"></span>
-              <span class="art__sel" aria-hidden="true"><i></i><i></i><i></i><i></i><em>1440 × 900</em></span>
+              <span class="art__sel" aria-hidden="true"><i></i><i></i><i></i><i></i><em><b></b>Live · otwórz</em></span>
             </a>
             <div class="art__meta">
               <h4><a href="https://borkowskiprzemo098.github.io/KROWKI/" target="_blank" rel="noopener">Moje Krówki</a></h4>
@@ -302,7 +296,7 @@ FINISH: unreviewed and undocumented is unfinished; this build ends with the fini
             <a class="art__board" href="https://borkowskiprzemo098.github.io/ALUTKA-WIZYT1-LADOWARKI/" target="_blank" rel="noopener" aria-label="AIRLOAD: otwórz stronę w nowej karcie">
               <span class="art__shot"><img src="shots/ALUTKA-WIZYT1-LADOWARKI.jpg" alt="" width="1200" height="750" loading="lazy" decoding="async"></span>
               <span class="art__phone"><img src="shots/ALUTKA-WIZYT1-LADOWARKI-m.jpg" alt="" width="390" height="844" loading="lazy" decoding="async"></span>
-              <span class="art__sel" aria-hidden="true"><i></i><i></i><i></i><i></i><em>1440 × 900</em></span>
+              <span class="art__sel" aria-hidden="true"><i></i><i></i><i></i><i></i><em><b></b>Live · otwórz</em></span>
             </a>
             <div class="art__meta">
               <h4><a href="https://borkowskiprzemo098.github.io/ALUTKA-WIZYT1-LADOWARKI/" target="_blank" rel="noopener">AIRLOAD</a></h4>
@@ -317,7 +311,7 @@ FINISH: unreviewed and undocumented is unfinished; this build ends with the fini
             <a class="art__board" href="https://borkowskiprzemo098.github.io/STRONA-SZYCIE/" target="_blank" rel="noopener" aria-label="Szyte z Sercem: otwórz stronę w nowej karcie">
               <span class="art__shot"><img src="shots/STRONA-SZYCIE.jpg" alt="" width="1200" height="750" loading="lazy" decoding="async"></span>
               <span class="art__phone"><img src="shots/STRONA-SZYCIE-m.jpg" alt="" width="390" height="844" loading="lazy" decoding="async"></span>
-              <span class="art__sel" aria-hidden="true"><i></i><i></i><i></i><i></i><em>1440 × 900</em></span>
+              <span class="art__sel" aria-hidden="true"><i></i><i></i><i></i><i></i><em><b></b>Live · otwórz</em></span>
             </a>
             <div class="art__meta">
               <h4><a href="https://borkowskiprzemo098.github.io/STRONA-SZYCIE/" target="_blank" rel="noopener">Szyte z Sercem</a></h4>
@@ -332,7 +326,7 @@ FINISH: unreviewed and undocumented is unfinished; this build ends with the fini
             <a class="art__board" href="https://borkowskiprzemo098.github.io/TRENERTEST/" target="_blank" rel="noopener" aria-label="ŻELAZO, trener personalny: otwórz stronę w nowej karcie">
               <span class="art__shot"><img src="shots/TRENERTEST.jpg" alt="" width="1200" height="750" loading="lazy" decoding="async"></span>
               <span class="art__phone"><img src="shots/TRENERTEST-m.jpg" alt="" width="390" height="844" loading="lazy" decoding="async"></span>
-              <span class="art__sel" aria-hidden="true"><i></i><i></i><i></i><i></i><em>1440 × 900</em></span>
+              <span class="art__sel" aria-hidden="true"><i></i><i></i><i></i><i></i><em><b></b>Live · otwórz</em></span>
             </a>
             <div class="art__meta">
               <h4><a href="https://borkowskiprzemo098.github.io/TRENERTEST/" target="_blank" rel="noopener">ŻELAZO, trener personalny</a></h4>
@@ -355,7 +349,7 @@ FINISH: unreviewed and undocumented is unfinished; this build ends with the fini
             <a class="art__board" href="https://borkowskiprzemo098.github.io/GENERATOR-OFERT/" target="_blank" rel="noopener" aria-label="Generator Ofert: otwórz stronę w nowej karcie">
               <span class="art__shot"><img src="shots/GENERATOR-OFERT.jpg" alt="" width="1200" height="750" loading="lazy" decoding="async"></span>
               <span class="art__phone"><img src="shots/GENERATOR-OFERT-m.jpg" alt="" width="390" height="844" loading="lazy" decoding="async"></span>
-              <span class="art__sel" aria-hidden="true"><i></i><i></i><i></i><i></i><em>1440 × 900</em></span>
+              <span class="art__sel" aria-hidden="true"><i></i><i></i><i></i><i></i><em><b></b>Live · otwórz</em></span>
             </a>
             <div class="art__meta">
               <h4><a href="https://borkowskiprzemo098.github.io/GENERATOR-OFERT/" target="_blank" rel="noopener">Generator Ofert</a></h4>
@@ -370,7 +364,7 @@ FINISH: unreviewed and undocumented is unfinished; this build ends with the fini
             <a class="art__board" href="https://borkowskiprzemo098.github.io/HTML-CARD-CREATOR/" target="_blank" rel="noopener" aria-label="HTML Card Creator: otwórz stronę w nowej karcie">
               <span class="art__shot"><img src="shots/HTML-CARD-CREATOR.jpg" alt="" width="1200" height="750" loading="lazy" decoding="async"></span>
               <span class="art__phone"><img src="shots/HTML-CARD-CREATOR-m.jpg" alt="" width="390" height="844" loading="lazy" decoding="async"></span>
-              <span class="art__sel" aria-hidden="true"><i></i><i></i><i></i><i></i><em>1440 × 900</em></span>
+              <span class="art__sel" aria-hidden="true"><i></i><i></i><i></i><i></i><em><b></b>Live · otwórz</em></span>
             </a>
             <div class="art__meta">
               <h4><a href="https://borkowskiprzemo098.github.io/HTML-CARD-CREATOR/" target="_blank" rel="noopener">HTML Card Creator</a></h4>
@@ -385,7 +379,7 @@ FINISH: unreviewed and undocumented is unfinished; this build ends with the fini
             <a class="art__board" href="https://borkowskiprzemo098.github.io/WORKFLOW-V1/" target="_blank" rel="noopener" aria-label="Workflow: otwórz stronę w nowej karcie">
               <span class="art__shot"><img src="shots/WORKFLOW-V1.jpg" alt="" width="1200" height="750" loading="lazy" decoding="async"></span>
               <span class="art__phone"><img src="shots/WORKFLOW-V1-m.jpg" alt="" width="390" height="844" loading="lazy" decoding="async"></span>
-              <span class="art__sel" aria-hidden="true"><i></i><i></i><i></i><i></i><em>1440 × 900</em></span>
+              <span class="art__sel" aria-hidden="true"><i></i><i></i><i></i><i></i><em><b></b>Live · otwórz</em></span>
             </a>
             <div class="art__meta">
               <h4><a href="https://borkowskiprzemo098.github.io/WORKFLOW-V1/" target="_blank" rel="noopener">Workflow</a></h4>
@@ -434,18 +428,22 @@ FINISH: unreviewed and undocumented is unfinished; this build ends with the fini
       <p class="process__lead">Cztery kroki, jedna osoba odpowiedzialna za całość. Bez przekazywania projektu między agencjami.</p>
       <ol class="flow">
         <li class="flow__node">
+          <div class="flow__art flow__art--brief" aria-hidden="true"><b>Cel strony</b><i></i><i></i><i class="s"></i></div>
           <h3>Rozmowa i cel</h3>
           <p>Ustalamy, kto ma trafić na stronę i co ma na niej zrobić. Z tego wynika cała reszta.</p>
         </li>
         <li class="flow__node">
+          <div class="flow__art flow__art--wire" aria-hidden="true"><i class="a"></i><i class="b"></i><i class="c"></i><i class="c"></i><i class="c"></i></div>
           <h3>Projekt</h3>
           <p>Układ, typografia i kolory dopasowane do marki. Najpierw widok na telefonie, potem na dużym ekranie.</p>
         </li>
         <li class="flow__node">
+          <div class="flow__art flow__art--code" aria-hidden="true"><code>&lt;section class="hero"&gt;</code><code>&nbsp;&nbsp;&lt;h1&gt;Twoja marka&lt;/h1&gt;</code><code>&lt;/section&gt;</code></div>
           <h3>Kod</h3>
           <p>Lekki, szybki kod pisany ręcznie. Strona działa płynnie na każdym urządzeniu i w każdej przeglądarce.</p>
         </li>
         <li class="flow__node">
+          <div class="flow__art flow__art--live" aria-hidden="true"><span class="dot"></span>twojafirma.pl<span class="ok">Live</span></div>
           <h3>Publikacja</h3>
           <p>Strona trafia pod prawdziwy adres. Poprawki po starcie wprowadzam szybko, bez biurokracji.</p>
         </li>
@@ -456,7 +454,7 @@ FINISH: unreviewed and undocumented is unfinished; this build ends with the fini
   <section class="contact" id="kontakt" aria-labelledby="contact-title">
     <div class="wrap contact__in">
       <h2 id="contact-title">Masz projekt? <span>Zróbmy go live.</span></h2>
-      <p>Napisz, czego potrzebujesz. Odpowiem z propozycją, jak to zrobić.</p>
+      <p>Napisz, czego potrzebujesz. Odpowiem z propozycją, jak to zrobić, i podeślę podobne realizacje.</p>
       <div class="contact__links">
         <!-- CONTACT: e-mail / telefon / LinkedIn do uzupełnienia -->
         <a class="btn btn--accent btn--lg" href="https://github.com/borkowskiPrzemo098" target="_blank" rel="noopener">

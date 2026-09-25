@@ -24,7 +24,7 @@ const card = (p, i, all) => {
             <a class="art__board" href="${url}" target="_blank" rel="noopener" aria-label="${esc(p.title)}: otwórz stronę w nowej karcie">
               <span class="art__shot"><img src="${shot}" alt="" width="1200" height="750" loading="lazy" decoding="async"></span>
               ${hasPhone ? `<span class="art__phone"><img src="${phone}" alt="" width="390" height="844" loading="lazy" decoding="async"></span>` : ''}
-              <span class="art__sel" aria-hidden="true"><i></i><i></i><i></i><i></i><em>1440 × 900</em></span>
+              <span class="art__sel" aria-hidden="true"><i></i><i></i><i></i><i></i><em><b></b>Live · otwórz</em></span>
             </a>
             <div class="art__meta">
               <h4><a href="${url}" target="_blank" rel="noopener">${esc(p.title)}</a></h4>
