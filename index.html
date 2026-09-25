@@ -4,11 +4,11 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <title>PBDesign — Przemysław Borkowski, web designer & developer</title>
-<meta name="description" content="Przemysław Borkowski, PBDesign. Projektuję i koduję landing page’e, strony firmowe i narzędzia online. Zobacz ofertę, studia przypadków i realizacje.">
-<meta name="theme-color" content="#FFFFFF">
+<meta name="description" content="Przemysław Borkowski, PBDesign. Projektuję i koduję landing page’e, strony firmowe i narzędzia online. Zobacz projekty, ofertę i sposób współpracy.">
+<meta name="theme-color" content="#1F4435">
 <meta property="og:type" content="website">
 <meta property="og:title" content="PBDesign — Przemysław Borkowski">
-<meta property="og:description" content="Strony, które pracują na Twoją markę. Oferta, studia przypadków i realizacje.">
+<meta property="og:description" content="Projektuję strony, które pracują na Twoją markę. Projekty, oferta i kontakt.">
 <meta property="og:image" content="https://borkowskiprzemo098.github.io/PORTFOLIO/assets/og.png">
 <meta property="og:url" content="https://borkowskiprzemo098.github.io/PORTFOLIO/">
 <meta name="twitter:card" content="summary_large_image">
@@ -24,14 +24,14 @@
 </head>
 <body>
 <!--
-THESIS: A bright, airy editorial portfolio built around the portrait (Dubai haze, black-and-white stripes): the person first, then what he offers, then two case studies told properly, then the rest of the work. Refuses the dark tech stage of v2 and the one-row-per-project monotony.
-OWN-WORLD: white and sky-mist #EEF2F5 grounds, ink #0E1013 type, one warm sun accent #C87A2E used only for small marks; Clash Grotesk display, Gambetta italic for single emphasized words, Satoshi text. Large 28–36px radii, soft long shadows, thin ink hairlines, black pill buttons.
-STORY: who he is and the promise (portrait) → what he can do for a company (offer) → proof in depth (2 case studies) → more work → who he is and how he works → contact details.
-FIRST VIEWPORT: left, large headline with one italic word, intro, black primary pill + outline pill, three quiet facts; right, tall portrait with a rotating PB seal and a floating "latest project" card.
-FORM: user-steered redesign v3 (light, airy premium; offer + case studies requested). v1 seed 25b7e526 superseded.
+THESIS: Heritage-premium portfolio in bottle green and burgundy: a centered statement, then the person (portrait + short bio), then the work told in depth, offer, process, FAQ and full contact details. Simple, confident, colourful sections instead of an empty white page.
+OWN-WORLD: bottle green #1F4435 and burgundy #6B1E2E drench alternating sections over ivory #F6F3EC; sand #E4C99A is the accent on dark grounds. Clash Grotesk display, Gambetta italic for one emphasised word, Satoshi text. 28px radii, soft shadows, pill buttons.
+STORY: statement (hero) → who he is (photo + bio) → proof (case studies, more work) → what he offers → how it works → answers → contact details.
+FIRST VIEWPORT: full-height bottle-green stage, headline centered and very large with a sand italic word, name/role line under it, sand primary pill + outline pill centered, scroll cue at the bottom.
+FORM: user-steered redesign v4 (centered hero, about+photo under hero, bottle green + burgundy, competitor-simple structure).
 FINISH: unreviewed and undocumented is unfinished; this build ends with the finish review, the verdict, and DESIGN.md
 -->
-<a class="skip" href="#oferta">Przejdź do treści</a>
+<a class="skip" href="#o-mnie">Przejdź do treści</a>
 
 <header class="nav" id="nav">
   <div class="nav__in">
@@ -40,19 +40,19 @@ FINISH: unreviewed and undocumented is unfinished; this build ends with the fini
       <span>PB<em>Design</em></span>
     </a>
     <nav class="nav__links" aria-label="Główna nawigacja">
-      <a href="#oferta">Oferta</a>
-      <a href="#case-studies">Studia przypadków</a>
-      <a href="#realizacje">Realizacje</a>
       <a href="#o-mnie">O mnie</a>
+      <a href="#projekty">Projekty</a>
+      <a href="#oferta">Oferta</a>
+      <a href="#faq">FAQ</a>
     </nav>
-    <a class="btn btn--ink btn--sm" href="#kontakt">Kontakt</a>
+    <a class="btn btn--sand btn--sm" href="#kontakt">Kontakt</a>
     <button class="nav__burger" type="button" aria-label="Otwórz menu" aria-expanded="false" aria-controls="menu"><span></span><span></span></button>
   </div>
   <div class="menu" id="menu" hidden>
-    <a href="#oferta">Oferta</a>
-    <a href="#case-studies">Studia przypadków</a>
-    <a href="#realizacje">Realizacje</a>
     <a href="#o-mnie">O mnie</a>
+    <a href="#projekty">Projekty</a>
+    <a href="#oferta">Oferta</a>
+    <a href="#faq">FAQ</a>
     <a href="#kontakt">Kontakt</a>
   </div>
 </header>
@@ -61,85 +61,52 @@ FINISH: unreviewed and undocumented is unfinished; this build ends with the fini
   <!-- ============ HERO ============ -->
   <section class="hero" aria-labelledby="hero-title">
     <div class="wrap hero__in">
-      <div class="hero__text">
-        <h1 id="hero-title" class="hero__title">
-          <span class="ln"><span>Strony, które</span></span>
-          <span class="ln"><span><em>pracują</em> na</span></span>
-          <span class="ln"><span>Twoją markę.</span></span>
-        </h1>
-        <p class="hero__lede">Jestem <strong>Przemysław Borkowski</strong>, web designer i&nbsp;developer. Projektuję i&nbsp;sam koduję landing page’e, strony firmowe i&nbsp;narzędzia online. Od pierwszego szkicu po działającą stronę pod Twoim adresem.</p>
-        <div class="hero__cta">
-          <a class="btn btn--ink" href="#case-studies">Zobacz realizacje
-            <svg class="i" viewBox="0 0 20 20" aria-hidden="true"><path d="M10 3.5v13M4.5 11l5.5 5.5 5.5-5.5"/></svg></a>
-          <a class="btn btn--outline" href="#oferta">Co mogę dla Ciebie zrobić</a>
-        </div>
-        <ul class="hero__facts">
-          <li><b>16</b><span>wdrożonych projektów online</span></li>
-          <li><b>4</b><span>rodzaje usług, od landing page po narzędzia</span></li>
-          <li><b>A–Z</b><span>projekt, kod i publikacja w jednych rękach</span></li>
-        </ul>
-      </div>
-
-      <div class="hero__visual">
-        <figure class="portrait">
-          <!-- PHOTO:START -->
-          <img src="assets/portret.jpg" alt="Przemysław Borkowski" width="912" height="1172" fetchpriority="high">
-          <!-- PHOTO:END -->
-        </figure>
-        <svg class="seal" viewBox="0 0 120 120" aria-hidden="true">
-          <defs><path id="sealPath" d="M60 60m-44 0a44 44 0 1 1 88 0a44 44 0 1 1-88 0"/></defs>
-          <circle cx="60" cy="60" r="58" class="seal__bg"/>
-          <text><textPath href="#sealPath">WEB DESIGN · DEVELOPMENT · </textPath></text>
-          <circle cx="60" cy="60" r="5" class="seal__dot"/>
-        </svg>
-        <a class="latest" href="https://borkowskiprzemo098.github.io/miastometr/" target="_blank" rel="noopener">
-          <img src="shots/miastometr.jpg" alt="" width="120" height="75">
-          <span><small>Ostatnia realizacja</small><strong>Miastometr</strong></span>
-          <svg class="i" viewBox="0 0 20 20" aria-hidden="true"><path d="M6 14L14 6M7.5 6H14v6.5"/></svg>
-        </a>
+      <h1 id="hero-title" class="hero__title">
+        <span class="ln"><span>Projektuję strony,</span></span>
+        <span class="ln"><span>które <em>pracują</em></span></span>
+        <span class="ln"><span>na Twoją markę.</span></span>
+      </h1>
+      <p class="hero__who">Przemysław Borkowski <i></i> web designer &amp; developer</p>
+      <div class="hero__cta">
+        <a class="btn btn--sand" href="#projekty">Zobacz projekty</a>
+        <a class="btn btn--ghost" href="#kontakt">Porozmawiajmy</a>
       </div>
     </div>
+    <a class="hero__scroll" href="#o-mnie" aria-label="Przewiń do sekcji O mnie">
+      <svg class="i" viewBox="0 0 20 20" aria-hidden="true"><path d="M10 3.5v13M4.5 11l5.5 5.5 5.5-5.5"/></svg>
+    </a>
   </section>
 
-  <!-- ============ OFFER ============ -->
-  <section class="offer" id="oferta" aria-labelledby="offer-title">
-    <div class="wrap">
-      <div class="sec-head">
-        <h2 id="offer-title">W czym mogę pomóc <em>Twojej</em> firmie</h2>
-        <p>Każdy projekt prowadzę sam, od rozmowy o celu po publikację. Dzięki temu nic nie ginie między projektantem a programistą.</p>
+  <!-- ============ ABOUT ============ -->
+  <section class="about" id="o-mnie" aria-labelledby="about-title">
+    <div class="wrap about__in">
+      <figure class="about__photo">
+        <!-- PHOTO:START -->
+          <img src="assets/portret.jpg" alt="Przemysław Borkowski" width="912" height="1172" fetchpriority="high">
+          <!-- PHOTO:END -->
+      </figure>
+      <div class="about__text">
+        <h2 id="about-title">Cześć, jestem <em>Przemysław</em>.</h2>
+        <p class="about__lead">Projektuję i sam koduję strony internetowe dla firm: od landing page’y pod kampanie, przez strony firmowe, po narzędzia online.</p>
+        <p>Łączę projektowanie z programowaniem, więc nic nie ginie po drodze między pomysłem a działającą stroną. Pracuję konkretnie i szybko, a każdą stronę zaczynam od widoku na telefonie, bo stamtąd przychodzi większość klientów.</p>
+        <ul class="facts">
+          <li><b>16</b><span>wdrożonych projektów online</span></li>
+          <li><b>4</b><span>rodzaje usług</span></li>
+          <li><b>A–Z</b><span>projekt, kod i publikacja</span></li>
+        </ul>
+        <ul class="stack" aria-label="Technologie">
+          <li>HTML</li><li>CSS</li><li>JavaScript</li><li>TypeScript</li><li>React</li><li>Next.js</li><li>Tailwind CSS</li><li>SEO</li>
+        </ul>
       </div>
-      <ul class="services">
-        <li class="svc" data-preview="shots/LP-10PRZYKAZAN.jpg">
-          <h3>Landing page sprzedażowy</h3>
-          <p class="svc__desc">Jedna strona pod kampanię lub produkt. Jasna oferta, argumenty w dobrej kolejności i prosta droga do zamówienia.</p>
-          <ul class="svc__list"><li>Układ i hierarchia treści</li><li>Formularz lub integracja zamówień</li><li>Wersja mobilna dopracowana w detalu</li></ul>
-        </li>
-        <li class="svc" data-preview="shots/salon-kosmetyczny-nikola.jpg">
-          <h3>Strona firmowa</h3>
-          <p class="svc__desc">Wizytówka firmy, która buduje zaufanie: oferta, cennik, galeria, opinie i szybki kontakt lub rezerwacja.</p>
-          <ul class="svc__list"><li>Identyfikacja dopasowana do marki</li><li>Rezerwacje i kontakt jednym kliknięciem</li><li>SEO lokalne i szybkie ładowanie</li></ul>
-        </li>
-        <li class="svc" data-preview="shots/generator-dokumentow-online.jpg">
-          <h3>Narzędzia i portale online</h3>
-          <p class="svc__desc">Kalkulatory, generatory dokumentów, porównywarki. Serwisy, które rozwiązują konkretny problem i przyciągają ruch z Google.</p>
-          <ul class="svc__list"><li>Logika działająca w przeglądarce</li><li>Praca z danymi i API</li><li>Generowanie PDF</li></ul>
-        </li>
-        <li class="svc" data-preview="shots/BARBERSHOP.jpg">
-          <h3>Odświeżenie istniejącej strony</h3>
-          <p class="svc__desc">Nowy wygląd i porządek w treści dla strony, która przestała pracować. Zachowuję to, co działa, poprawiam resztę.</p>
-          <ul class="svc__list"><li>Przegląd i plan zmian</li><li>Nowy projekt i wdrożenie</li><li>Poprawa szybkości i wersji mobilnej</li></ul>
-        </li>
-      </ul>
     </div>
-    <div class="svc-preview" aria-hidden="true"><img src="shots/LP-10PRZYKAZAN.jpg" alt="" width="1200" height="750" loading="lazy"></div>
   </section>
 
   <!-- ============ CASE STUDIES ============ -->
-  <section class="cases" id="case-studies" aria-labelledby="cases-title">
+  <section class="cases" id="projekty" aria-labelledby="cases-title">
     <div class="wrap">
       <div class="sec-head">
-        <h2 id="cases-title">Studia <em>przypadków</em></h2>
-        <p>Dwa projekty rozpisane krok po kroku: od problemu, przez rozwiązanie, po to, co dokładnie zrobiłem.</p>
+        <h2 id="cases-title">Wybrane <em>projekty</em></h2>
+        <p>Dwa projekty rozpisane krok po kroku: problem, rozwiązanie i to, co dokładnie zrobiłem.</p>
       </div>
       <!-- CASES:START -->
       <article class="case" id="case-miastometr">
@@ -195,7 +162,7 @@ FINISH: unreviewed and undocumented is unfinished; this build ends with the fini
     <div class="wrap">
       <div class="sec-head">
         <h2 id="work-title">Pozostałe <em>realizacje</em></h2>
-        <p>Wybrane strony i narzędzia. Każda działa online, kliknij, żeby zobaczyć ją na żywo.</p>
+        <p>Każda z tych stron działa online. Kliknij, żeby zobaczyć ją na żywo.</p>
       </div>
       <div class="grid">
         <!-- WORK:START -->
@@ -252,24 +219,39 @@ FINISH: unreviewed and undocumented is unfinished; this build ends with the fini
     </div>
   </section>
 
-  <!-- ============ ABOUT ============ -->
-  <section class="about" id="o-mnie" aria-labelledby="about-title">
-    <div class="wrap about__in">
-      <div>
-        <h2 id="about-title" class="about__quote">Dobra strona nie potrzebuje <em>instrukcji</em>.</h2>
-        <p class="about__lead">Nazywam się Przemysław Borkowski. Projektuję tak, żeby odwiedzający od razu wiedział, gdzie jest i co ma zrobić, a potem sam koduję i publikuję każdą stronę.</p>
-        <p class="about__p">Robiłem kampanie sprzedażowe dla kolekcji złota, strony lokalnych firm, darmowe portale z narzędziami i aplikacje, które skracają pracę zespołu. Pracuję szybko, konkretnie i bez biurokracji.</p>
+  <!-- ============ OFFER ============ -->
+  <section class="offer" id="oferta" aria-labelledby="offer-title">
+    <div class="wrap">
+      <div class="sec-head">
+        <h2 id="offer-title">W czym mogę <em>pomóc</em></h2>
+        <p>Każdy projekt prowadzę sam, od rozmowy o celu po publikację strony pod Twoim adresem.</p>
       </div>
-      <div class="about__side">
-        <ul class="principles">
-          <li><h3>Czytelność ponad efekty</h3><p>Klient ma zrozumieć ofertę w kilka sekund. Efekty są dodatkiem, nie celem.</p></li>
-          <li><h3>Najpierw telefon</h3><p>Większość odwiedzających przychodzi z komórki, więc od niej zaczynam projekt.</p></li>
-          <li><h3>Szybkość i porządek</h3><p>Lekki, ręcznie pisany kod. Strona ładuje się szybko i dobrze wypada w Google.</p></li>
-        </ul>
-        <ul class="stack" aria-label="Technologie">
-          <li>HTML</li><li>CSS</li><li>JavaScript</li><li>TypeScript</li><li>React</li><li>Next.js</li><li>Tailwind CSS</li><li>GSAP</li><li>API i dane</li><li>SEO techniczne</li>
-        </ul>
-      </div>
+      <ul class="services">
+        <li class="svc svc--green">
+          <svg class="svc__ic" viewBox="0 0 32 32" aria-hidden="true"><rect x="4" y="6" width="24" height="20" rx="3"/><path d="M4 11h24M9 16h8M9 20h5"/><circle cx="22" cy="19" r="3"/></svg>
+          <h3>Landing page sprzedażowy</h3>
+          <p>Jedna strona pod kampanię lub produkt. Jasna oferta i prosta droga do zamówienia.</p>
+          <ul><li>Układ i kolejność argumentów</li><li>Formularz zamówienia</li><li>Dopracowana wersja mobilna</li></ul>
+        </li>
+        <li class="svc svc--wine">
+          <svg class="svc__ic" viewBox="0 0 32 32" aria-hidden="true"><path d="M5 14L16 5l11 9v12a1 1 0 0 1-1 1H6a1 1 0 0 1-1-1z"/><path d="M13 27v-8h6v8"/></svg>
+          <h3>Strona firmowa</h3>
+          <p>Wizytówka, która buduje zaufanie: oferta, cennik, galeria i szybki kontakt.</p>
+          <ul><li>Wygląd dopasowany do marki</li><li>Rezerwacje i kontakt jednym kliknięciem</li><li>SEO lokalne</li></ul>
+        </li>
+        <li class="svc svc--wine">
+          <svg class="svc__ic" viewBox="0 0 32 32" aria-hidden="true"><rect x="6" y="4" width="20" height="24" rx="3"/><path d="M10 10h12M10 15h12M10 20h4M18 20h4"/></svg>
+          <h3>Narzędzia i portale online</h3>
+          <p>Kalkulatory, generatory dokumentów, porównywarki, które przyciągają ruch z Google.</p>
+          <ul><li>Logika działająca w przeglądarce</li><li>Dane i API</li><li>Generowanie PDF</li></ul>
+        </li>
+        <li class="svc svc--green">
+          <svg class="svc__ic" viewBox="0 0 32 32" aria-hidden="true"><path d="M26 16a10 10 0 1 1-3-7.1"/><path d="M27 5v6h-6"/></svg>
+          <h3>Odświeżenie strony</h3>
+          <p>Nowy wygląd i porządek w treści dla strony, która przestała pracować.</p>
+          <ul><li>Przegląd i plan zmian</li><li>Nowy projekt i wdrożenie</li><li>Szybkość i wersja mobilna</li></ul>
+        </li>
+      </ul>
     </div>
   </section>
 
@@ -289,6 +271,23 @@ FINISH: unreviewed and undocumented is unfinished; this build ends with the fini
     </div>
   </section>
 
+  <!-- ============ FAQ ============ -->
+  <section class="faq" id="faq" aria-labelledby="faq-title">
+    <div class="wrap faq__in">
+      <div class="sec-head sec-head--stack">
+        <h2 id="faq-title">Częste <em>pytania</em></h2>
+        <p>Nie ma tu odpowiedzi na Twoje pytanie? Napisz, odpowiem bez zobowiązań.</p>
+      </div>
+      <div class="qa">
+        <details><summary>Ile trwa wykonanie strony?</summary><p>To zależy od zakresu. Termin podaję po pierwszej rozmowie, kiedy wiem, ile podstron i funkcji potrzebujesz, i trzymam się go.</p></details>
+        <details><summary>Ile kosztuje strona?</summary><p>Wycenę przygotowuję indywidualnie po rozmowie o celu i zakresie. Dostajesz jedną, konkretną kwotę bez ukrytych kosztów.</p></details>
+        <details><summary>Czy strona będzie działać na telefonie?</summary><p>Tak. Każdy projekt zaczynam od widoku na telefonie, a dopiero potem rozbudowuję go na tablet i komputer.</p></details>
+        <details><summary>Czy pomożesz z domeną i publikacją?</summary><p>Tak. Publikuję stronę pod Twoim adresem i pomagam podłączyć domenę, żebyś nie musiał się tym zajmować.</p></details>
+        <details><summary>Czy mogę później wprowadzać zmiany?</summary><p>Tak. Po starcie szybko wprowadzam poprawki, a jeśli potrzebujesz, zostaję przy stronie na dłużej.</p></details>
+      </div>
+    </div>
+  </section>
+
   <!-- ============ CONTACT ============ -->
   <section class="contact" id="kontakt" aria-labelledby="contact-title">
     <div class="wrap contact__in">
@@ -297,8 +296,10 @@ FINISH: unreviewed and undocumented is unfinished; this build ends with the fini
         <p>Napisz albo zadzwoń. Opowiedz krótko, czego potrzebujesz, a wrócę z propozycją rozwiązania i terminem.</p>
       </div>
       <div class="contact__card">
-        <img class="contact__face" src="assets/portret.jpg" alt="" width="72" height="72">
-        <p class="contact__name"><strong>Przemysław Borkowski</strong><span>PBDesign · web designer &amp; developer</span></p>
+        <div class="contact__id">
+          <img class="contact__face" src="assets/portret.jpg" alt="" width="72" height="72">
+          <p><strong>Przemysław Borkowski</strong><span>PBDesign · web designer &amp; developer</span></p>
+        </div>
         <dl class="contact__list">
           <!-- CONTACT:START -->
           <div class="contact__soon"><dt><svg class="i" viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="M3.5 6.5L12 13l8.5-6.5"/></svg>Dane kontaktowe</dt><dd>E-mail i telefon pojawią się tutaj wkrótce.</dd></div>
@@ -316,7 +317,7 @@ FINISH: unreviewed and undocumented is unfinished; this build ends with the fini
       <span>PB<em>Design</em></span>
     </a>
     <nav class="foot__nav" aria-label="Stopka">
-      <a href="#oferta">Oferta</a><a href="#case-studies">Studia przypadków</a><a href="#realizacje">Realizacje</a><a href="#o-mnie">O mnie</a><a href="#kontakt">Kontakt</a>
+      <a href="#o-mnie">O mnie</a><a href="#projekty">Projekty</a><a href="#oferta">Oferta</a><a href="#faq">FAQ</a><a href="#kontakt">Kontakt</a>
     </nav>
     <div class="foot__contact">
       <!-- FOOTCONTACT:START -->
