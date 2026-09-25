@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <title>PBDesign — Przemysław Borkowski, web designer & developer</title>
-<meta name="description" content="Przemysław Borkowski, PBDesign. Projektuję i koduję landing page’e, strony firmowe i narzędzia online. Zobacz projekty, ofertę i sposób współpracy.">
+<meta name="description" content="Przemysław Borkowski, PBDesign. Projektuję i koduję landing page’e, strony firmowe i narzędzia online. Zobacz wybrane projekty, ofertę i sposób współpracy.">
 <meta name="theme-color" content="#1F4435">
 <meta property="og:type" content="website">
 <meta property="og:title" content="PBDesign — Przemysław Borkowski">
@@ -101,121 +101,130 @@ FINISH: unreviewed and undocumented is unfinished; this build ends with the fini
     </div>
   </section>
 
-  <!-- ============ CASE STUDIES ============ -->
+  <!-- ============ PROJECTS ============ -->
   <section class="cases" id="projekty" aria-labelledby="cases-title">
     <div class="wrap">
       <div class="sec-head">
         <h2 id="cases-title">Wybrane <em>projekty</em></h2>
-        <p>Dwa projekty rozpisane krok po kroku: problem, rozwiązanie i to, co dokładnie zrobiłem.</p>
+        <p>Strony dla klientów i projekty własne. Każdy działa online: kliknij, żeby zobaczyć go na żywo.</p>
       </div>
-      <!-- CASES:START -->
-      <article class="case" id="case-miastometr">
-        <header class="case__head">
-          <div>
-            <h3>Miastometr</h3>
-            <p class="case__lead">Porównywarka polskich miast oparta wyłącznie na publicznych danych.</p>
-            <a class="btn btn--ink btn--sm" href="https://borkowskiprzemo098.github.io/miastometr/" target="_blank" rel="noopener">Zobacz stronę na żywo <svg class="i" viewBox="0 0 20 20" aria-hidden="true"><path d="M6 14L14 6M7.5 6H14v6.5"/></svg></a>
-          </div>
-          <dl class="case__meta"><div><dt>Typ</dt><dd>Portal z danymi</dd></div><div><dt>Zakres</dt><dd>Projekt, programowanie, przetwarzanie danych</dd></div><div><dt>Technologie</dt><dd>HTML, CSS, JavaScript, API GUS BDL, API GIOŚ</dd></div></dl>
-        </header>
-        <div class="case__gallery">
-          <a class="case__main" href="https://borkowskiprzemo098.github.io/miastometr/" target="_blank" rel="noopener" aria-label="Miastometr: otwórz stronę">
-            <span class="browser"><span class="browser__bar" aria-hidden="true"><i></i><i></i><i></i><b>borkowskiprzemo098.github.io/miastometr</b></span><img src="shots/case/miastometr-d0.jpg" alt="Miastometr, widok na komputerze" width="1440" height="900" loading="lazy" decoding="async"></span>
+      <!-- PROJECTS:START -->
+      <div class="group" id="strony">
+        <div class="group__head">
+          <h3>Gotowa strona<span>1</span></h3>
+          <p>Strona zrealizowana dla klienta i działająca pod jego własną domeną.</p>
+        </div>
+        <div class="grid">
+          <a class="card card--wide" href="https://salonpieknoscinikola.pl/" target="_blank" rel="noopener">
+            <span class="card__media">
+              <span class="browser"><span class="browser__bar" aria-hidden="true"><i></i><i></i><i></i><b>salonpieknoscinikola.pl</b></span><img src="shots/salonpieknoscinikola.jpg" alt="Salon Piękności Nikola, widok na komputerze" width="1440" height="900" loading="lazy" decoding="async"></span>
+              <span class="phone phone--sm"><img src="shots/salonpieknoscinikola-m.jpg" alt="Salon Piękności Nikola, widok na telefonie" width="390" height="844" loading="lazy" decoding="async"></span>
+            </span>
+            <span class="card__body">
+              <span class="card__title">Salon Piękności Nikola</span>
+              <span class="card__cat">Strona firmowa · Kościerzyna</span>
+              <span class="card__desc">Strona salonu kosmetycznego: manicure, pedicure, pielęgnacja twarzy, rzęsy i depilacja laserowa. Przejrzysty cennik, galeria, opinie i szybkie umawianie wizyt. Projektowana najpierw pod telefon, bo stamtąd przychodzi większość klientek.</span>
+              <span class="tags"><span>Strona firmowa</span><span>Rezerwacje</span><span>Cennik</span><span>SEO lokalne</span></span>
+              <span class="card__go">Zobacz stronę na żywo <svg class="i" viewBox="0 0 20 20" aria-hidden="true"><path d="M6 14L14 6M7.5 6H14v6.5"/></svg></span>
+            </span>
           </a>
-          <div class="case__phones"><span class="phone"><img src="shots/case/miastometr-m0.jpg" alt="Miastometr, widok na telefonie" width="390" height="844" loading="lazy" decoding="async"></span><span class="phone"><img src="shots/case/miastometr-m1.jpg" alt="Miastometr, widok na telefonie" width="390" height="844" loading="lazy" decoding="async"></span><span class="phone"><img src="shots/case/miastometr-m3.jpg" alt="Miastometr, widok na telefonie" width="390" height="844" loading="lazy" decoding="async"></span></div>
-          <span class="case__wide browser"><img src="shots/case/miastometr-d1.jpg" alt="Miastometr, kolejna sekcja strony" width="1440" height="900" loading="lazy" decoding="async"></span><span class="case__wide browser"><img src="shots/case/miastometr-d2.jpg" alt="Miastometr, kolejna sekcja strony" width="1440" height="900" loading="lazy" decoding="async"></span>
         </div>
-        <div class="case__story">
-          <div><h4>Wyzwanie</h4><p>Dane GUS i GIOŚ są publiczne, ale rozproszone w tabelach i interfejsach API, których zwykły użytkownik nie przeczyta. Trzeba było zamienić je w coś, co da się zrozumieć w kilka sekund.</p></div>
-          <div><h4>Rozwiązanie</h4><p>Jedno pytanie na start: które miasto? Wskaźnik w formie zegara pokazuje wynik od razu, a tablica wyników, mapa odczytów i profile miast pozwalają zejść głębiej. Wyrazista, plakatowa identyfikacja odróżnia serwis od urzędowych tabel.</p></div>
-          <div><h4>Co zrobiłem</h4><p>Pobieranie i obróbka danych z API GUS BDL i GIOŚ, statyczna strona bez backendu, ranking i porównywarka miast, widok mobilny projektowany od początku pod telefon.</p></div>
+      </div>
+      <div class="group" id="landing">
+        <div class="group__head">
+          <h3>Gotowe landing page<span>2</span></h3>
+          <p>Strony kampanii sprzedażowych dla AZ Aurum, działające w sklepie klienta.</p>
         </div>
-      </article>
-      <article class="case" id="case-az-aurum">
-        <header class="case__head">
-          <div>
-            <h3>Dziesięć Przykazań</h3>
-            <p class="case__lead">Landing page kampanii kolekcji złotych numizmatów dla AZ Aurum.</p>
-            <a class="btn btn--ink btn--sm" href="https://borkowskiprzemo098.github.io/LP-10PRZYKAZAN/" target="_blank" rel="noopener">Zobacz stronę na żywo <svg class="i" viewBox="0 0 20 20" aria-hidden="true"><path d="M6 14L14 6M7.5 6H14v6.5"/></svg></a>
-          </div>
-          <dl class="case__meta"><div><dt>Typ</dt><dd>Landing page sprzedażowy</dd></div><div><dt>Klient</dt><dd>AZ Aurum</dd></div><div><dt>Zakres</dt><dd>Układ i hierarchia treści, projekt, programowanie</dd></div><div><dt>Technologie</dt><dd>HTML, CSS, JavaScript</dd></div></dl>
-        </header>
-        <div class="case__gallery">
-          <a class="case__main" href="https://borkowskiprzemo098.github.io/LP-10PRZYKAZAN/" target="_blank" rel="noopener" aria-label="Dziesięć Przykazań: otwórz stronę">
-            <span class="browser"><span class="browser__bar" aria-hidden="true"><i></i><i></i><i></i><b>borkowskiprzemo098.github.io/LP-10PRZYKAZAN</b></span><img src="shots/case/LP-10PRZYKAZAN-d0.jpg" alt="Dziesięć Przykazań, widok na komputerze" width="1440" height="900" loading="lazy" decoding="async"></span>
+        <div class="grid">
+          <a class="card card--half" href="https://azaurum.pl/historia_zlotych_euro,35" target="_blank" rel="noopener">
+            <span class="card__media">
+              <span class="browser"><span class="browser__bar" aria-hidden="true"><i></i><i></i><i></i><b>azaurum.pl/historia_zlotych_euro,35</b></span><img src="shots/az-historia-zlotych-euro.jpg" alt="Historia Złotych Euro, widok na komputerze" width="1440" height="900" loading="lazy" decoding="async"></span>
+              <span class="phone phone--sm"><img src="shots/az-historia-zlotych-euro-m.jpg" alt="Historia Złotych Euro, widok na telefonie" width="390" height="844" loading="lazy" decoding="async"></span>
+            </span>
+            <span class="card__body">
+              <span class="card__title">Historia Złotych Euro</span>
+              <span class="card__cat">Landing page · AZ Aurum</span>
+              <span class="card__desc">Kampania kolekcji złotych monet euro, otwierana monetą z Janem Pawłem II. Cena specjalna i zamówienie widoczne od razu, a niżej historia monety, parametry i gwarancje.</span>
+              <span class="tags"><span>Landing page</span><span>Kampania</span><span>E-commerce</span></span>
+              <span class="card__go">Zobacz stronę na żywo <svg class="i" viewBox="0 0 20 20" aria-hidden="true"><path d="M6 14L14 6M7.5 6H14v6.5"/></svg></span>
+            </span>
           </a>
-          <div class="case__phones"><span class="phone"><img src="shots/case/LP-10PRZYKAZAN-m0.jpg" alt="Dziesięć Przykazań, widok na telefonie" width="390" height="844" loading="lazy" decoding="async"></span><span class="phone"><img src="shots/case/LP-10PRZYKAZAN-m2.jpg" alt="Dziesięć Przykazań, widok na telefonie" width="390" height="844" loading="lazy" decoding="async"></span><span class="phone"><img src="shots/case/LP-10PRZYKAZAN-m3.jpg" alt="Dziesięć Przykazań, widok na telefonie" width="390" height="844" loading="lazy" decoding="async"></span></div>
-          <span class="case__wide browser"><img src="shots/case/LP-10PRZYKAZAN-d1.jpg" alt="Dziesięć Przykazań, kolejna sekcja strony" width="1440" height="900" loading="lazy" decoding="async"></span><span class="case__wide browser"><img src="shots/case/LP-10PRZYKAZAN-d2.jpg" alt="Dziesięć Przykazań, kolejna sekcja strony" width="1440" height="900" loading="lazy" decoding="async"></span>
+          <a class="card card--half" href="https://azaurum.pl/250_lat_usa,37" target="_blank" rel="noopener">
+            <span class="card__media">
+              <span class="browser"><span class="browser__bar" aria-hidden="true"><i></i><i></i><i></i><b>azaurum.pl/250_lat_usa,37</b></span><img src="shots/az-250-lat-usa.jpg" alt="250 lat USA, widok na komputerze" width="1440" height="900" loading="lazy" decoding="async"></span>
+              <span class="phone phone--sm"><img src="shots/az-250-lat-usa-m.jpg" alt="250 lat USA, widok na telefonie" width="390" height="844" loading="lazy" decoding="async"></span>
+            </span>
+            <span class="card__body">
+              <span class="card__title">250 lat USA</span>
+              <span class="card__cat">Landing page · AZ Aurum</span>
+              <span class="card__desc">Kolekcja złotych monet na 250. rocznicę powstania USA, otwierana Statuą Wolności. Oferta promocyjna, oś czasu historii i prezentacja całej kolekcji.</span>
+              <span class="tags"><span>Landing page</span><span>Kampania</span><span>Storytelling</span></span>
+              <span class="card__go">Zobacz stronę na żywo <svg class="i" viewBox="0 0 20 20" aria-hidden="true"><path d="M6 14L14 6M7.5 6H14v6.5"/></svg></span>
+            </span>
+          </a>
         </div>
-        <div class="case__story">
-          <div><h4>Wyzwanie</h4><p>Produkt kolekcjonerski za kilkaset złotych, kupowany prosto z reklamy. Odwiedzający musi w kilka sekund zrozumieć ofertę i uwierzyć, że to wartościowa kolekcja, a nie gadżet.</p></div>
-          <div><h4>Rozwiązanie</h4><p>Oferta pierwszego egzemplarza i cena są widoczne od razu, formularz zamówienia jest pod ręką. Niżej cała kolekcja dziesięciu motywów, zestaw kolekcjonerski, specyfikacja i certyfikat, czyli wszystko, co buduje zaufanie przed zakupem.</p></div>
-          <div><h4>Co zrobiłem</h4><p>Układ strony i kolejność argumentów, prezentacja kolekcji, specyfikacja techniczna, formularz zamówienia i dopracowana wersja na telefon.</p></div>
+      </div>
+      <div class="group" id="wlasne">
+        <div class="group__head">
+          <h3>Własne projekty<span>4</span></h3>
+          <p>Serwisy, które zaprojektowałem i zbudowałem od zera z własnej inicjatywy.</p>
         </div>
-      </article>
-      <!-- CASES:END -->
-    </div>
-  </section>
-
-  <!-- ============ MORE WORK ============ -->
-  <section class="work" id="realizacje" aria-labelledby="work-title">
-    <div class="wrap">
-      <div class="sec-head">
-        <h2 id="work-title">Pozostałe <em>realizacje</em></h2>
-        <p>Każda z tych stron działa online. Kliknij, żeby zobaczyć ją na żywo.</p>
+        <div class="grid">
+          <a class="card card--half" href="https://borkowskiprzemo098.github.io/miastometr/" target="_blank" rel="noopener">
+            <span class="card__media">
+              <span class="browser"><span class="browser__bar" aria-hidden="true"><i></i><i></i><i></i><b>borkowskiprzemo098.github.io/miastometr</b></span><img src="shots/miastometr.jpg" alt="Miastometr, widok na komputerze" width="1440" height="900" loading="lazy" decoding="async"></span>
+              <span class="phone phone--sm"><img src="shots/miastometr-m.jpg" alt="Miastometr, widok na telefonie" width="390" height="844" loading="lazy" decoding="async"></span>
+            </span>
+            <span class="card__body">
+              <span class="card__title">Miastometr</span>
+              <span class="card__cat">Portal z danymi</span>
+              <span class="card__desc">Porównywarka polskich miast oparta na publicznych danych GUS i GIOŚ: wynagrodzenia, ludność, bezrobocie i jakość powietrza.</span>
+              <span class="tags"><span>Dane publiczne</span><span>API</span><span>Wizualizacja</span></span>
+              <span class="card__go">Zobacz stronę na żywo <svg class="i" viewBox="0 0 20 20" aria-hidden="true"><path d="M6 14L14 6M7.5 6H14v6.5"/></svg></span>
+            </span>
+          </a>
+          <a class="card card--half" href="https://borkowskiprzemo098.github.io/generator-dokumentow-online/index.html" target="_blank" rel="noopener">
+            <span class="card__media">
+              <span class="browser"><span class="browser__bar" aria-hidden="true"><i></i><i></i><i></i><b>borkowskiprzemo098.github.io/generator-dokumentow-online/index.html</b></span><img src="shots/generator-dokumentow-online.jpg" alt="Generator dokumentów, widok na komputerze" width="1440" height="900" loading="lazy" decoding="async"></span>
+              <span class="phone phone--sm"><img src="shots/generator-dokumentow-online-m.jpg" alt="Generator dokumentów, widok na telefonie" width="390" height="844" loading="lazy" decoding="async"></span>
+            </span>
+            <span class="card__body">
+              <span class="card__title">Generator dokumentów</span>
+              <span class="card__cat">Narzędzie online</span>
+              <span class="card__desc">30 wzorów pism i dokumentów: CV, wypowiedzenia, pełnomocnictwa. Wypełniasz formularz i od razu pobierasz gotowy PDF.</span>
+              <span class="tags"><span>Generator PDF</span><span>30 szablonów</span><span>SEO</span></span>
+              <span class="card__go">Zobacz stronę na żywo <svg class="i" viewBox="0 0 20 20" aria-hidden="true"><path d="M6 14L14 6M7.5 6H14v6.5"/></svg></span>
+            </span>
+          </a>
+          <a class="card card--half" href="https://borkowskiprzemo098.github.io/kalkulatory/" target="_blank" rel="noopener">
+            <span class="card__media">
+              <span class="browser"><span class="browser__bar" aria-hidden="true"><i></i><i></i><i></i><b>borkowskiprzemo098.github.io/kalkulatory</b></span><img src="shots/kalkulatory.jpg" alt="Kalkulatory Online, widok na komputerze" width="1440" height="900" loading="lazy" decoding="async"></span>
+              <span class="phone phone--sm"><img src="shots/kalkulatory-m.jpg" alt="Kalkulatory Online, widok na telefonie" width="390" height="844" loading="lazy" decoding="async"></span>
+            </span>
+            <span class="card__body">
+              <span class="card__title">Kalkulatory Online</span>
+              <span class="card__cat">Portal z narzędziami</span>
+              <span class="card__desc">Darmowe kalkulatory do codziennych obliczeń. Cała logika działa w przeglądarce, bez rejestracji.</span>
+              <span class="tags"><span>Next.js</span><span>TypeScript</span><span>SEO</span></span>
+              <span class="card__go">Zobacz stronę na żywo <svg class="i" viewBox="0 0 20 20" aria-hidden="true"><path d="M6 14L14 6M7.5 6H14v6.5"/></svg></span>
+            </span>
+          </a>
+          <a class="card card--half" href="https://borkowskiprzemo098.github.io/STRONA-SZYCIE/" target="_blank" rel="noopener">
+            <span class="card__media">
+              <span class="browser"><span class="browser__bar" aria-hidden="true"><i></i><i></i><i></i><b>borkowskiprzemo098.github.io/STRONA-SZYCIE</b></span><img src="shots/STRONA-SZYCIE.jpg" alt="Szyte z Sercem, widok na komputerze" width="1440" height="900" loading="lazy" decoding="async"></span>
+              <span class="phone phone--sm"><img src="shots/STRONA-SZYCIE-m.jpg" alt="Szyte z Sercem, widok na telefonie" width="390" height="844" loading="lazy" decoding="async"></span>
+            </span>
+            <span class="card__body">
+              <span class="card__title">Szyte z Sercem</span>
+              <span class="card__cat">Strona marki rękodzielniczej</span>
+              <span class="card__desc">Ręcznie szyte siatki i fartuszki na zamówienie. Ciepła identyfikacja i formularz, w którym klient opisuje własny projekt.</span>
+              <span class="tags"><span>Strona marki</span><span>Formularz</span></span>
+              <span class="card__go">Zobacz stronę na żywo <svg class="i" viewBox="0 0 20 20" aria-hidden="true"><path d="M6 14L14 6M7.5 6H14v6.5"/></svg></span>
+            </span>
+          </a>
+        </div>
       </div>
-      <div class="grid">
-        <!-- WORK:START -->
-        <a class="card" href="https://borkowskiprzemo098.github.io/salon-kosmetyczny-nikola/" target="_blank" rel="noopener">
-          <span class="card__media">
-            <img src="shots/salon-kosmetyczny-nikola.jpg" alt="" width="1200" height="750" loading="lazy" decoding="async">
-            <span class="phone phone--sm"><img src="shots/salon-kosmetyczny-nikola-m.jpg" alt="" width="390" height="844" loading="lazy" decoding="async"></span>
-          </span>
-          <span class="card__body">
-            <span class="card__title">Salon Piękności Nikola</span>
-            <span class="card__cat">Strona firmowa</span>
-            <span class="card__desc">Strona salonu w Kościerzynie: przejrzysty cennik, galeria i szybkie umawianie wizyt. Zaprojektowana najpierw pod telefon.</span>
-            <span class="card__go">Zobacz stronę <svg class="i" viewBox="0 0 20 20" aria-hidden="true"><path d="M6 14L14 6M7.5 6H14v6.5"/></svg></span>
-          </span>
-        </a>
-        <a class="card" href="https://borkowskiprzemo098.github.io/generator-dokumentow-online/" target="_blank" rel="noopener">
-          <span class="card__media">
-            <img src="shots/generator-dokumentow-online.jpg" alt="" width="1200" height="750" loading="lazy" decoding="async">
-            <span class="phone phone--sm"><img src="shots/generator-dokumentow-online-m.jpg" alt="" width="390" height="844" loading="lazy" decoding="async"></span>
-          </span>
-          <span class="card__body">
-            <span class="card__title">Generator dokumentów</span>
-            <span class="card__cat">Narzędzie online</span>
-            <span class="card__desc">30 wzorów pism i dokumentów: CV, wypowiedzenia, pełnomocnictwa. Użytkownik wypełnia formularz i od razu pobiera gotowy PDF.</span>
-            <span class="card__go">Zobacz stronę <svg class="i" viewBox="0 0 20 20" aria-hidden="true"><path d="M6 14L14 6M7.5 6H14v6.5"/></svg></span>
-          </span>
-        </a>
-        <a class="card" href="https://borkowskiprzemo098.github.io/BARBERSHOP/" target="_blank" rel="noopener">
-          <span class="card__media">
-            <img src="shots/BARBERSHOP.jpg" alt="" width="1200" height="750" loading="lazy" decoding="async">
-            <span class="phone phone--sm"><img src="shots/BARBERSHOP-m.jpg" alt="" width="390" height="844" loading="lazy" decoding="async"></span>
-          </span>
-          <span class="card__body">
-            <span class="card__title">SFM Salon Fryzur Męskich</span>
-            <span class="card__cat">Strona firmowa</span>
-            <span class="card__desc">Wizerunkowa strona barbershopu. Ciemna, rzemieślnicza identyfikacja, oferta usług i rezerwacja.</span>
-            <span class="card__go">Zobacz stronę <svg class="i" viewBox="0 0 20 20" aria-hidden="true"><path d="M6 14L14 6M7.5 6H14v6.5"/></svg></span>
-          </span>
-        </a>
-        <a class="card" href="https://borkowskiprzemo098.github.io/KROWKI/" target="_blank" rel="noopener">
-          <span class="card__media">
-            <img src="shots/KROWKI.jpg" alt="" width="1200" height="750" loading="lazy" decoding="async">
-            <span class="phone phone--sm"><img src="shots/KROWKI-m.jpg" alt="" width="390" height="844" loading="lazy" decoding="async"></span>
-          </span>
-          <span class="card__body">
-            <span class="card__title">Moje Krówki</span>
-            <span class="card__cat">Strona marki</span>
-            <span class="card__desc">Rzemieślnicze krówki z logo firmy. Strona prowadzi klienta biznesowego od wyboru smaku do zamówienia na event.</span>
-            <span class="card__go">Zobacz stronę <svg class="i" viewBox="0 0 20 20" aria-hidden="true"><path d="M6 14L14 6M7.5 6H14v6.5"/></svg></span>
-          </span>
-        </a>
-        <!-- WORK:END -->
-      </div>
+      <!-- PROJECTS:END -->
     </div>
   </section>
 

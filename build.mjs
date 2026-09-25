@@ -3,8 +3,7 @@
 import { readFileSync, writeFileSync, existsSync } from 'node:fs';
 
 const read = (f, d) => (existsSync(f) ? JSON.parse(readFileSync(f, 'utf8')) : d);
-const { projects } = read('data/projects.json', { projects: [] });
-const { cases } = read('data/cases.json', { cases: [] });
+const { groups } = read('data/projects.json', { groups: [] });
 const contact = read('data/contact.json', {});
 const esc = (s) => String(s).replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;').replace(/"/g, '&quot;');
 const arrow = '<svg class="i" viewBox="0 0 20 20" aria-hidden="true"><path d="M6 14L14 6M7.5 6H14v6.5"/></svg>';
@@ -16,47 +15,33 @@ const photo = existsSync('assets/portret.jpg')
   ? `<img src="assets/portret.jpg" alt="Przemysław Borkowski" width="912" height="1172" fetchpriority="high">`
   : `<div class="portrait__ph">PB</div>`;
 
-// ---- case studies
-const caseHtml = cases.map((c, i) => `
-      <article class="case" id="case-${c.id}">
-        <header class="case__head">
-          <div>
-            <h3>${esc(c.title)}</h3>
-            <p class="case__lead">${esc(c.lead)}</p>
-            <a class="btn btn--ink btn--sm" href="${c.url}" target="_blank" rel="noopener">Zobacz stronę na żywo ${arrow}</a>
-          </div>
-          <dl class="case__meta">${c.meta.map(([k, v]) => `<div><dt>${esc(k)}</dt><dd>${esc(v)}</dd></div>`).join('')}</dl>
-        </header>
-        <div class="case__gallery">
-          <a class="case__main" href="${c.url}" target="_blank" rel="noopener" aria-label="${esc(c.title)}: otwórz stronę">
-            <span class="browser"><span class="browser__bar" aria-hidden="true"><i></i><i></i><i></i><b>${esc(host(c.url))}</b></span>${img(`shots/case/${c.shots.main}.jpg`, 1440, 900, `${c.title}, widok na komputerze`)}</span>
-          </a>
-          <div class="case__phones">${c.shots.phones.map((s) => `<span class="phone">${img(`shots/case/${s}.jpg`, 390, 844, `${c.title}, widok na telefonie`)}</span>`).join('')}</div>
-          ${c.shots.wide.map((s) => `<span class="case__wide browser">${img(`shots/case/${s}.jpg`, 1440, 900, `${c.title}, kolejna sekcja strony`)}</span>`).join('')}
+// ---- grouped projects
+const card = (p, layout) => `
+          <a class="card card--${layout}" href="${p.url}" target="_blank" rel="noopener">
+            <span class="card__media">
+              <span class="browser"><span class="browser__bar" aria-hidden="true"><i></i><i></i><i></i><b>${esc(host(p.url))}</b></span>${img(`shots/${p.shot}.jpg`, 1440, 900, `${p.title}, widok na komputerze`)}</span>
+              ${existsSync(`shots/${p.shot}-m.jpg`) ? `<span class="phone phone--sm">${img(`shots/${p.shot}-m.jpg`, 390, 844, `${p.title}, widok na telefonie`)}</span>` : ''}
+            </span>
+            <span class="card__body">
+              <span class="card__title">${esc(p.title)}</span>
+              <span class="card__cat">${esc(p.category)}</span>
+              <span class="card__desc">${esc(p.desc)}</span>
+              <span class="tags">${p.tags.map((t) => `<span>${esc(t)}</span>`).join('')}</span>
+              <span class="card__go">Zobacz stronę na żywo ${arrow}</span>
+            </span>
+          </a>`;
+const projectsHtml = groups.map((g) => {
+  const layout = g.projects.length === 1 ? 'wide' : 'half';
+  return `
+      <div class="group" id="${g.id}">
+        <div class="group__head">
+          <h3>${esc(g.title)}<span>${g.projects.length}</span></h3>
+          <p>${esc(g.lead)}</p>
         </div>
-        <div class="case__story">
-          <div><h4>Wyzwanie</h4><p>${esc(c.challenge)}</p></div>
-          <div><h4>Rozwiązanie</h4><p>${esc(c.solution)}</p></div>
-          <div><h4>Co zrobiłem</h4><p>${esc(c.work)}</p></div>
+        <div class="grid">${g.projects.map((p) => card(p, layout)).join('')}
         </div>
-      </article>`).join('');
-
-// ---- remaining work (projects not already shown as case studies)
-const inCase = new Set(cases.map((c) => c.repo));
-const rest = projects.filter((p) => !inCase.has(p.repo));
-const workHtml = rest.map((p, i) => `
-        <a class="card${i === 0 && rest.length % 2 === 1 ? ' card--wide' : ''}" href="${p.url}" target="_blank" rel="noopener">
-          <span class="card__media">
-            ${img(`shots/${p.repo}.jpg`, 1200, 750)}
-            ${existsSync(`shots/${p.repo}-m.jpg`) ? `<span class="phone phone--sm">${img(`shots/${p.repo}-m.jpg`, 390, 844)}</span>` : ''}
-          </span>
-          <span class="card__body">
-            <span class="card__title">${esc(p.title)}</span>
-            <span class="card__cat">${esc(p.category)}</span>
-            <span class="card__desc">${esc(p.desc)}</span>
-            <span class="card__go">Zobacz stronę ${arrow}</span>
-          </span>
-        </a>`).join('');
+      </div>`;
+}).join('');
 
 // ---- contact
 const ic = {
@@ -78,9 +63,8 @@ const footHtml = rows.length ? rows.filter(([k]) => k !== 'Lokalizacja').map(([,
 let html = readFileSync('index.html', 'utf8');
 const put = (name, body) => { html = html.replace(new RegExp(`(<!-- ${name}:START -->)[\\s\\S]*?(<!-- ${name}:END -->)`), `$1${body}$2`); };
 put('PHOTO', `\n          ${photo}\n          `);
-put('CASES', caseHtml + '\n      ');
-put('WORK', workHtml + '\n        ');
+put('PROJECTS', projectsHtml + '\n      ');
 put('CONTACT', contactHtml);
 put('FOOTCONTACT', `\n      ${footHtml}\n      `);
 writeFileSync('index.html', html);
-console.log(`built: ${cases.length} cases, ${rest.length} other projects, contact rows: ${rows.length}`);
+console.log(`built: ${groups.length} groups, ${groups.reduce((n, g) => n + g.projects.length, 0)} projects, contact rows: ${rows.length}`);
