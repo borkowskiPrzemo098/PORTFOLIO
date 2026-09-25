@@ -390,3 +390,59 @@ button { font: inherit; color: inherit; }
   .card, .cases .card { box-shadow: 0 12px 30px -18px rgba(22, 24, 26, .45); }
 }
 html { -webkit-tap-highlight-color: transparent; }
+
+/* ---------- Alignment fixes ---------- */
+.group__head { display: grid; grid-template-columns: minmax(0, 1.25fr) minmax(0, 1fr); gap: 12px 72px; align-items: end; }
+.group__head p { max-width: 40ch; }
+@media (max-width: 860px) { .group__head { grid-template-columns: minmax(0, 1fr); } }
+.stack { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 8px; }
+.stack li { text-align: center; white-space: nowrap; }
+@media (max-width: 480px) { .stack { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
+
+/* ---------- Buttons used in the contact dialog ---------- */
+.btn--wine { background: var(--wine); color: var(--on-dark); }
+.btn--wine:hover { background: var(--wine-deep); }
+.btn--line-ink { border-color: var(--line); background: var(--paper); color: var(--ink); }
+.btn--line-ink:hover { border-color: var(--ink); }
+
+/* ---------- Contact dialog ---------- */
+.cdlg { width: min(560px, calc(100vw - 24px)); max-height: calc(100dvh - 24px); padding: 0; border: 0; border-radius: var(--r); background: var(--ivory); color: var(--ink); box-shadow: var(--shadow-lg); overflow: auto; }
+.cdlg::backdrop { background: rgba(21, 48, 42, .55); }
+.cdlg[open] { animation: dlgIn .35s var(--ease); }
+.cdlg[open]::backdrop { animation: fadeIn .3s ease; }
+@keyframes dlgIn { from { opacity: 0; transform: translateY(16px) scale(.98); } }
+@keyframes fadeIn { from { opacity: 0; } }
+.cdlg__card { position: relative; padding: clamp(24px, 4vw, 36px); }
+.cdlg__close { position: absolute; top: 16px; right: 16px; width: 44px; height: 44px; border-radius: 50%; border: 1px solid var(--line); background: var(--paper); cursor: pointer; display: grid; place-items: center; transition: border-color .2s; }
+.cdlg__close:hover { border-color: var(--ink); }
+.cdlg__id { display: flex; align-items: center; gap: 16px; padding-right: 48px; }
+.cdlg__id img { width: 64px; height: 64px; border-radius: 50%; object-fit: cover; object-position: 60% 25%; flex: none; }
+.cdlg__id h2 { font-size: clamp(1.7rem, 4vw, 2.1rem); line-height: 1.1; letter-spacing: -.02em; }
+.cdlg__id p { color: var(--ink-2); font-size: 15.5px; }
+.cdlg__opts { display: grid; gap: 12px; margin-top: 24px; }
+.opt { display: grid; grid-template-columns: auto minmax(0, 1fr); column-gap: 14px; row-gap: 2px; align-items: center; padding: 18px; border-radius: 20px; background: var(--paper); border: 1px solid var(--line); }
+.opt__ic { grid-row: span 2; display: grid; place-items: center; width: 46px; height: 46px; border-radius: 50%; background: var(--green-soft); color: var(--green); }
+.opt:nth-child(2) .opt__ic { background: var(--wine-soft); color: var(--wine); }
+.opt__label { font-size: 14px; color: var(--ink-2); }
+.opt__value { font: 600 clamp(1.05rem, 3.6vw, 1.3rem)/1.25 var(--f-display); word-break: break-word; }
+.opt__act { grid-column: 1 / -1; display: flex; flex-wrap: wrap; gap: 8px; margin-top: 14px; }
+.opt__act .btn { flex: 1 1 160px; }
+/* desktop: no dialler, copying the number is the main action */
+@media (hover: hover) and (pointer: fine) {
+  .opt__call { display: none; }
+  .opt [data-copied="Skopiowano numer telefonu"] { background: var(--wine); color: var(--on-dark); border-color: var(--wine); }
+  .opt [data-copied="Skopiowano numer telefonu"]:hover { background: var(--wine-deep); }
+}
+.toast { position: fixed; left: 50%; bottom: 24px; z-index: 400; translate: -50% 16px; margin: 0; padding: 12px 20px; border-radius: 999px; background: var(--green-deep); color: var(--on-dark); font-weight: 500; font-size: 15px; box-shadow: var(--shadow-lg); opacity: 0; pointer-events: none; transition: opacity .25s var(--ease), translate .25s var(--ease); }
+.toast.is-on { opacity: 1; translate: -50% 0; }
+@media (max-width: 480px) {
+  .cdlg__card { padding: 22px 16px 18px; }
+  .cdlg__id { gap: 12px; padding-right: 44px; }
+  .cdlg__id img { width: 52px; height: 52px; }
+  .cdlg__id h2 { font-size: 1.5rem; }
+  .cdlg__id p { font-size: 14.5px; }
+  .cdlg__close { top: 14px; right: 12px; width: 40px; height: 40px; }
+  .opt { padding: 14px; column-gap: 12px; }
+  .opt__ic { width: 40px; height: 40px; }
+  .opt__value { font-size: 1.02rem; word-break: normal; overflow-wrap: anywhere; }
+}

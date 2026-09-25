@@ -64,6 +64,29 @@ const put = (name, body) => { html = html.replace(new RegExp(`(<!-- ${name}:STAR
 put('PHOTO', `\n          ${photo}\n          `);
 put('PROJECTS', projectsHtml + '\n      ');
 put('CONTACT', contactHtml);
+const dialogHtml = [
+  contact.email && `
+      <div class="opt">
+        <span class="opt__ic">${ic.mail}</span>
+        <span class="opt__label">E-mail</span>
+        <strong class="opt__value">${esc(contact.email)}</strong>
+        <span class="opt__act">
+          <a class="btn btn--wine btn--sm" href="mailto:${esc(contact.email)}">Napisz wiadomość</a>
+          <button class="btn btn--line-ink btn--sm" type="button" data-copy="${esc(contact.email)}" data-copied="Skopiowano adres e-mail">Kopiuj adres</button>
+        </span>
+      </div>`,
+  contact.phone && `
+      <div class="opt">
+        <span class="opt__ic">${ic.tel}</span>
+        <span class="opt__label">Telefon</span>
+        <strong class="opt__value">${esc(contact.phone)}</strong>
+        <span class="opt__act">
+          <a class="btn btn--wine btn--sm opt__call" href="tel:${esc(contact.phone.replace(/\s/g, ''))}">Zadzwoń</a>
+          <button class="btn btn--line-ink btn--sm" type="button" data-copy="${esc(contact.phone)}" data-copied="Skopiowano numer telefonu">Kopiuj numer</button>
+        </span>
+      </div>`,
+].filter(Boolean).join('') + '\n      ';
+put('DIALOG', dialogHtml);
 put('FOOTCONTACT', `\n      ${footHtml}\n      `);
 writeFileSync('index.html', html);
 console.log(`built: ${groups.length} groups, ${groups.reduce((n, g) => n + g.projects.length, 0)} projects, contact rows: ${rows.length}`);

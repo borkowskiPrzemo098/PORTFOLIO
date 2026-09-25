@@ -37,3 +37,34 @@
 
 
 })();
+
+/* ---------- Contact: choice dialog, copy on desktop instead of tel: ---------- */
+(() => {
+  const dlg = document.getElementById('contact-dialog');
+  const toast = document.querySelector('.toast');
+  const desktop = matchMedia('(hover: hover) and (pointer: fine)');
+  let tT;
+  const say = (msg) => { toast.textContent = msg; toast.classList.add('is-on'); clearTimeout(tT); tT = setTimeout(() => toast.classList.remove('is-on'), 2400); };
+  const copy = async (text, msg) => {
+    try { await navigator.clipboard.writeText(text); }
+    catch { const t = document.createElement('textarea'); t.value = text; document.body.append(t); t.select(); document.execCommand('copy'); t.remove(); }
+    say(msg);
+  };
+
+  document.querySelectorAll('[data-contact]').forEach((a) => a.addEventListener('click', (e) => {
+    if (!dlg || !dlg.showModal) return; // old browsers: fall back to the contact section
+    e.preventDefault();
+    const menu = document.getElementById('menu');
+    if (menu && !menu.hidden) document.querySelector('.nav__burger').click();
+    dlg.showModal();
+  }));
+  dlg?.querySelector('.cdlg__close').addEventListener('click', () => dlg.close());
+  dlg?.addEventListener('click', (e) => { if (e.target === dlg) dlg.close(); });
+
+  document.addEventListener('click', (e) => {
+    const btn = e.target.closest('[data-copy]');
+    if (btn) { copy(btn.dataset.copy, btn.dataset.copied || 'Skopiowano'); return; }
+    const tel = e.target.closest('a[href^="tel:"]');
+    if (tel && desktop.matches) { e.preventDefault(); copy(tel.textContent.trim() || tel.getAttribute('href').slice(4), 'Skopiowano numer telefonu'); }
+  });
+})();
