@@ -64,7 +64,7 @@ button { font: inherit; color: inherit; }
 
 /* ---------- Nav ---------- */
 .nav { position: fixed; inset: 0 0 auto; z-index: 100; color: var(--on-dark); transition: background-color .3s var(--ease), box-shadow .3s var(--ease); }
-.nav.is-solid { background: rgba(21, 48, 42, .94); -webkit-backdrop-filter: blur(14px); backdrop-filter: blur(14px); box-shadow: 0 1px 0 var(--line-dark); }
+.nav.is-solid { background: var(--green-deep); box-shadow: 0 1px 0 var(--line-dark); }
 .nav__in { height: var(--nav-h); max-width: calc(var(--max) + 2 * var(--gutter)); margin-inline: auto; padding-inline: var(--gutter); display: flex; align-items: center; gap: 28px; }
 .brand { display: inline-flex; align-items: center; gap: 12px; text-decoration: none; }
 .brand img { border-radius: 10px; box-shadow: 0 0 0 1px var(--line-dark); }
@@ -321,7 +321,7 @@ button { font: inherit; color: inherit; }
 
 /* ---------- Thematic textures: faint wireframe sketches + grain ---------- */
 :root {
-  --grain: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='180' height='180'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.85' numOctaves='3' stitchTiles='stitch'/%3E%3CfeColorMatrix values='0 0 0 0 1 0 0 0 0 1 0 0 0 0 1 0 0 0 .5 0'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+  --grain: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='180' height='180'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.85' numOctaves='3' stitchTiles='stitch'/%3E%3CfeColorMatrix values='0 0 0 0 1 0 0 0 0 1 0 0 0 0 1 0 0 0 .06 0'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
 }
 .hero::before, .cases::before, .cases::after {
   content: ""; position: absolute; inset: 0; pointer-events: none; z-index: -1;
@@ -332,8 +332,8 @@ button { font: inherit; color: inherit; }
   -webkit-mask-image: radial-gradient(ellipse 46% 42% at 50% 46%, transparent 35%, #000 100%);
   mask-image: radial-gradient(ellipse 46% 42% at 50% 46%, transparent 35%, #000 100%);
 }
-.hero { background-image: var(--grain), radial-gradient(80% 60% at 50% 38%, #2A5745 0%, var(--green) 55%, var(--green-deep) 100%); background-size: 180px 180px, auto; background-blend-mode: soft-light, normal; }
-.cases { position: relative; isolation: isolate; background-image: var(--grain), radial-gradient(70% 50% at 20% 0%, #7E2738 0%, var(--wine) 60%, var(--wine-deep) 100%); background-size: 180px 180px, auto; background-blend-mode: soft-light, normal; }
+.hero { background-image: var(--grain), radial-gradient(80% 60% at 50% 38%, #2A5745 0%, var(--green) 55%, var(--green-deep) 100%); background-size: 180px 180px, auto; }
+.cases { position: relative; isolation: isolate; background-image: var(--grain), radial-gradient(70% 50% at 20% 0%, #7E2738 0%, var(--wine) 60%, var(--wine-deep) 100%); background-size: 180px 180px, auto; }
 .cases::before {
   background: url("../assets/pattern-wire.svg") 120px 40px / 520px 520px repeat;
   opacity: .08;
@@ -378,3 +378,15 @@ button { font: inherit; color: inherit; }
 @media (max-width: 560px) { .cases .phone--sm { width: 23%; border-width: 3px; border-radius: 12px; } }
 .card--wide .card__media .browser { width: 100%; flex: 1 1 auto; }
 .card__media .browser img { background: #EFEDE7; }
+
+/* ---------- Touch devices: no sticky hover lifts, lighter layers ---------- */
+@media (hover: none), (pointer: coarse) {
+  .btn:hover, .card:hover, .svc:hover, .steps li:hover, .case__main:hover .browser { transform: none; }
+  .cases .card:hover .card__media .browser, .card:hover .card__media > img { transform: none; }
+  .hero__scroll { animation: none; }
+}
+@media (max-width: 760px) {
+  .hero::before, .cases::before { will-change: auto; }
+  .card, .cases .card { box-shadow: 0 12px 30px -18px rgba(22, 24, 26, .45); }
+}
+html { -webkit-tap-highlight-color: transparent; }
