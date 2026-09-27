@@ -47,8 +47,20 @@
     {
       "id": "autorskie",
       "title": "Projekty autorskie",
-      "lead": "Serwisy, które zaprojektowałem i zbudowałem od zera: narzędzia online, portal z danymi i strona marki.",
+      "lead": "Serwisy, które zaprojektowałem i zbudowałem od zera: strony firm, narzędzia online i portal z danymi.",
       "projects": [
+        {
+          "shot": "BARBERSHOP",
+          "url": "https://borkowskiprzemo098.github.io/BARBERSHOP/",
+          "title": "SFM Salon Fryzur Męskich",
+          "category": "Strona firmowa · barbershop",
+          "desc": "Strona męskiego salonu w duchu przedwojennego rzemiosła: strzyżenie, broda i golenie brzytwą. Ciemna, elegancka identyfikacja, oferta z cennikiem i rezerwacja online przez Booksy.",
+          "tags": [
+            "Branding",
+            "Booksy",
+            "Strona firmowa"
+          ]
+        },
         {
           "shot": "miastometr",
           "url": "https://borkowskiprzemo098.github.io/miastometr/",
@@ -78,7 +90,7 @@
           "url": "https://borkowskiprzemo098.github.io/kalkulatory/",
           "title": "Kalkulatory Online",
           "category": "Portal z narzędziami",
-          "desc": "Darmowe kalkulatory do codziennych obliczeń. Cała logika działa w przeglądarce, bez rejestracji.",
+          "desc": "60 darmowych kalkulatorów do codziennych obliczeń: VAT, procenty, raty kredytu, BMI. Wynik od razu, cała logika działa w przeglądarce, bez rejestracji.",
           "tags": [
             "Next.js",
             "TypeScript",
