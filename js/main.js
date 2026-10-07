@@ -68,3 +68,19 @@
     if (tel && desktop.matches) { e.preventDefault(); copy(tel.textContent.trim() || tel.getAttribute('href').slice(4), 'Skopiowano numer telefonu'); }
   });
 })();
+
+/* ---------- Project category filter ---------- */
+(() => {
+  const bar = document.querySelector('.filters');
+  if (!bar) return;
+  const groups = [...document.querySelectorAll('.cases .group')];
+  bar.addEventListener('click', (e) => {
+    const btn = e.target.closest('button[data-filter]');
+    if (!btn) return;
+    const f = btn.dataset.filter;
+    bar.querySelectorAll('button').forEach((b) => { const on = b === btn; b.classList.toggle('is-on', on); b.setAttribute('aria-pressed', String(on)); });
+    groups.forEach((g) => { g.hidden = f !== 'all' && g.id !== f; });
+    const top = bar.closest('.cases').querySelector('.sec-head').getBoundingClientRect().bottom + scrollY - 90;
+    if (scrollY > top) scrollTo({ top, behavior: 'smooth' });
+  });
+})();

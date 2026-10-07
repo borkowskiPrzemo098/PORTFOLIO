@@ -24,13 +24,19 @@ const card = (p, layout) => `
             </span>
             <span class="card__body">
               <span class="card__title">${esc(p.title)}</span>
+              <span class="card__kind${p.kind === 'Realizacja dla klienta' ? ' card__kind--client' : ''}">${esc(p.kind || '')}</span>
               <span class="card__cat">${esc(p.category)}</span>
               <span class="card__desc">${esc(p.desc)}</span>
               <span class="tags">${p.tags.map((t) => `<span>${esc(t)}</span>`).join('')}</span>
               <span class="card__go">Zobacz stronę na żywo ${arrow}</span>
             </span>
           </a>`;
-const projectsHtml = groups.map((g) => {
+const filterHtml = `
+      <nav class="filters" aria-label="Kategorie projektów">
+        <button type="button" class="is-on" data-filter="all" aria-pressed="true">Wszystkie <span>${groups.reduce((n, g) => n + g.projects.length, 0)}</span></button>${groups.map((g) => `
+        <button type="button" data-filter="${g.id}" aria-pressed="false">${esc(g.title)} <span>${g.projects.length}</span></button>`).join('')}
+      </nav>`;
+const projectsHtml = filterHtml + groups.map((g) => {
   return `
       <div class="group" id="${g.id}">
         <div class="group__head">

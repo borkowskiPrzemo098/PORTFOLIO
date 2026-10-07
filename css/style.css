@@ -463,3 +463,19 @@ html { -webkit-tap-highlight-color: transparent; }
   .card--wide .card__body { padding: clamp(36px, 4vw, 44px) 20px 24px; }
 }
 @media (max-width: 480px) { .tags { gap: 5px; } .tags span { font-size: 12px; padding: 3px 9px; } }
+
+/* ---------- Project categories: filter bar + client/own label ---------- */
+.filters { position: sticky; top: calc(var(--nav-h) + 12px); z-index: 20; display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: clamp(40px, 5vw, 64px); padding: 8px; background: rgba(82, 22, 36, .92); border: 1px solid var(--line-dark); border-radius: 999px; width: fit-content; max-width: 100%; }
+.filters button { display: inline-flex; align-items: center; gap: 8px; min-height: 44px; padding: 0 18px; border-radius: 999px; border: 0; background: transparent; color: var(--on-dark); font: 600 15px/1 var(--f-text); cursor: pointer; transition: background-color .25s var(--ease), color .25s var(--ease); white-space: nowrap; }
+.filters button span { display: inline-grid; place-items: center; min-width: 24px; height: 24px; padding: 0 7px; border-radius: 999px; background: rgba(246, 243, 236, .14); font-size: 13px; }
+.filters button:hover { background: rgba(246, 243, 236, .1); }
+.filters button.is-on { background: var(--sand); color: var(--wine-deep); }
+.filters button.is-on span { background: rgba(82, 22, 36, .14); }
+.group[hidden] { display: none; }
+.card__kind { justify-self: start; font-size: 12px; font-weight: 700; letter-spacing: .02em; padding: 4px 10px; border-radius: 999px; background: var(--green-soft); color: var(--green); margin-bottom: 4px; }
+.card__kind--client { background: var(--wine-soft); color: var(--wine); }
+@media (max-width: 760px) {
+  .filters { border-radius: 22px; width: 100%; flex-wrap: nowrap; overflow-x: auto; scrollbar-width: none; }
+  .filters::-webkit-scrollbar { display: none; }
+  .filters button { min-height: 40px; padding: 0 14px; font-size: 14px; }
+}

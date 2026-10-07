@@ -109,10 +109,16 @@ FINISH: unreviewed and undocumented is unfinished; this build ends with the fini
         <p>Strony dla klientów i projekty własne. Każdy działa online: kliknij, żeby zobaczyć go na żywo.</p>
       </div>
       <!-- PROJECTS:START -->
-      <div class="group" id="klienci">
+      <nav class="filters" aria-label="Kategorie projektów">
+        <button type="button" class="is-on" data-filter="all" aria-pressed="true">Wszystkie <span>10</span></button>
+        <button type="button" data-filter="strony" aria-pressed="false">Strony firmowe <span>5</span></button>
+        <button type="button" data-filter="landing" aria-pressed="false">Landing page sprzedażowe <span>2</span></button>
+        <button type="button" data-filter="narzedzia" aria-pressed="false">Narzędzia i portale online <span>3</span></button>
+      </nav>
+      <div class="group" id="strony">
         <div class="group__head">
-          <h3>Realizacje dla klientów</h3>
-          <p>Strona firmowa i landing page’e kampanii sprzedażowych, działające pod domenami klientów.</p>
+          <h3>Strony firmowe</h3>
+          <p>Strony dla restauracji, salonów, klinik i marek. Budują zaufanie i prowadzą do rezerwacji albo kontaktu.</p>
         </div>
         <div class="grid">
           <a class="card card--wide" href="https://salonpieknoscinikola.pl/" target="_blank" rel="noopener">
@@ -122,12 +128,77 @@ FINISH: unreviewed and undocumented is unfinished; this build ends with the fini
             </span>
             <span class="card__body">
               <span class="card__title">Salon Piękności Nikola</span>
+              <span class="card__kind card__kind--client">Realizacja dla klienta</span>
               <span class="card__cat">Strona firmowa · Kościerzyna</span>
               <span class="card__desc">Strona salonu kosmetycznego: manicure, pedicure, pielęgnacja twarzy, rzęsy i depilacja laserowa. Przejrzysty cennik, galeria, opinie i szybkie umawianie wizyt. Projektowana najpierw pod telefon, bo stamtąd przychodzi większość klientek.</span>
               <span class="tags"><span>Strona firmowa</span><span>Rezerwacje</span><span>SEO lokalne</span></span>
               <span class="card__go">Zobacz stronę na żywo <svg class="i" viewBox="0 0 20 20" aria-hidden="true"><path d="M6 14L14 6M7.5 6H14v6.5"/></svg></span>
             </span>
           </a>
+          <a class="card card--half" href="https://borkowskiprzemo098.github.io/AMBRA-RESTAURACJA/" target="_blank" rel="noopener">
+            <span class="card__media">
+              <span class="browser"><span class="browser__bar" aria-hidden="true"><i></i><i></i><i></i><b>borkowskiprzemo098.github.io/AMBRA-RESTAURACJA</b></span><img src="shots/AMBRA-RESTAURACJA.jpg" alt="AMBRA, widok na komputerze" width="1440" height="900" loading="lazy" decoding="async"></span>
+              <span class="phone phone--sm"><img src="shots/AMBRA-RESTAURACJA-m.jpg" alt="AMBRA, widok na telefonie" width="390" height="844" loading="lazy" decoding="async"></span>
+            </span>
+            <span class="card__body">
+              <span class="card__title">AMBRA</span>
+              <span class="card__kind">Projekt autorski</span>
+              <span class="card__cat">Restauracja degustacyjna · Gdańsk</span>
+              <span class="card__desc">Strona restauracji z kuchnią Pomorza: menu degustacyjne 6, 7 i 9 dań, piwnica win i sala prywatna. Elegancki, redakcyjny układ i rezerwacja stolika online.</span>
+              <span class="tags"><span>Gastronomia</span><span>Rezerwacje</span><span>Premium</span></span>
+              <span class="card__go">Zobacz stronę na żywo <svg class="i" viewBox="0 0 20 20" aria-hidden="true"><path d="M6 14L14 6M7.5 6H14v6.5"/></svg></span>
+            </span>
+          </a>
+          <a class="card card--half" href="https://borkowskiprzemo098.github.io/PORCELANA-KLINIKA/" target="_blank" rel="noopener">
+            <span class="card__media">
+              <span class="browser"><span class="browser__bar" aria-hidden="true"><i></i><i></i><i></i><b>borkowskiprzemo098.github.io/PORCELANA-KLINIKA</b></span><img src="shots/PORCELANA-KLINIKA.jpg" alt="PORCELANA, widok na komputerze" width="1440" height="900" loading="lazy" decoding="async"></span>
+              <span class="phone phone--sm"><img src="shots/PORCELANA-KLINIKA-m.jpg" alt="PORCELANA, widok na telefonie" width="390" height="844" loading="lazy" decoding="async"></span>
+            </span>
+            <span class="card__body">
+              <span class="card__title">PORCELANA</span>
+              <span class="card__kind">Projekt autorski</span>
+              <span class="card__cat">Klinika stomatologiczna · Sopot</span>
+              <span class="card__desc">Strona kliniki stomatologii estetycznej: licówki, wybielanie, implanty i ortodoncja nakładkowa. Spokojna, jasna identyfikacja i umawianie konsultacji online.</span>
+              <span class="tags"><span>Medycyna</span><span>Konsultacje online</span><span>Premium</span></span>
+              <span class="card__go">Zobacz stronę na żywo <svg class="i" viewBox="0 0 20 20" aria-hidden="true"><path d="M6 14L14 6M7.5 6H14v6.5"/></svg></span>
+            </span>
+          </a>
+          <a class="card card--half" href="https://borkowskiprzemo098.github.io/BARBERSHOP/" target="_blank" rel="noopener">
+            <span class="card__media">
+              <span class="browser"><span class="browser__bar" aria-hidden="true"><i></i><i></i><i></i><b>borkowskiprzemo098.github.io/BARBERSHOP</b></span><img src="shots/BARBERSHOP.jpg" alt="SFM Salon Fryzur Męskich, widok na komputerze" width="1440" height="900" loading="lazy" decoding="async"></span>
+              <span class="phone phone--sm"><img src="shots/BARBERSHOP-m.jpg" alt="SFM Salon Fryzur Męskich, widok na telefonie" width="390" height="844" loading="lazy" decoding="async"></span>
+            </span>
+            <span class="card__body">
+              <span class="card__title">SFM Salon Fryzur Męskich</span>
+              <span class="card__kind">Projekt autorski</span>
+              <span class="card__cat">Strona firmowa · barbershop</span>
+              <span class="card__desc">Strona męskiego salonu w duchu przedwojennego rzemiosła: strzyżenie, broda i golenie brzytwą. Ciemna, elegancka identyfikacja, oferta z cennikiem i rezerwacja online przez Booksy.</span>
+              <span class="tags"><span>Branding</span><span>Booksy</span><span>Strona firmowa</span></span>
+              <span class="card__go">Zobacz stronę na żywo <svg class="i" viewBox="0 0 20 20" aria-hidden="true"><path d="M6 14L14 6M7.5 6H14v6.5"/></svg></span>
+            </span>
+          </a>
+          <a class="card card--half" href="https://borkowskiprzemo098.github.io/STRONA-SZYCIE/" target="_blank" rel="noopener">
+            <span class="card__media">
+              <span class="browser"><span class="browser__bar" aria-hidden="true"><i></i><i></i><i></i><b>borkowskiprzemo098.github.io/STRONA-SZYCIE</b></span><img src="shots/STRONA-SZYCIE.jpg" alt="Szyte z Sercem, widok na komputerze" width="1440" height="900" loading="lazy" decoding="async"></span>
+              <span class="phone phone--sm"><img src="shots/STRONA-SZYCIE-m.jpg" alt="Szyte z Sercem, widok na telefonie" width="390" height="844" loading="lazy" decoding="async"></span>
+            </span>
+            <span class="card__body">
+              <span class="card__title">Szyte z Sercem</span>
+              <span class="card__kind">Projekt autorski</span>
+              <span class="card__cat">Strona marki rękodzielniczej</span>
+              <span class="card__desc">Ręcznie szyte siatki i fartuszki na zamówienie. Ciepła identyfikacja i formularz, w którym klient opisuje własny projekt.</span>
+              <span class="tags"><span>Strona marki</span><span>Formularz</span></span>
+              <span class="card__go">Zobacz stronę na żywo <svg class="i" viewBox="0 0 20 20" aria-hidden="true"><path d="M6 14L14 6M7.5 6H14v6.5"/></svg></span>
+            </span>
+          </a>
+        </div>
+      </div>
+      <div class="group" id="landing">
+        <div class="group__head">
+          <h3>Landing page sprzedażowe</h3>
+          <p>Strony kampanii dla AZ Aurum, działające w sklepie klienta. Jedna oferta i prosta droga do zamówienia.</p>
+        </div>
+        <div class="grid">
           <a class="card card--half" href="https://azaurum.pl/historia_zlotych_euro,35" target="_blank" rel="noopener">
             <span class="card__media">
               <span class="browser"><span class="browser__bar" aria-hidden="true"><i></i><i></i><i></i><b>azaurum.pl/historia_zlotych_euro,35</b></span><img src="shots/az-historia-zlotych-euro.jpg" alt="Historia Złotych Euro, widok na komputerze" width="1440" height="900" loading="lazy" decoding="async"></span>
@@ -135,6 +206,7 @@ FINISH: unreviewed and undocumented is unfinished; this build ends with the fini
             </span>
             <span class="card__body">
               <span class="card__title">Historia Złotych Euro</span>
+              <span class="card__kind card__kind--client">Realizacja dla klienta</span>
               <span class="card__cat">Landing page · AZ Aurum</span>
               <span class="card__desc">Kampania kolekcji złotych monet euro, otwierana monetą z Janem Pawłem II. Cena specjalna i zamówienie widoczne od razu, a niżej historia monety, parametry i gwarancje.</span>
               <span class="tags"><span>Landing page</span><span>Kampania</span><span>E-commerce</span></span>
@@ -148,6 +220,7 @@ FINISH: unreviewed and undocumented is unfinished; this build ends with the fini
             </span>
             <span class="card__body">
               <span class="card__title">250 lat USA</span>
+              <span class="card__kind card__kind--client">Realizacja dla klienta</span>
               <span class="card__cat">Landing page · AZ Aurum</span>
               <span class="card__desc">Kolekcja złotych monet na 250. rocznicę powstania USA, otwierana Statuą Wolności. Oferta promocyjna, oś czasu historii i prezentacja całej kolekcji.</span>
               <span class="tags"><span>Landing page</span><span>Kampania</span><span>Storytelling</span></span>
@@ -156,32 +229,20 @@ FINISH: unreviewed and undocumented is unfinished; this build ends with the fini
           </a>
         </div>
       </div>
-      <div class="group" id="autorskie">
+      <div class="group" id="narzedzia">
         <div class="group__head">
-          <h3>Projekty autorskie</h3>
-          <p>Serwisy, które zaprojektowałem i zbudowałem od zera: strony firm, narzędzia online i portal z danymi.</p>
+          <h3>Narzędzia i portale online</h3>
+          <p>Darmowe serwisy, które liczą, generują i porównują w przeglądarce. Przyciągają ruch z Google.</p>
         </div>
         <div class="grid">
-          <a class="card card--wide" href="https://borkowskiprzemo098.github.io/BARBERSHOP/" target="_blank" rel="noopener">
-            <span class="card__media">
-              <span class="browser"><span class="browser__bar" aria-hidden="true"><i></i><i></i><i></i><b>borkowskiprzemo098.github.io/BARBERSHOP</b></span><img src="shots/BARBERSHOP.jpg" alt="SFM Salon Fryzur Męskich, widok na komputerze" width="1440" height="900" loading="lazy" decoding="async"></span>
-              <span class="phone phone--sm"><img src="shots/BARBERSHOP-m.jpg" alt="SFM Salon Fryzur Męskich, widok na telefonie" width="390" height="844" loading="lazy" decoding="async"></span>
-            </span>
-            <span class="card__body">
-              <span class="card__title">SFM Salon Fryzur Męskich</span>
-              <span class="card__cat">Strona firmowa · barbershop</span>
-              <span class="card__desc">Strona męskiego salonu w duchu przedwojennego rzemiosła: strzyżenie, broda i golenie brzytwą. Ciemna, elegancka identyfikacja, oferta z cennikiem i rezerwacja online przez Booksy.</span>
-              <span class="tags"><span>Branding</span><span>Booksy</span><span>Strona firmowa</span></span>
-              <span class="card__go">Zobacz stronę na żywo <svg class="i" viewBox="0 0 20 20" aria-hidden="true"><path d="M6 14L14 6M7.5 6H14v6.5"/></svg></span>
-            </span>
-          </a>
-          <a class="card card--half" href="https://borkowskiprzemo098.github.io/miastometr/" target="_blank" rel="noopener">
+          <a class="card card--wide" href="https://borkowskiprzemo098.github.io/miastometr/" target="_blank" rel="noopener">
             <span class="card__media">
               <span class="browser"><span class="browser__bar" aria-hidden="true"><i></i><i></i><i></i><b>borkowskiprzemo098.github.io/miastometr</b></span><img src="shots/miastometr.jpg" alt="Miastometr, widok na komputerze" width="1440" height="900" loading="lazy" decoding="async"></span>
               <span class="phone phone--sm"><img src="shots/miastometr-m.jpg" alt="Miastometr, widok na telefonie" width="390" height="844" loading="lazy" decoding="async"></span>
             </span>
             <span class="card__body">
               <span class="card__title">Miastometr</span>
+              <span class="card__kind">Projekt autorski</span>
               <span class="card__cat">Portal z danymi</span>
               <span class="card__desc">Porównywarka polskich miast oparta na publicznych danych GUS i GIOŚ: wynagrodzenia, ludność, bezrobocie i jakość powietrza.</span>
               <span class="tags"><span>Dane publiczne</span><span>API</span><span>Wizualizacja</span></span>
@@ -195,6 +256,7 @@ FINISH: unreviewed and undocumented is unfinished; this build ends with the fini
             </span>
             <span class="card__body">
               <span class="card__title">Generator dokumentów</span>
+              <span class="card__kind">Projekt autorski</span>
               <span class="card__cat">Narzędzie online</span>
               <span class="card__desc">30 wzorów pism i dokumentów: CV, wypowiedzenia, pełnomocnictwa. Wypełniasz formularz i od razu pobierasz gotowy PDF.</span>
               <span class="tags"><span>Generator PDF</span><span>30 szablonów</span><span>SEO</span></span>
@@ -208,22 +270,10 @@ FINISH: unreviewed and undocumented is unfinished; this build ends with the fini
             </span>
             <span class="card__body">
               <span class="card__title">Kalkulatory Online</span>
+              <span class="card__kind">Projekt autorski</span>
               <span class="card__cat">Portal z narzędziami</span>
               <span class="card__desc">60 darmowych kalkulatorów do codziennych obliczeń: VAT, procenty, raty kredytu, BMI. Wynik od razu, cała logika działa w przeglądarce, bez rejestracji.</span>
               <span class="tags"><span>Next.js</span><span>TypeScript</span><span>SEO</span></span>
-              <span class="card__go">Zobacz stronę na żywo <svg class="i" viewBox="0 0 20 20" aria-hidden="true"><path d="M6 14L14 6M7.5 6H14v6.5"/></svg></span>
-            </span>
-          </a>
-          <a class="card card--half" href="https://borkowskiprzemo098.github.io/STRONA-SZYCIE/" target="_blank" rel="noopener">
-            <span class="card__media">
-              <span class="browser"><span class="browser__bar" aria-hidden="true"><i></i><i></i><i></i><b>borkowskiprzemo098.github.io/STRONA-SZYCIE</b></span><img src="shots/STRONA-SZYCIE.jpg" alt="Szyte z Sercem, widok na komputerze" width="1440" height="900" loading="lazy" decoding="async"></span>
-              <span class="phone phone--sm"><img src="shots/STRONA-SZYCIE-m.jpg" alt="Szyte z Sercem, widok na telefonie" width="390" height="844" loading="lazy" decoding="async"></span>
-            </span>
-            <span class="card__body">
-              <span class="card__title">Szyte z Sercem</span>
-              <span class="card__cat">Strona marki rękodzielniczej</span>
-              <span class="card__desc">Ręcznie szyte siatki i fartuszki na zamówienie. Ciepła identyfikacja i formularz, w którym klient opisuje własny projekt.</span>
-              <span class="tags"><span>Strona marki</span><span>Formularz</span></span>
               <span class="card__go">Zobacz stronę na żywo <svg class="i" viewBox="0 0 20 20" aria-hidden="true"><path d="M6 14L14 6M7.5 6H14v6.5"/></svg></span>
             </span>
           </a>

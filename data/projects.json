@@ -1,10 +1,10 @@
 {
-  "_info": "Projekty w grupach. Kolejność = kolejność na stronie. Po zmianie uruchom: node build.mjs. 'shot' = nazwa pliku w shots/ (bez .jpg), wersja mobilna to <shot>-m.jpg",
+  "_info": "Kategorie projektów. 'kind' = Realizacja dla klienta / Projekt autorski. Po zmianie: node build.mjs",
   "groups": [
     {
-      "id": "klienci",
-      "title": "Realizacje dla klientów",
-      "lead": "Strona firmowa i landing page’e kampanii sprzedażowych, działające pod domenami klientów.",
+      "id": "strony",
+      "title": "Strony firmowe",
+      "lead": "Strony dla restauracji, salonów, klinik i marek. Budują zaufanie i prowadzą do rezerwacji albo kontaktu.",
       "projects": [
         {
           "shot": "salonpieknoscinikola",
@@ -16,8 +16,67 @@
             "Strona firmowa",
             "Rezerwacje",
             "SEO lokalne"
-          ]
+          ],
+          "kind": "Realizacja dla klienta"
         },
+        {
+          "shot": "AMBRA-RESTAURACJA",
+          "url": "https://borkowskiprzemo098.github.io/AMBRA-RESTAURACJA/",
+          "title": "AMBRA",
+          "category": "Restauracja degustacyjna · Gdańsk",
+          "desc": "Strona restauracji z kuchnią Pomorza: menu degustacyjne 6, 7 i 9 dań, piwnica win i sala prywatna. Elegancki, redakcyjny układ i rezerwacja stolika online.",
+          "tags": [
+            "Gastronomia",
+            "Rezerwacje",
+            "Premium"
+          ],
+          "kind": "Projekt autorski"
+        },
+        {
+          "shot": "PORCELANA-KLINIKA",
+          "url": "https://borkowskiprzemo098.github.io/PORCELANA-KLINIKA/",
+          "title": "PORCELANA",
+          "category": "Klinika stomatologiczna · Sopot",
+          "desc": "Strona kliniki stomatologii estetycznej: licówki, wybielanie, implanty i ortodoncja nakładkowa. Spokojna, jasna identyfikacja i umawianie konsultacji online.",
+          "tags": [
+            "Medycyna",
+            "Konsultacje online",
+            "Premium"
+          ],
+          "kind": "Projekt autorski"
+        },
+        {
+          "shot": "BARBERSHOP",
+          "url": "https://borkowskiprzemo098.github.io/BARBERSHOP/",
+          "title": "SFM Salon Fryzur Męskich",
+          "category": "Strona firmowa · barbershop",
+          "desc": "Strona męskiego salonu w duchu przedwojennego rzemiosła: strzyżenie, broda i golenie brzytwą. Ciemna, elegancka identyfikacja, oferta z cennikiem i rezerwacja online przez Booksy.",
+          "tags": [
+            "Branding",
+            "Booksy",
+            "Strona firmowa"
+          ],
+          "kind": "Projekt autorski"
+        },
+        {
+          "shot": "STRONA-SZYCIE",
+          "url": "https://borkowskiprzemo098.github.io/STRONA-SZYCIE/",
+          "title": "Szyte z Sercem",
+          "category": "Strona marki rękodzielniczej",
+          "desc": "Ręcznie szyte siatki i fartuszki na zamówienie. Ciepła identyfikacja i formularz, w którym klient opisuje własny projekt.",
+          "tags": [
+            "Strona marki",
+            "Formularz"
+          ],
+          "kind": "Projekt autorski"
+        }
+      ]
+    },
+    {
+      "id": "landing",
+      "title": "Landing page sprzedażowe",
+      "lead": "Strony kampanii dla AZ Aurum, działające w sklepie klienta. Jedna oferta i prosta droga do zamówienia.",
+      "projects": [
         {
           "shot": "az-historia-zlotych-euro",
           "url": "https://azaurum.pl/historia_zlotych_euro,35",
@@ -28,7 +87,8 @@
             "Landing page",
             "Kampania",
             "E-commerce"
-          ]
+          ],
+          "kind": "Realizacja dla klienta"
         },
         {
           "shot": "az-250-lat-usa",
@@ -40,27 +100,16 @@
             "Landing page",
             "Kampania",
             "Storytelling"
-          ]
+          ],
+          "kind": "Realizacja dla klienta"
         }
       ]
     },
     {
-      "id": "autorskie",
-      "title": "Projekty autorskie",
-      "lead": "Serwisy, które zaprojektowałem i zbudowałem od zera: strony firm, narzędzia online i portal z danymi.",
+      "id": "narzedzia",
+      "title": "Narzędzia i portale online",
+      "lead": "Darmowe serwisy, które liczą, generują i porównują w przeglądarce. Przyciągają ruch z Google.",
       "projects": [
-        {
-          "shot": "BARBERSHOP",
-          "url": "https://borkowskiprzemo098.github.io/BARBERSHOP/",
-          "title": "SFM Salon Fryzur Męskich",
-          "category": "Strona firmowa · barbershop",
-          "desc": "Strona męskiego salonu w duchu przedwojennego rzemiosła: strzyżenie, broda i golenie brzytwą. Ciemna, elegancka identyfikacja, oferta z cennikiem i rezerwacja online przez Booksy.",
-          "tags": [
-            "Branding",
-            "Booksy",
-            "Strona firmowa"
-          ]
-        },
         {
           "shot": "miastometr",
           "url": "https://borkowskiprzemo098.github.io/miastometr/",
@@ -71,7 +120,8 @@
             "Dane publiczne",
             "API",
             "Wizualizacja"
-          ]
+          ],
+          "kind": "Projekt autorski"
         },
         {
           "shot": "generator-dokumentow-online",
@@ -83,7 +133,8 @@
             "Generator PDF",
             "30 szablonów",
             "SEO"
-          ]
+          ],
+          "kind": "Projekt autorski"
         },
         {
           "shot": "kalkulatory",
@@ -95,18 +146,8 @@
             "Next.js",
             "TypeScript",
             "SEO"
-          ]
-        },
-        {
-          "shot": "STRONA-SZYCIE",
-          "url": "https://borkowskiprzemo098.github.io/STRONA-SZYCIE/",
-          "title": "Szyte z Sercem",
-          "category": "Strona marki rękodzielniczej",
-          "desc": "Ręcznie szyte siatki i fartuszki na zamówienie. Ciepła identyfikacja i formularz, w którym klient opisuje własny projekt.",
-          "tags": [
-            "Strona marki",
-            "Formularz"
-          ]
+          ],
+          "kind": "Projekt autorski"
         }
       ]
     }
