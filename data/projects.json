@@ -4,7 +4,7 @@
     {
       "id": "strony",
       "title": "Strony firmowe",
-      "lead": "Strony dla restauracji, salonów, klinik i marek. Budują zaufanie i prowadzą do rezerwacji albo kontaktu.",
+      "lead": "Strony dla restauracji, salonów, klinik, nieruchomości i marek. Budują zaufanie i prowadzą do rezerwacji albo kontaktu.",
       "projects": [
         {
           "shot": "salonpieknoscinikola",
@@ -42,6 +42,19 @@
             "Medycyna",
             "Konsultacje online",
             "Premium"
+          ],
+          "kind": "Projekt autorski"
+        },
+        {
+          "shot": "HORYZONT-NIERUCHOMOSCI",
+          "url": "https://borkowskiprzemo098.github.io/HORYZONT-NIERUCHOMOSCI/",
+          "title": "HORYZONT",
+          "category": "Nieruchomości premium · Gdynia",
+          "desc": "Strona biura nieruchomości z inwestycją Latarnia Orłowo: 28 pięter nad Zatoką Gdańską. Budynek można obejrzeć o świcie, w południe, o zachodzie, w deszczu i nocą.",
+          "tags": [
+            "Nieruchomości",
+            "Premium",
+            "Interakcja"
           ],
           "kind": "Projekt autorski"
         },
