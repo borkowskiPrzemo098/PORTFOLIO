@@ -4,7 +4,7 @@
     {
       "id": "strony",
       "title": "Strony firmowe",
-      "lead": "Strony dla restauracji, salonów, klinik, nieruchomości i marek. Budują zaufanie i prowadzą do rezerwacji albo kontaktu.",
+      "lead": "Strony dla restauracji, salonów, klinik, kancelarii, nieruchomości i marek. Budują zaufanie i prowadzą do rezerwacji, zakupu albo kontaktu.",
       "projects": [
         {
           "shot": "salonpieknoscinikola",
@@ -55,6 +55,32 @@
             "Nieruchomości",
             "Premium",
             "Interakcja"
+          ],
+          "kind": "Projekt autorski"
+        },
+        {
+          "shot": "SYGNATURA-KANCELARIA",
+          "url": "https://borkowskiprzemo098.github.io/SYGNATURA-KANCELARIA/",
+          "title": "SYGNATURA",
+          "category": "Kancelaria prawna · Poznań",
+          "desc": "Strona kancelarii adwokacko-radcowskiej: prawo gospodarcze, nieruchomości, spadki, prawo pracy i rodzinne. Rzeczowy, budzący zaufanie układ i szybki kontakt z prawnikiem.",
+          "tags": [
+            "Prawo",
+            "Zaufanie",
+            "Kontakt"
+          ],
+          "kind": "Projekt autorski"
+        },
+        {
+          "shot": "TRZASK-PALARNIA",
+          "url": "https://borkowskiprzemo098.github.io/TRZASK-PALARNIA/",
+          "title": "TRZASK",
+          "category": "Palarnia kawy i sklep · Łódź",
+          "desc": "Strona i sklep małej palarni z Księżego Młyna. Kawa palona co czwartek i wysyłana w 48 godzin od wypalenia, z charakterną identyfikacją marki.",
+          "tags": [
+            "E-commerce",
+            "Branding",
+            "Gastronomia"
           ],
           "kind": "Projekt autorski"
         },
@@ -120,8 +146,8 @@
     },
     {
       "id": "narzedzia",
-      "title": "Narzędzia i portale online",
-      "lead": "Darmowe serwisy, które liczą, generują i porównują w przeglądarce. Przyciągają ruch z Google.",
+      "title": "Narzędzia i aplikacje",
+      "lead": "Serwisy i aplikacje, które liczą, generują, porównują i porządkują dane w przeglądarce.",
       "projects": [
         {
           "shot": "miastometr",
@@ -159,6 +185,19 @@
             "Next.js",
             "TypeScript",
             "SEO"
+          ],
+          "kind": "Projekt autorski"
+        },
+        {
+          "shot": "NURT-CRM",
+          "url": "https://borkowskiprzemo098.github.io/NURT-CRM/",
+          "title": "NURT CRM",
+          "category": "Panel sprzedaży · aplikacja webowa",
+          "desc": "Koncepcyjny pulpit CRM: plan miesiąca, lejek sprzedaży, źródła leadów, wyniki zespołu i tabela szans z sortowaniem. Dane demonstracyjne.",
+          "tags": [
+            "Aplikacja",
+            "Dashboard",
+            "Dane"
           ],
           "kind": "Projekt autorski"
         }
