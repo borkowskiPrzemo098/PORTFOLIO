@@ -479,3 +479,10 @@ html { -webkit-tap-highlight-color: transparent; }
   .filters::-webkit-scrollbar { display: none; }
   .filters button { min-height: 40px; padding: 0 14px; font-size: 14px; }
 }
+
+/* ---------- Mobile-app cards: three phone screens instead of a browser ---------- */
+.card__media--app { display: grid !important; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: clamp(10px, 1.6vw, 18px); align-items: end; padding-bottom: clamp(18px, 2.4vw, 30px) !important; }
+.card__media--app .phone { border-width: 4px; border-radius: 22px; box-shadow: var(--shadow); }
+.card__media--app .phone:nth-child(2) { transform: translateY(-14px); }
+.card__media--app .browser[hidden] { display: none; }
+@media (max-width: 480px) { .card__media--app .phone { border-width: 3px; border-radius: 14px; } }

@@ -18,9 +18,9 @@ const photo = existsSync('assets/portret.jpg')
 // ---- grouped projects
 const card = (p, layout) => `
           <a class="card card--${layout}" href="${p.url}" target="_blank" rel="noopener">
-            <span class="card__media">
-              <span class="browser"><span class="browser__bar" aria-hidden="true"><i></i><i></i><i></i><b>${esc(host(p.url))}</b></span>${img(`shots/${p.shot}.jpg`, 1440, 900, `${p.title}, widok na komputerze`)}</span>
-              ${existsSync(`shots/${p.shot}-m.jpg`) ? `<span class="phone phone--sm">${img(`shots/${p.shot}-m.jpg`, 390, 844, `${p.title}, widok na telefonie`)}</span>` : ''}
+            <span class="card__media${p.phones ? ' card__media--app' : ''}">
+              ${p.phones ? p.phones.map((s) => `<span class="phone">${img(`shots/${s}.jpg`, 390, 844, `${p.title}, ekran aplikacji`)}</span>`).join('') : ''}<span class="browser"${p.phones ? ' hidden' : ''}><span class="browser__bar" aria-hidden="true"><i></i><i></i><i></i><b>${esc(host(p.url))}</b></span>${img(`shots/${p.shot}.jpg`, 1440, 900, `${p.title}, widok na komputerze`)}</span>
+              ${!p.phones && existsSync(`shots/${p.shot}-m.jpg`) ? `<span class="phone phone--sm">${img(`shots/${p.shot}-m.jpg`, 390, 844, `${p.title}, widok na telefonie`)}</span>` : ''}
             </span>
             <span class="card__body">
               <span class="card__title">${esc(p.title)}</span>
@@ -28,7 +28,7 @@ const card = (p, layout) => `
               <span class="card__cat">${esc(p.category)}</span>
               <span class="card__desc">${esc(p.desc)}</span>
               <span class="tags">${p.tags.map((t) => `<span>${esc(t)}</span>`).join('')}</span>
-              <span class="card__go">Zobacz stronę na żywo ${arrow}</span>
+              <span class="card__go">${p.phones ? 'Otwórz aplikację' : 'Zobacz stronę na żywo'} ${arrow}</span>
             </span>
           </a>`;
 const filterHtml = `

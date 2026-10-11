@@ -216,6 +216,31 @@
           "kind": "Projekt autorski"
         }
       ]
+    },
+    {
+      "id": "mobilne",
+      "title": "Aplikacje mobilne",
+      "lead": "Aplikacje projektowane od początku pod telefon: obsługa kciukiem, praca offline i dane zapisane na urządzeniu.",
+      "projects": [
+        {
+          "shot": "SILECZKOMAT",
+          "phones": [
+            "SILECZKOMAT-m1",
+            "SILECZKOMAT-m2",
+            "SILECZKOMAT-m3"
+          ],
+          "url": "https://borkowskiprzemo098.github.io/SILECZKOMAT/",
+          "title": "SIŁECZKOMAT",
+          "category": "Aplikacja treningowa · PWA",
+          "desc": "Plan treningowy dopasowany do celu, sprzętu i bolących miejsc. Licznik serii, postępy, cele i przygotowanie do rekordu. Działa offline, a dane zostają na telefonie.",
+          "tags": [
+            "Aplikacja mobilna",
+            "Offline",
+            "Fitness"
+          ],
+          "kind": "Projekt autorski"
+        }
+      ]
     }
   ]
 }
