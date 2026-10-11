@@ -84,7 +84,8 @@
           ],
           "kind": "Projekt autorski"
         }
-      ]
+      ],
+      "short": "Strony firmowe"
     },
     {
       "id": "sklepy",
@@ -116,7 +117,8 @@
           ],
           "kind": "Projekt autorski"
         }
-      ]
+      ],
+      "short": "Sklepy"
     },
     {
       "id": "landing",
@@ -149,7 +151,8 @@
           ],
           "kind": "Realizacja dla klienta"
         }
-      ]
+      ],
+      "short": "Landing page"
     },
     {
       "id": "portale",
@@ -195,7 +198,8 @@
           ],
           "kind": "Projekt autorski"
         }
-      ]
+      ],
+      "short": "Portale"
     },
     {
       "id": "aplikacje",
@@ -215,7 +219,8 @@
           ],
           "kind": "Projekt autorski"
         }
-      ]
+      ],
+      "short": "Aplikacje webowe"
     },
     {
       "id": "mobilne",
@@ -240,7 +245,8 @@
           ],
           "kind": "Projekt autorski"
         }
-      ]
+      ],
+      "short": "Aplikacje mobilne"
     }
   ]
 }

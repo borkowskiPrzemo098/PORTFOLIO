@@ -34,7 +34,7 @@ const card = (p, layout) => `
 const filterHtml = `
       <nav class="filters" aria-label="Kategorie projektów">
         <button type="button" class="is-on" data-filter="all" aria-pressed="true">Wszystkie <span>${groups.reduce((n, g) => n + g.projects.length, 0)}</span></button>${groups.map((g) => `
-        <button type="button" data-filter="${g.id}" aria-pressed="false">${esc(g.title)} <span>${g.projects.length}</span></button>`).join('')}
+        <button type="button" data-filter="${g.id}" aria-pressed="false">${esc(g.short || g.title)} <span>${g.projects.length}</span></button>`).join('')}
       </nav>`;
 const projectsHtml = filterHtml + groups.map((g) => {
   return `
