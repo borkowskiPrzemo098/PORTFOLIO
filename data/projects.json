@@ -2,9 +2,9 @@
   "_info": "Kategorie projektów. 'kind' = Realizacja dla klienta / Projekt autorski. Po zmianie: node build.mjs",
   "groups": [
     {
-      "id": "strony",
+      "id": "firmowe",
       "title": "Strony firmowe",
-      "lead": "Strony dla restauracji, salonów, klinik, kancelarii, nieruchomości i marek. Budują zaufanie i prowadzą do rezerwacji, zakupu albo kontaktu.",
+      "lead": "Strony dla restauracji, salonów, klinik, kancelarii i biur nieruchomości. Budują zaufanie i prowadzą do rezerwacji albo kontaktu.",
       "projects": [
         {
           "shot": "salonpieknoscinikola",
@@ -72,19 +72,6 @@
           "kind": "Projekt autorski"
         },
         {
-          "shot": "TRZASK-PALARNIA",
-          "url": "https://borkowskiprzemo098.github.io/TRZASK-PALARNIA/",
-          "title": "TRZASK",
-          "category": "Palarnia kawy i sklep · Łódź",
-          "desc": "Strona i sklep małej palarni z Księżego Młyna. Kawa palona co czwartek i wysyłana w 48 godzin od wypalenia, z charakterną identyfikacją marki.",
-          "tags": [
-            "E-commerce",
-            "Branding",
-            "Gastronomia"
-          ],
-          "kind": "Projekt autorski"
-        },
-        {
           "shot": "BARBERSHOP",
           "url": "https://borkowskiprzemo098.github.io/BARBERSHOP/",
           "title": "SFM Salon Fryzur Męskich",
@@ -94,6 +81,26 @@
             "Branding",
             "Booksy",
             "Strona firmowa"
+          ],
+          "kind": "Projekt autorski"
+        }
+      ]
+    },
+    {
+      "id": "sklepy",
+      "title": "Sklepy internetowe",
+      "lead": "Strony, na których klient wybiera produkt i od razu go zamawia.",
+      "projects": [
+        {
+          "shot": "TRZASK-PALARNIA",
+          "url": "https://borkowskiprzemo098.github.io/TRZASK-PALARNIA/",
+          "title": "TRZASK",
+          "category": "Palarnia kawy i sklep · Łódź",
+          "desc": "Strona i sklep małej palarni z Księżego Młyna. Kawa palona co czwartek i wysyłana w 48 godzin od wypalenia, z charakterną identyfikacją marki.",
+          "tags": [
+            "E-commerce",
+            "Branding",
+            "Gastronomia"
           ],
           "kind": "Projekt autorski"
         },
@@ -145,9 +152,9 @@
       ]
     },
     {
-      "id": "narzedzia",
-      "title": "Narzędzia i aplikacje",
-      "lead": "Serwisy i aplikacje, które liczą, generują, porównują i porządkują dane w przeglądarce.",
+      "id": "portale",
+      "title": "Portale informacyjne",
+      "lead": "Darmowe serwisy z wiedzą i narzędziami: liczą, generują i porównują w przeglądarce. Przyciągają ruch z Google.",
       "projects": [
         {
           "shot": "miastometr",
@@ -187,7 +194,14 @@
             "SEO"
           ],
           "kind": "Projekt autorski"
-        },
+        }
+      ]
+    },
+    {
+      "id": "aplikacje",
+      "title": "Aplikacje webowe",
+      "lead": "Narzędzia robocze dla firm, które porządkują dane i codzienną pracę zespołu.",
+      "projects": [
         {
           "shot": "NURT-CRM",
           "url": "https://borkowskiprzemo098.github.io/NURT-CRM/",
