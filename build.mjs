@@ -8,7 +8,12 @@ const contact = read('data/contact.json', {});
 const esc = (s) => String(s).replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;').replace(/"/g, '&quot;');
 const arrow = '<svg class="i" viewBox="0 0 20 20" aria-hidden="true"><path d="M6 14L14 6M7.5 6H14v6.5"/></svg>';
 const host = (u) => u.replace(/^https?:\/\//, '').replace(/\/$/, '');
-const img = (src, w, h, alt = '') => `<img src="${src}" alt="${esc(alt)}" width="${w}" height="${h}" loading="lazy" decoding="async">`;
+const img = (src, w, h, alt = '') => {
+  // long full-page capture, swapped in by JS when the card is near the viewport (scroll-on-hover)
+  const full = src.replace(/.jpg$/, '-full.jpg');
+  const data = existsSync(full) ? ` data-full="${full}"` : '';
+  return `<img src="${src}"${data} alt="${esc(alt)}" width="${w}" height="${h}" loading="lazy" decoding="async">`;
+};
 
 // ---- portrait
 const photo = existsSync('assets/portret.jpg')

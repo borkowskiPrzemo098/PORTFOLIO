@@ -502,3 +502,74 @@ html { -webkit-tap-highlight-color: transparent; }
 .filters button:not(.is-on) { background: rgba(246, 243, 236, .07); }
 .filters button:not(.is-on):hover { background: rgba(246, 243, 236, .14); }
 .filters { position: static !important; }
+
+/* =====================================================================
+   MOTION PACK (2026-10-12). Rollback point: git tag "przed-animacjami".
+   Rule: nothing starts hidden; motion only decorates visible content.
+   ===================================================================== */
+
+/* 1. Hero: website sketches that draw themselves + follow the cursor */
+.sketches { position: absolute; inset: 0; z-index: -1; pointer-events: none; overflow: hidden; }
+.sketch { position: absolute; stroke: var(--sand); stroke-width: 1.4; opacity: .42; translate: var(--px, 0) var(--py, 0); transition: translate .8s var(--ease); animation: drift 9s ease-in-out infinite alternate; }
+.sketch .f { fill: var(--sand); stroke: none; opacity: 0; animation: fillIn .9s ease forwards; animation-delay: 1.5s; }
+.sketch .d { stroke-dasharray: 1; stroke-dashoffset: 1; animation: draw 1.9s var(--ease) forwards; animation-delay: .25s; }
+.sketch .f2 { fill: var(--sand); fill-opacity: 0; animation: draw 1.9s var(--ease) forwards .25s, fillIn2 .9s ease forwards 1.6s; }
+.sk-a { width: clamp(150px, 14vw, 230px); left: 3%; top: 13%; }
+.sk-b { width: clamp(150px, 14vw, 230px); right: 3%; bottom: 13%; animation-delay: -3s; }
+.sk-c { width: clamp(64px, 5.5vw, 92px); right: 7%; top: 15%; animation-delay: -5s; }
+.sk-d { width: clamp(100px, 9vw, 140px); left: 6%; bottom: 17%; animation-delay: -2s; }
+.sk-b .d, .sk-b .f2 { animation-delay: .55s; }
+.sk-c .d { animation-delay: .8s; }
+.sk-d .d { animation-delay: 1s; }
+@keyframes draw { to { stroke-dashoffset: 0; } }
+@keyframes fillIn { to { opacity: .35; } }
+@keyframes fillIn2 { to { fill-opacity: .25; } }
+@keyframes drift { from { transform: translateY(-6px) rotate(-.6deg); } to { transform: translateY(8px) rotate(.6deg); } }
+@media (max-width: 900px) {
+  .sketch { opacity: .26; }
+  .sk-a { width: 150px; left: -36px; top: auto; bottom: 9%; }
+  .sk-c { width: 60px; right: 4%; top: 11%; }
+  .sk-b, .sk-d { display: none; }
+}
+
+/* 2. Project cards: the screenshot scrolls through the whole site */
+.card .browser img, .card .phone--sm img { transition: object-position 1.4s cubic-bezier(.45, 0, .55, 1); }
+.card:hover .browser img, .card:hover .phone--sm img,
+.card:focus-visible .browser img, .card:focus-visible .phone--sm img,
+.card.is-tour .browser img, .card.is-tour .phone--sm img { object-position: 50% 100%; transition-duration: 8s; }
+
+/* 3. Counters need stable width while counting */
+.facts b { font-variant-numeric: tabular-nums; }
+
+/* 4. Process timeline: rail fills with scroll, steps light up */
+.timeline { position: relative; height: 2px; margin: 0 0 28px; background: var(--line-dark); border-radius: 2px; overflow: hidden; }
+.timeline span { position: absolute; inset: 0; background: var(--sand); transform-origin: left; transform: scaleX(var(--tl, 1)); }
+.tl-on .steps__n { background: transparent; color: var(--sand); box-shadow: inset 0 0 0 1.5px var(--sand); transition: background-color .5s var(--ease), color .5s var(--ease), transform .5s var(--ease); }
+.tl-on .steps li.lit .steps__n { background: var(--sand); color: var(--green-deep); transform: scale(1.06); }
+.tl-on .steps li { transition: border-color .5s var(--ease), transform .4s var(--ease); }
+.tl-on .steps li.lit { border-color: rgba(228, 201, 154, .45); }
+@media (max-width: 560px) { .timeline { display: none; } }
+
+/* 5. Gentle sheen on the sand italic words (dark sections only) */
+.hero__title em, .cases .sec-head em, .process .sec-head em, .contact h2 em {
+  background: linear-gradient(100deg, var(--sand) 0 40%, #FFF4DE 50%, var(--sand) 60% 100%) 100% 0 / 260% 100% no-repeat;
+  -webkit-background-clip: text; background-clip: text; color: transparent; -webkit-text-fill-color: transparent;
+  padding-right: .08em; margin-right: -.08em;
+  animation: sheen 7s ease-in-out infinite;
+}
+@keyframes sheen { 0%, 55% { background-position: 100% 0; } 85%, 100% { background-position: 0 0; } }
+
+/* magnetic buttons: JS sets --mx/--my */
+.magnet { translate: var(--mx, 0) var(--my, 0); transition: translate .35s var(--ease), background-color .3s var(--ease), color .3s var(--ease), border-color .3s var(--ease); }
+
+@media (prefers-reduced-motion: reduce) {
+  .sketch, .sketch .d, .sketch .f, .sketch .f2, .hero__title em, .cases .sec-head em, .process .sec-head em, .contact h2 em { animation: none !important; }
+  .sketch .d { stroke-dashoffset: 0; }
+  .sketch .f { opacity: .35; }
+  .card .browser img, .card .phone--sm img { transition: none !important; object-position: 50% 0 !important; }
+  .hero__title em, .cases .sec-head em, .process .sec-head em, .contact h2 em { background: none; color: var(--sand); -webkit-text-fill-color: var(--sand); }
+  .magnet { translate: none; }
+}
+
+/* the live sketches replace most of the static pattern in the hero */
+.hero::before { opacity: .035; }
