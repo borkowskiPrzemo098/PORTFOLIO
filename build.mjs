@@ -33,7 +33,7 @@ const card = (p, layout) => `
               <span class="card__cat">${esc(p.category)}</span>
               <span class="card__desc">${esc(p.desc)}</span>
               <span class="tags">${p.tags.map((t) => `<span>${esc(t)}</span>`).join('')}</span>
-              <span class="card__go">${p.phones ? 'Otwórz aplikację' : 'Zobacz stronę na żywo'} ${arrow}</span>
+              <span class="card__go">${p.phones ? (p.shot === 'ABYSS' || p.shot === 'OSADA' || p.shot === 'LINIA' ? 'Zagraj' : 'Otwórz aplikację') : 'Zobacz stronę na żywo'} ${arrow}</span>
             </span>
           </a>`;
 const filterHtml = `

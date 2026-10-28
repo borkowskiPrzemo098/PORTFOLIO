@@ -488,12 +488,13 @@ html { -webkit-tap-highlight-color: transparent; }
 @media (max-width: 480px) { .card__media--app .phone { border-width: 3px; border-radius: 14px; } }
 
 /* ---------- Filter bar v2: equal tiles in one tidy grid ---------- */
-.filters { display: grid; grid-template-columns: repeat(7, minmax(0, 1fr)); gap: 6px; width: 100%; border-radius: 22px; padding: 6px; }
+.filters { display: grid; grid-template-columns: repeat(8, minmax(0, 1fr)); gap: 6px; width: 100%; border-radius: 22px; padding: 6px; }
 .filters button { justify-content: center; padding: 0 10px; min-height: 48px; border-radius: 16px; font-size: 14.5px; }
-@media (max-width: 1240px) {
-  .filters { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); overflow: visible; position: static; }
+@media (max-width: 1420px) {
+  .filters { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); overflow: visible; position: static; }
+
   .filters button { flex: initial; padding: 0 10px; }
-  .filters button:first-child { grid-column: 1 / -1; }
+
 }
 @media (max-width: 760px) {
   .filters { grid-template-columns: repeat(2, minmax(0, 1fr)); position: static; border-radius: 20px; }

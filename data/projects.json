@@ -265,6 +265,68 @@
         }
       ],
       "short": "Aplikacje mobilne"
+    },
+    {
+      "id": "gry",
+      "title": "Gry mobilne",
+      "short": "Gry",
+      "lead": "Gry w przeglądarce, projektowane pod telefon: grafika, rozgrywka, dźwięk i zapis postępów.",
+      "projects": [
+        {
+          "shot": "ABYSS",
+          "phones": [
+            "ABYSS-m1",
+            "ABYSS-m2",
+            "ABYSS-m3"
+          ],
+          "url": "https://borkowskiprzemo098.github.io/abyss-hollow-crown/",
+          "title": "ABYSS: The Hollow Crown",
+          "category": "Dungeon crawler · izometryczna gra akcji",
+          "desc": "Mroczny, izometryczny dungeon crawler na telefon. Dwie klasy bohaterów, 20 umiejętności, ekwipunek z legendarnymi przedmiotami, bossowie i trzy różne krainy podziemi. Atak jest automatyczny, gracz steruje ruchem i unikami.",
+          "tags": [
+            "Phaser",
+            "Gra akcji",
+            "PWA"
+          ],
+          "kind": "Projekt autorski"
+        },
+        {
+          "shot": "OSADA",
+          "phones": [
+            "OSADA-m1",
+            "OSADA-m2",
+            "OSADA-m3"
+          ],
+          "url": "https://borkowskiprzemo098.github.io/osada-gra/",
+          "title": "Osada",
+          "category": "Gra strategiczna 3D",
+          "desc": "Budujesz wioskę w trójwymiarowym świecie: pola, tartaki, zwierzęta i obrona przed najazdami barbarzyńców. Wojsko, mapa krainy z wyprawami, cele i codzienna skrzynia.",
+          "tags": [
+            "Three.js",
+            "Strategia",
+            "3D"
+          ],
+          "kind": "Projekt autorski"
+        },
+        {
+          "shot": "LINIA",
+          "phones": [
+            "LINIA-m1",
+            "LINIA-m2",
+            "LINIA-m3"
+          ],
+          "url": "https://borkowskiprzemo098.github.io/ostatnia-linia/",
+          "title": "Ostatnia Linia",
+          "category": "Zręcznościowa gra akcji",
+          "desc": "Prowadzisz oddział przez hordę zombie. Wybierasz bramki, które mnożą żołnierzy, rozbijasz skrzynie z lepszą bronią i walczysz z bossem co 600 metrów.",
+          "tags": [
+            "Canvas",
+            "Arcade",
+            "Mobile"
+          ],
+          "kind": "Projekt autorski"
+        }
+      ]
     }
   ]
 }
