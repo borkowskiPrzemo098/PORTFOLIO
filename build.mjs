@@ -17,7 +17,7 @@ const img = (src, w, h, alt = '') => {
 
 // ---- portrait
 const photo = existsSync('assets/portret.jpg')
-  ? `<img src="assets/portret.jpg" alt="Przemysław Borkowski" width="912" height="1172" fetchpriority="high">`
+  ? `<img src="assets/portret-640.jpg" srcset="assets/portret-640.jpg 640w, assets/portret-912.jpg 912w" sizes="(max-width: 900px) 420px, 520px" alt="Przemysław Borkowski" width="912" height="1172" loading="lazy" decoding="async">`
   : `<div class="portrait__ph">PB</div>`;
 
 // ---- grouped projects

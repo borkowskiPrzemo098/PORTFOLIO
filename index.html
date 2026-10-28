@@ -17,9 +17,7 @@
 <link rel="apple-touch-icon" href="assets/apple-touch-icon.png">
 <link rel="preconnect" href="https://api.fontshare.com">
 <link rel="preconnect" href="https://cdn.fontshare.com" crossorigin>
-<link rel="stylesheet" href="https://api.fontshare.com/v2/css?f[]=clash-grotesk@500,600&display=swap">
-<link rel="stylesheet" href="https://api.fontshare.com/v2/css?f[]=gambetta@400i,500i&display=swap">
-<link rel="stylesheet" href="https://api.fontshare.com/v2/css?f[]=satoshi@400,500,700&display=swap">
+<link rel="stylesheet" href="https://api.fontshare.com/v2/css?f[]=clash-grotesk@500,600&f[]=gambetta@400i&f[]=satoshi@400,500,700&display=swap">
 <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
@@ -88,7 +86,7 @@ FINISH: unreviewed and undocumented is unfinished; this build ends with the fini
     <div class="wrap about__in">
       <figure class="about__photo">
         <!-- PHOTO:START -->
-          <img src="assets/portret.jpg" alt="Przemysław Borkowski" width="912" height="1172" fetchpriority="high">
+          <img src="assets/portret-640.jpg" srcset="assets/portret-640.jpg 640w, assets/portret-912.jpg 912w" sizes="(max-width: 900px) 420px, 520px" alt="Przemysław Borkowski" width="912" height="1172" loading="lazy" decoding="async">
           <!-- PHOTO:END -->
       </figure>
       <div class="about__text">
@@ -532,7 +530,7 @@ FINISH: unreviewed and undocumented is unfinished; this build ends with the fini
       </div>
       <div class="contact__card">
         <div class="contact__id">
-          <img class="contact__face" src="assets/portret.jpg" alt="" width="72" height="72">
+          <img class="contact__face" src="assets/portret-avatar.jpg" loading="lazy" alt="" width="72" height="72">
           <p><strong>Przemysław Borkowski</strong><span>PBDesign · web&nbsp;designer&nbsp;&amp;&nbsp;developer</span></p>
         </div>
         <dl class="contact__list">
@@ -568,7 +566,7 @@ FINISH: unreviewed and undocumented is unfinished; this build ends with the fini
   <div class="cdlg__card">
     <button class="cdlg__close" type="button" aria-label="Zamknij okno kontaktu"><svg class="i" viewBox="0 0 20 20" aria-hidden="true"><path d="M5 5l10 10M15 5L5 15"/></svg></button>
     <div class="cdlg__id">
-      <img src="assets/portret.jpg" alt="" width="64" height="64">
+      <img src="assets/portret-avatar.jpg" alt="" width="64" height="64" loading="lazy">
       <div><h2 id="cdlg-title">Porozmawiajmy</h2><p>Wybierz, jak wolisz się skontaktować.</p></div>
     </div>
     <div class="cdlg__opts">
@@ -597,7 +595,6 @@ FINISH: unreviewed and undocumented is unfinished; this build ends with the fini
 </dialog>
 <p class="toast" role="status" aria-live="polite"></p>
 
-<script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js" defer></script>
 <script src="js/main.js" defer></script>
 </body>
 </html>

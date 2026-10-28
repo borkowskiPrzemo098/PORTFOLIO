@@ -574,3 +574,14 @@ html { -webkit-tap-highlight-color: transparent; }
 
 /* the live sketches replace most of the static pattern in the hero */
 .hero::before { opacity: .035; }
+
+/* Hero entrance (replaces GSAP, ~71 KB saved) */
+@media (prefers-reduced-motion: no-preference) {
+  .hero__title .ln > span { animation: lnUp 1s cubic-bezier(.22, 1, .36, 1) both; }
+  .hero__title .ln:nth-child(2) > span { animation-delay: .09s; }
+  .hero__title .ln:nth-child(3) > span { animation-delay: .18s; }
+  .hero__who, .hero__cta { animation: riseIn .8s cubic-bezier(.22, 1, .36, 1) both; }
+  .hero__who { animation-delay: .35s; } .hero__cta { animation-delay: .43s; }
+}
+@keyframes lnUp { from { transform: translateY(105%); } }
+@keyframes riseIn { from { opacity: 0; translate: 0 20px; } }

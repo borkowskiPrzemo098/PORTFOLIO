@@ -27,14 +27,7 @@
   }), { rootMargin: '-45% 0px -50% 0px' });
   ['o-mnie', 'projekty', 'oferta', 'faq'].forEach((id) => { const el = document.getElementById(id); if (el) spy.observe(el); });
 
-  /* ---------- Motion (quick, never blocks scrolling) ---------- */
-  if (reduce || !window.gsap) return;
-  const ease = 'power3.out';
-
-  gsap.timeline({ defaults: { ease } })
-    .from('.hero__title .ln > span', { yPercent: 105, duration: 1, stagger: .09 })
-    .from(['.hero__who', '.hero__cta', '.hero__scroll'], { y: 20, opacity: 0, duration: .8, stagger: .08 }, .35);
-
+  /* Hero entrance is pure CSS now (see .hero__title .ln in style.css) — no GSAP download */
 
 })();
 
