@@ -24,7 +24,7 @@ const photo = existsSync('assets/portret.jpg')
 const card = (p, layout) => `
           <a class="card card--${layout}" href="${p.url}" target="_blank" rel="noopener">
             <span class="card__media${p.phones ? ' card__media--app' : ''}">
-              ${p.phones ? p.phones.map((s) => `<span class="phone">${img(`shots/${s}.jpg`, 390, 844, `${p.title}, ekran aplikacji`)}</span>`).join('') : ''}<span class="browser"${p.phones ? ' hidden' : ''}><span class="browser__bar" aria-hidden="true"><i></i><i></i><i></i><b>${esc(host(p.url))}</b></span>${img(`shots/${p.shot}.jpg`, 1440, 900, `${p.title}, widok na komputerze`)}</span>
+              ${p.phones ? p.phones.map((s) => `<span class="phone">${img(`shots/${s}.jpg`, 390, 844, `${p.title}, ekran aplikacji`)}</span>`).join('') : ''}${p.phones ? '' : `<span class="browser"><span class="browser__bar" aria-hidden="true"><i></i><i></i><i></i><b>${esc(host(p.url))}</b></span>${img(`shots/${p.shot}.jpg`, 1440, 900, `${p.title}, widok na komputerze`)}</span>`}
               ${!p.phones && existsSync(`shots/${p.shot}-m.jpg`) ? `<span class="phone phone--sm">${img(`shots/${p.shot}-m.jpg`, 390, 844, `${p.title}, widok na telefonie`)}</span>` : ''}
             </span>
             <span class="card__body">
@@ -74,6 +74,13 @@ let html = readFileSync('index.html', 'utf8');
 const put = (name, body) => { html = html.replace(new RegExp(`(<!-- ${name}:START -->)[\\s\\S]*?(<!-- ${name}:END -->)`), `$1${body}$2`); };
 put('PHOTO', `\n          ${photo}\n          `);
 put('PROJECTS', projectsHtml + '\n      ');
+// "O mnie" facts follow the data, so they never go stale
+const nProj = groups.reduce((n, g) => n + g.projects.length, 0);
+const pl = (n, one, few, many) => (n === 1 ? one : n % 10 >= 2 && n % 10 <= 4 && (n % 100 < 10 || n % 100 >= 20) ? few : many);
+put('FACTS', `
+          <li><b>${nProj}</b><span>${pl(nProj, 'projekt online', 'projekty online', 'projektów online')}</span></li>
+          <li><b>${groups.length}</b><span>${pl(groups.length, 'rodzaj realizacji', 'rodzaje realizacji', 'rodzajów realizacji')}</span></li>
+          `);
 put('CONTACT', contactHtml);
 const dialogHtml = [
   contact.email && `
