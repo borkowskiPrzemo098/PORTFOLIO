@@ -1,0 +1,18 @@
+SOBOTA 2026-11-21, godzina 10:00
+Format: karuzela (5 slajdów)
+Projekt: Kalkulatory Online
+Karuzela: dodaj slajdy po kolei, w kolejności numerów w nazwach plików.
+Story (opcjonalnie, ok. 11:30): plik STORY_*.png, dodaj naklejkę z out/stickery w aplikacji.
+
+=== OPIS DO WKLEJENIA ===
+Nowy projekt autorski: Kalkulatory Online.
+
+Portal z narzędziami. 60 darmowych kalkulatorów do codziennych obliczeń: VAT, procenty, raty kredytu, BMI. Wynik od razu, cała logika działa w przeglądarce, bez rejestracji. To projekt autorski, nie realizacja dla klienta.
+
+Chcesz podobną stronę? Napisz: pborkowski0301@gmail.com
+Link do portfolio jest w bio.
+
+#narzedziaonline #webdesign #webdev #seo #projektowaniestron #PBDesign
+
+=== TEKST ALTERNATYWNY (Ustawienia zaawansowane przy dodawaniu posta) ===
+Wizualizacja strony Kalkulatory Online (Portal z narzędziami) na telefonie i komputerze.

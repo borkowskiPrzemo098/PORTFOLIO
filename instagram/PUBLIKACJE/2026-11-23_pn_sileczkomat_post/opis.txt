@@ -1,0 +1,17 @@
+PONIEDZIAŁEK 2026-11-23, godzina 18:00
+Format: post
+Projekt: SIŁECZKOMAT
+Story (opcjonalnie, ok. 19:30): plik STORY_*.png, dodaj naklejkę z out/stickery w aplikacji.
+
+=== OPIS DO WKLEJENIA ===
+Nowy projekt autorski: SIŁECZKOMAT.
+
+Aplikacja treningowa, PWA. Plan treningowy dopasowany do celu, sprzętu i bolących miejsc. Licznik serii, postępy, cele i przygotowanie do rekordu. Działa offline, a dane zostają na telefonie. To projekt autorski, nie realizacja dla klienta.
+
+Chcesz podobną stronę? Napisz: pborkowski0301@gmail.com
+Link do portfolio jest w bio.
+
+#pwa #aplikacjamobilna #webapp #mobilefirst #webdesign #pwa #PBDesign
+
+=== TEKST ALTERNATYWNY (Ustawienia zaawansowane przy dodawaniu posta) ===
+Wizualizacja strony SIŁECZKOMAT (Aplikacja treningowa, PWA) na telefonie i komputerze.

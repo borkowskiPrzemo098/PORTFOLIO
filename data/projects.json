@@ -228,6 +228,24 @@
       "lead": "Aplikacje projektowane od początku pod telefon: obsługa kciukiem, praca offline i dane zapisane na urządzeniu.",
       "projects": [
         {
+          "shot": "LEAPY",
+          "phones": [
+            "LEAPY-m1",
+            "LEAPY-m2",
+            "LEAPY-m3"
+          ],
+          "url": "https://borkowskiprzemo098.github.io/leapy/app/witaj",
+          "title": "Leapy",
+          "category": "Platforma do nauki · PWA",
+          "desc": "Darmowa nauka do egzaminu ósmoklasisty i matury: lekcje w pigułce, ponad 1100 zadań z wyjaśnieniami krok po kroku, powtórki, fiszki i egzaminy próbne. Cel dzienny, seria i postępy. Bez konta, działa offline.",
+          "tags": [
+            "Edukacja",
+            "Offline",
+            "Grywalizacja"
+          ],
+          "kind": "Projekt autorski"
+        },
+        {
           "shot": "SILECZKOMAT",
           "phones": [
             "SILECZKOMAT-m1",

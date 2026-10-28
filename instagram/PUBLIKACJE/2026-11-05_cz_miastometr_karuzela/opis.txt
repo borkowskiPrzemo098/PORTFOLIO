@@ -1,0 +1,18 @@
+CZWARTEK 2026-11-05, godzina 18:00
+Format: karuzela (6 slajdów)
+Projekt: Miastometr
+Karuzela: dodaj slajdy po kolei, w kolejności numerów w nazwach plików.
+Story (opcjonalnie, ok. 19:30): plik STORY_*.png, dodaj naklejkę z out/stickery w aplikacji.
+
+=== OPIS DO WKLEJENIA ===
+Nowy projekt autorski: Miastometr.
+
+Portal z danymi. Porównywarka polskich miast oparta na publicznych danych GUS i GIOŚ: wynagrodzenia, ludność, bezrobocie i jakość powietrza. To projekt autorski, nie realizacja dla klienta.
+
+Chcesz podobną stronę? Napisz: pborkowski0301@gmail.com
+Link do portfolio jest w bio.
+
+#narzedziaonline #webdesign #webdev #seo #projektowaniestron #PBDesign
+
+=== TEKST ALTERNATYWNY (Ustawienia zaawansowane przy dodawaniu posta) ===
+Wizualizacja strony Miastometr (Portal z danymi) na telefonie i komputerze.
