@@ -532,3 +532,14 @@ a.tile:hover .bphones .phone:nth-child(3) { transform: translateY(-8px) rotate(2
 .wow__frame { background: #f4f5f7; isolation: isolate; }
 .wow__frame::before { content: ""; position: absolute; inset: 0; z-index: -1; background: url("../assets/video/wow-poster.jpg") center / cover; opacity: .75; }
 .wow__video.is-playing { opacity: .75; }
+
+/* statement over the glass-ribbon video (wow band merged into it) */
+.statement--video { position: relative; isolation: isolate; overflow: hidden; background: #f4f5f7; padding-block: clamp(120px, 16vw, 220px); }
+.statement--video::before { content: ""; position: absolute; inset: 0; z-index: -2; background: url("../assets/video/wow-poster.jpg") center / cover; opacity: .75; }
+.statement__video { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; z-index: -1; opacity: 0; transition: opacity 1s ease; }
+.statement__video.is-playing { opacity: .75; }
+.statement--video .lit { position: relative; padding: clamp(28px, 4vw, 56px); border-radius: 32px; background: rgba(251, 251, 253, .78); -webkit-backdrop-filter: blur(18px) saturate(1.3); backdrop-filter: blur(18px) saturate(1.3); box-shadow: 0 30px 80px -40px rgba(0, 0, 0, .35); }
+.statement--video .lit .w { color: #8e8e93; }
+.statement--video .lit .w.on { color: var(--ink); }
+@media (prefers-reduced-motion: reduce) { .statement__video { display: none; } }
+@media (min-width: 900px) { .statement--video .lit { max-width: 720px; margin-left: max(var(--gutter), calc((100vw - var(--max)) / 2)); margin-right: auto; font-size: clamp(1.8rem, 2.7vw, 2.6rem); } }
