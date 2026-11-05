@@ -543,3 +543,15 @@ a.tile:hover .bphones .phone:nth-child(3) { transform: translateY(-8px) rotate(2
 .statement--video .lit .w.on { color: var(--ink); }
 @media (prefers-reduced-motion: reduce) { .statement__video { display: none; } }
 @media (min-width: 900px) { .statement--video .lit { max-width: 720px; margin-left: max(var(--gutter), calc((100vw - var(--max)) / 2)); margin-right: auto; font-size: clamp(1.8rem, 2.7vw, 2.6rem); } }
+/* bigger supporting text */
+.steps p { font-size: clamp(18px, 1.5vw, 20px); line-height: 1.5; }
+.steps h3 { font-size: clamp(1.6rem, 2.2vw, 1.9rem); }
+.tile--mini span, .tile--num span { font-size: 18px; }
+.qa p { font-size: 18px; }
+.facts span { font-size: 16px; }
+.rcard__cat { font-size: 15.5px; }
+.card__desc { font-size: 17.5px; }
+.stack li { font-size: 15px; }
+.steps p { font-size: clamp(19px, 1.6vw, 22px); color: #3a3a3c; letter-spacing: 0; line-height: 1.45; }
+.steps li { padding: 34px 30px 38px; }
+.qa p, .tile--mini span, .tile--num span, .card__desc { color: #3a3a3c; }
