@@ -205,12 +205,27 @@ const reelHtml = `
       </div>
       `;
 
+
+// hero collage: real projects layered at different depths (CSS places .c1..c7)
+const collageItems = [
+  ['c1', 'browser', 'HORYZONT-NIERUCHOMOSCI', 0.5],
+  ['c2', 'browser', 'TRZASK-PALARNIA', 0.5],
+  ['c3', 'browser', 'AMBRA-RESTAURACJA', 0.9],
+  ['c4', 'phone', 'LEAPY-m2', 1.4],
+  ['c5', 'phone', 'salonpieknoscinikola-m', 1.3],
+  ['c6', 'phone', 'ABYSS-m1', 1.1],
+  ['c7', 'browser', 'PORCELANA-KLINIKA', 0.7],
+];
+const collageHtml = '\n' + collageItems.map(([c, kind, s, d], i) => kind === 'browser'
+  ? `      <span class="ci ${c}" data-depth="${d}"><span class="browser"><span class="browser__bar" aria-hidden="true"><i></i><i></i><i></i></span>${pic(`shots/${s}.jpg`, 1440, 900, byShot[s] ? byShot[s].title : '', c === 'c3')}</span></span>`
+  : `      <span class="ci ${c}" data-depth="${d}"><span class="phone">${pic(`shots/${s}.jpg`, 390, 844, '')}</span></span>`).join('\n') + '\n      ';
+
 // ---- render index.html
 let html = readFileSync('index.html', 'utf8');
 const putIn = (src, name, body) => src.replace(new RegExp(`(<!-- ${name}:START -->)[\\s\\S]*?(<!-- ${name}:END -->)`), `$1${body}$2`);
 const put = (name, body) => { html = putIn(html, name, body); };
 put('PHOTO', `\n          ${photo}\n          `);
-put('DEVICES', devicesHtml);
+put('COLLAGE', collageHtml);
 put('BENTO', bentoHtml);
 put('REEL', reelHtml);
 const nProj = groups.reduce((n, g) => n + g.projects.length, 0);

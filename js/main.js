@@ -315,3 +315,45 @@
     sync();
   }
 })();
+
+/* =====================================================================
+   LIGHT EDITION (2026-11-06): lazy background videos, collage parallax,
+   video band that opens to full width. All optional decoration.
+   ===================================================================== */
+(() => {
+  const reduce = matchMedia('(prefers-reduced-motion: reduce)').matches;
+  const saveData = navigator.connection && navigator.connection.saveData;
+  const $$ = (s, r = document) => [...r.querySelectorAll(s)];
+
+  /* Videos load only when their section is about to appear, and pause off-screen */
+  const vids = $$('video.lazy-video');
+  if (vids.length && !reduce && !saveData) {
+    const io = new IntersectionObserver((es) => es.forEach((e) => {
+      const v = e.target;
+      if (e.isIntersecting) {
+        if (!v.src) { v.src = v.dataset.src; v.load(); }
+        const p = v.play(); if (p && p.catch) p.catch(() => {});
+      } else if (v.src) v.pause();
+    }), { rootMargin: '200px 0px' });
+    vids.forEach((v) => io.observe(v));
+  }
+
+  if (reduce) return;
+  let ticking = false;
+  const items = $$('.collage .ci');
+  const frame = document.querySelector('.wow__frame');
+  const update = () => {
+    ticking = false;
+    const y = scrollY;
+    if (items.length && y < innerHeight * 1.6) items.forEach((el) => el.style.setProperty('--py', `${(-y * 0.12 * (+el.dataset.depth || 1)).toFixed(1)}px`));
+    if (frame) {
+      const r = frame.getBoundingClientRect();
+      const p = Math.min(1, Math.max(0, (innerHeight - r.top) / (innerHeight * 0.85)));
+      frame.style.setProperty('--wow-x', `${((1 - p) * 6).toFixed(2)}%`);
+      frame.style.setProperty('--wow-r', `${((1 - p) * 32).toFixed(1)}px`);
+    }
+  };
+  addEventListener('scroll', () => { if (!ticking) { ticking = true; requestAnimationFrame(update); } }, { passive: true });
+  addEventListener('resize', update);
+  update();
+})();

@@ -5,7 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <title>PBDesign — Przemysław Borkowski, web designer & developer</title>
 <meta name="description" content="Przemysław Borkowski, PBDesign. Projektuję i koduję strony firmowe, sklepy, landing page’e, aplikacje webowe i mobilne oraz gry. Zobacz realizacje i porozmawiajmy o Twoim projekcie.">
-<meta name="theme-color" content="#000000">
+<meta name="theme-color" content="#fbfbfd">
 <meta property="og:type" content="website">
 <meta property="og:title" content="PBDesign — Przemysław Borkowski">
 <meta property="og:description" content="Strony i aplikacje, które robią wrażenie. Projekt, kod i publikacja w jednych rękach.">
@@ -22,7 +22,7 @@
 </head>
 <body>
 <!--
-THESIS: Product-launch portfolio in the Apple keynote register: the work is the product. A cinematic black stage where his real sites play inside a laptop and phone that grow as you scroll, then a quiet statement, a bento of what he builds, a horizontal reel of live work, the person, and one clear way to talk.
+THESIS: Product-launch portfolio in the Apple keynote register, light edition: a bright stage with soft colour accents and an elegant layered collage of his real sites and apps, a video band that opens up on scroll, a lit statement, a bento of what he builds, a reel of live work, the person and one clear way to talk.
 OWN-WORLD: black #000 and Apple-grey #F5F5F7 fields alternating with white; ink #1D1D1F; one brand green #1F7A55 (#5BD6A0 on black) for actions only. Satoshi in every weight (900 display, 500 text), tight tracking, huge type. Hand-drawn CSS laptop/phone hardware, 28px tiles, no borders, soft depth.
 STORY: what he makes, shown (hero devices) → why it is different (lit statement) → what he can build (bento → subpages) → proof (reel) → who (about) → how (steps) → answers → contact.
 FIRST VIEWPORT: black; centered 2-line headline "Strony i aplikacje, / które robią wrażenie." at ~7.5rem, one-line sub, green pill + text link; below, a laptop with a phone beside it cycling his real projects; on scroll the devices rise and scale while the headline drifts away (pinned on desktop).
@@ -58,28 +58,37 @@ FINISH: unreviewed and undocumented is unfinished; this build ends with the fini
 </header>
 
 <main id="top">
-  <!-- ============ HERO: devices on a black stage ============ -->
+  <!-- ============ HERO: light stage with a collage of real projects ============ -->
   <section class="hero" aria-labelledby="hero-title">
-    <div class="hero__pin">
-      <div class="hero__copy">
-        <h1 id="hero-title" class="hero__title"><span>Strony i aplikacje,</span> <span>które robią wrażenie.</span></h1>
-        <p class="hero__sub">Projektuję i sam koduję. Od pierwszego szkicu po działającą stronę pod Twoim adresem.</p>
-        <div class="hero__cta">
-          <a class="btn btn--accent" href="#kontakt" data-contact>Porozmawiajmy</a>
-          <a class="link-more" href="#realizacje">Zobacz realizacje<svg class="i" viewBox="0 0 20 20" aria-hidden="true"><path d="M7.5 4.5L13 10l-5.5 5.5"/></svg></a>
-        </div>
+    <div class="hero__bg" aria-hidden="true"><i class="blob blob--a"></i><i class="blob blob--b"></i><i class="blob blob--c"></i></div>
+    <div class="hero__copy">
+      <h1 id="hero-title" class="hero__title"><span>Strony i aplikacje,</span> <span>które robią wrażenie.</span></h1>
+      <p class="hero__sub">Projektuję i sam koduję. Od pierwszego szkicu po działającą stronę pod Twoim adresem.</p>
+      <div class="hero__cta">
+        <a class="btn btn--accent" href="#kontakt" data-contact>Porozmawiajmy</a>
+        <a class="link-more" href="#realizacje">Zobacz realizacje<svg class="i" viewBox="0 0 20 20" aria-hidden="true"><path d="M7.5 4.5L13 10l-5.5 5.5"/></svg></a>
       </div>
-      <div class="hero__stage" aria-label="Przykładowe realizacje na komputerze i telefonie">
-        <!-- DEVICES:START -->
-        <div class="devices" data-cycle>
-          <div class="mac">
-            <div class="mac__lid"><div class="mac__screen"><span class="scr is-on" data-title="AMBRA" data-url="https://borkowskiprzemo098.github.io/AMBRA-RESTAURACJA/"><img src="shots/AMBRA-RESTAURACJA.jpg" alt="AMBRA, strona na komputerze" width="1440" height="900" fetchpriority="high" decoding="async"></span><span class="scr" data-title="HORYZONT" data-url="https://borkowskiprzemo098.github.io/HORYZONT-NIERUCHOMOSCI/"><img src="shots/HORYZONT-NIERUCHOMOSCI.jpg" alt="" width="1440" height="900" loading="lazy" decoding="async"></span><span class="scr" data-title="TRZASK" data-url="https://borkowskiprzemo098.github.io/TRZASK-PALARNIA/"><img src="shots/TRZASK-PALARNIA.jpg" alt="" width="1440" height="900" loading="lazy" decoding="async"></span><span class="scr" data-title="PORCELANA" data-url="https://borkowskiprzemo098.github.io/PORCELANA-KLINIKA/"><img src="shots/PORCELANA-KLINIKA.jpg" alt="" width="1440" height="900" loading="lazy" decoding="async"></span><span class="scr" data-title="250 lat USA" data-url="https://azaurum.pl/250_lat_usa,37"><img src="shots/az-250-lat-usa.jpg" alt="" width="1440" height="900" loading="lazy" decoding="async"></span><span class="scr" data-title="NURT CRM" data-url="https://borkowskiprzemo098.github.io/NURT-CRM/"><img src="shots/NURT-CRM.jpg" alt="" width="1440" height="900" loading="lazy" decoding="async"></span><span class="scr" data-title="Miastometr" data-url="https://borkowskiprzemo098.github.io/miastometr/"><img src="shots/miastometr.jpg" alt="" width="1440" height="900" loading="lazy" decoding="async"></span></div></div>
-            <div class="mac__base"><i></i></div>
-          </div>
-          <div class="iphone"><div class="iphone__screen"><span class="scr is-on"><img src="shots/AMBRA-RESTAURACJA-m.jpg" alt="" width="390" height="844" fetchpriority="high" decoding="async"></span><span class="scr"><img src="shots/HORYZONT-NIERUCHOMOSCI-m.jpg" alt="" width="390" height="844" loading="lazy" decoding="async"></span><span class="scr"><img src="shots/TRZASK-PALARNIA-m.jpg" alt="" width="390" height="844" loading="lazy" decoding="async"></span><span class="scr"><img src="shots/PORCELANA-KLINIKA-m.jpg" alt="" width="390" height="844" loading="lazy" decoding="async"></span><span class="scr"><img src="shots/az-250-lat-usa-m.jpg" alt="" width="390" height="844" loading="lazy" decoding="async"></span><span class="scr"><img src="shots/NURT-CRM-m.jpg" alt="" width="390" height="844" loading="lazy" decoding="async"></span><span class="scr"><img src="shots/miastometr-m.jpg" alt="" width="390" height="844" loading="lazy" decoding="async"></span><i class="iphone__island"></i></div></div>
-        </div>
-        <p class="devices__cap">Na ekranie: <a data-cap href="https://borkowskiprzemo098.github.io/AMBRA-RESTAURACJA/" target="_blank" rel="noopener">AMBRA</a></p>
-        <!-- DEVICES:END -->
+    </div>
+    <div class="collage" aria-label="Kolaż wybranych realizacji">
+      <!-- COLLAGE:START -->
+      <span class="ci c1" data-depth="0.5"><span class="browser"><span class="browser__bar" aria-hidden="true"><i></i><i></i><i></i></span><img src="shots/HORYZONT-NIERUCHOMOSCI.jpg" alt="HORYZONT" width="1440" height="900" loading="lazy" decoding="async"></span></span>
+      <span class="ci c2" data-depth="0.5"><span class="browser"><span class="browser__bar" aria-hidden="true"><i></i><i></i><i></i></span><img src="shots/TRZASK-PALARNIA.jpg" alt="TRZASK" width="1440" height="900" loading="lazy" decoding="async"></span></span>
+      <span class="ci c3" data-depth="0.9"><span class="browser"><span class="browser__bar" aria-hidden="true"><i></i><i></i><i></i></span><img src="shots/AMBRA-RESTAURACJA.jpg" alt="AMBRA" width="1440" height="900" fetchpriority="high" decoding="async"></span></span>
+      <span class="ci c4" data-depth="1.4"><span class="phone"><img src="shots/LEAPY-m2.jpg" alt="" width="390" height="844" loading="lazy" decoding="async"></span></span>
+      <span class="ci c5" data-depth="1.3"><span class="phone"><img src="shots/salonpieknoscinikola-m.jpg" alt="" width="390" height="844" loading="lazy" decoding="async"></span></span>
+      <span class="ci c6" data-depth="1.1"><span class="phone"><img src="shots/ABYSS-m1.jpg" alt="" width="390" height="844" loading="lazy" decoding="async"></span></span>
+      <span class="ci c7" data-depth="0.7"><span class="browser"><span class="browser__bar" aria-hidden="true"><i></i><i></i><i></i></span><img src="shots/PORCELANA-KLINIKA.jpg" alt="PORCELANA" width="1440" height="900" loading="lazy" decoding="async"></span></span>
+      <!-- COLLAGE:END -->
+    </div>
+  </section>
+
+  <!-- ============ WOW: video band that opens up on scroll ============ -->
+  <section class="wow" aria-label="Od pomysłu do produktu">
+    <div class="wow__frame">
+      <video class="wow__video lazy-video" muted loop playsinline preload="none" poster="assets/video/wow-poster.jpg" data-src="assets/video/wow.mp4" aria-hidden="true"></video>
+      <div class="wow__copy">
+        <p class="wow__title">Od pomysłu<br>do produktu.</p>
+        <p class="wow__sub">Projekt, kod i publikacja w jednych rękach.</p>
       </div>
     </div>
   </section>
@@ -184,7 +193,8 @@ FINISH: unreviewed and undocumented is unfinished; this build ends with the fini
   </section>
 
   <!-- ============ ABOUT ============ -->
-  <section class="about" id="o-mnie" aria-labelledby="about-title">
+  <section class="about has-video" id="o-mnie" aria-labelledby="about-title">
+    <video class="sec-video lazy-video" muted loop playsinline preload="none" poster="assets/video/silk-poster.jpg" data-src="assets/video/silk.mp4" aria-hidden="true"></video>
     <div class="wrap about__in">
       <figure class="about__photo">
         <!-- PHOTO:START -->
@@ -236,7 +246,8 @@ FINISH: unreviewed and undocumented is unfinished; this build ends with the fini
   </section>
 
   <!-- ============ CONTACT ============ -->
-  <section class="contact" id="kontakt" aria-labelledby="contact-title">
+  <section class="contact has-video" id="kontakt" aria-labelledby="contact-title">
+    <video class="sec-video lazy-video" muted loop playsinline preload="none" poster="assets/video/silk-poster.jpg" data-src="assets/video/silk.mp4" aria-hidden="true"></video>
     <div class="wrap contact__in">
       <div class="contact__main">
         <h2 id="contact-title">Porozmawiajmy.</h2>
