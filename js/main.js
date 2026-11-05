@@ -334,8 +334,10 @@
         if (!v.src) { v.src = v.dataset.src; v.load(); }
         const p = v.play(); if (p && p.catch) p.catch(() => {});
       } else if (v.src) v.pause();
-    }), { rootMargin: '200px 0px' });
-    vids.forEach((v) => io.observe(v));
+    }), { rootMargin: '0px', threshold: 0.15 });
+    // start watching only after the visitor scrolls, so no video downloads with the first view
+    const arm = () => { vids.forEach((v) => io.observe(v)); removeEventListener('scroll', arm); };
+    addEventListener('scroll', arm, { passive: true, once: true });
   }
 
   if (reduce) return;

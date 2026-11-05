@@ -217,8 +217,8 @@ const collageItems = [
   ['c7', 'browser', 'PORCELANA-KLINIKA', 0.7],
 ];
 const collageHtml = '\n' + collageItems.map(([c, kind, s, d], i) => kind === 'browser'
-  ? `      <span class="ci ${c}" data-depth="${d}"><span class="browser"><span class="browser__bar" aria-hidden="true"><i></i><i></i><i></i></span>${pic(`shots/${s}.jpg`, 1440, 900, byShot[s] ? byShot[s].title : '', c === 'c3')}</span></span>`
-  : `      <span class="ci ${c}" data-depth="${d}"><span class="phone">${pic(`shots/${s}.jpg`, 390, 844, '')}</span></span>`).join('\n') + '\n      ';
+  ? `      <span class="ci ${c}" data-depth="${d}"><span class="browser"><span class="browser__bar" aria-hidden="true"><i></i><i></i><i></i></span>${pic(`shots/small/${s}.jpg`, 1440, 900, byShot[s] ? byShot[s].title : '', c === 'c3')}</span></span>`
+  : `      <span class="ci ${c}" data-depth="${d}"><span class="phone">${pic(`shots/small/${s}.jpg`, 390, 844, '')}</span></span>`).join('\n') + '\n      ';
 
 // ---- render index.html
 let html = readFileSync('index.html', 'utf8');
