@@ -528,3 +528,7 @@ a.tile:hover .bphones .phone:nth-child(3) { transform: translateY(-8px) rotate(2
 .has-video { background-color: #f4f6f4; background-image: none; }
 .sec-video.is-playing { opacity: .55; }
 .has-video::before { content: ""; position: absolute; inset: 0; z-index: -3; background: url("../assets/video/silk-poster.jpg") center / cover; opacity: .55; }
+/* wow band: slightly softened (less than silk) over a light ground */
+.wow__frame { background: #f4f5f7; isolation: isolate; }
+.wow__frame::before { content: ""; position: absolute; inset: 0; z-index: -1; background: url("../assets/video/wow-poster.jpg") center / cover; opacity: .75; }
+.wow__video.is-playing { opacity: .75; }
