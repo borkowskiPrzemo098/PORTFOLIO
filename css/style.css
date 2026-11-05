@@ -518,3 +518,9 @@ a.tile:hover .bphones .phone:nth-child(3) { transform: translateY(-8px) rotate(2
 /* ---------- WOW: code-drawn glass ribbon (crisp on every screen) ---------- */
 .wow__frame { background: radial-gradient(120% 90% at 70% 40%, #ffffff 0%, #eef1f4 55%, #e2e6ea 100%); }
 .wow__canvas { position: absolute; inset: 0; width: 100%; height: 100%; display: block; }
+
+/* wow video: poster underneath, video fades in when playing */
+.wow__frame { background-image: url("../assets/video/wow-poster.jpg"); background-size: cover; background-position: center; }
+.wow__video { opacity: 0; transition: opacity 1s ease; }
+.wow__video.is-playing { opacity: 1; }
+.wow__canvas { display: none; }

@@ -333,7 +333,7 @@
     const io = new IntersectionObserver((es) => es.forEach((e) => {
       const v = e.target;
       if (e.isIntersecting) {
-        if (!v.getAttribute('src')) { v.src = v.dataset.src; }
+        if (!v.getAttribute('src')) { v.src = (innerWidth <= 760 && v.dataset.srcSm) ? v.dataset.srcSm : v.dataset.src; }
         const p = v.play(); if (p && p.catch) p.catch(() => {});
       } else if (v.getAttribute('src') && !v.paused) v.pause();
     }), { rootMargin: '300px 0px' });
@@ -359,96 +359,4 @@
   addEventListener('scroll', () => { if (!ticking) { ticking = true; requestAnimationFrame(update); } }, { passive: true });
   addEventListener('resize', update);
   update();
-})();
-
-/* =====================================================================
-   WOW RIBBON (2026-11-06): two twisted glass ribbons drawn on canvas at
-   device resolution. Twist follows scroll, plus a slow idle drift.
-   ===================================================================== */
-(() => {
-  const cv = document.querySelector('.wow__canvas');
-  if (!cv) return;
-  const ctx = cv.getContext('2d');
-  const reduce = matchMedia('(prefers-reduced-motion: reduce)').matches;
-  let W = 0, H = 0, dpr = 1, scrollP = 0, visible = false, raf = 0, t0 = performance.now();
-
-  const ribbons = [
-    { c1: [22, 92, 62], c2: [120, 196, 150], amp: 0.16, freq: 1.25, twist: 2.1, width: 0.11, y: 0.58, speed: 1, phase: 0 },
-    { c1: [196, 154, 92], c2: [244, 222, 176], amp: 0.12, freq: 1.05, twist: 1.7, width: 0.085, y: 0.52, speed: -0.8, phase: 1.9 },
-  ];
-
-  const size = () => {
-    const r = cv.getBoundingClientRect();
-    dpr = Math.min(2, devicePixelRatio || 1);
-    W = r.width; H = r.height;
-    cv.width = Math.round(W * dpr); cv.height = Math.round(H * dpr);
-    ctx.setTransform(dpr, 0, 0, dpr, 0, 0);
-  };
-
-  const mix = (a, b, k) => a.map((v, i) => Math.round(v + (b[i] - v) * k));
-
-  const drawRibbon = (rb, time) => {
-    const N = Math.max(120, Math.round(W / 6));
-    const ph = rb.phase + scrollP * 5.5 * rb.speed + time * 0.18 * rb.speed;
-    const pts = [];
-    for (let i = 0; i <= N; i++) {
-      const u = i / N, x = -0.08 * W + u * 1.16 * W;
-      const cy = H * rb.y + Math.sin(u * Math.PI * 2 * rb.freq + ph) * H * rb.amp + Math.sin(u * 5.3 + ph * 0.7) * H * 0.03;
-      const ang = u * Math.PI * 2 * rb.twist + ph * 1.3;
-      const half = Math.min(W, H * 1.6) * rb.width;
-      const c = Math.cos(ang), s = Math.sin(ang);
-      pts.push({ x, top: cy - c * half, bot: cy + c * half, face: c, light: s, u });
-    }
-    for (let i = 0; i < N; i++) {
-      const a = pts[i], b = pts[i + 1];
-      const front = a.face >= 0;
-      const k = 0.5 + 0.5 * a.light;
-      let col = mix(rb.c1, rb.c2, front ? k : k * 0.55);
-      // opaque fill (no seams); edge-on parts fade toward the light backdrop instead of using alpha
-      col = mix([238, 241, 244], col, 0.6 + 0.4 * Math.abs(a.face));
-      ctx.fillStyle = `rgb(${col[0]},${col[1]},${col[2]})`;
-      ctx.beginPath();
-      ctx.moveTo(a.x, a.top); ctx.lineTo(b.x + 1.5, b.top); ctx.lineTo(b.x + 1.5, b.bot); ctx.lineTo(a.x, a.bot); ctx.closePath();
-      ctx.fill();
-    }
-    // glossy edges
-    for (const edge of ['top', 'bot']) {
-      ctx.beginPath();
-      pts.forEach((p, i) => (i ? ctx.lineTo(p.x, p[edge]) : ctx.moveTo(p.x, p[edge])));
-      ctx.strokeStyle = edge === 'top' ? 'rgba(255,255,255,.75)' : 'rgba(255,255,255,.35)';
-      ctx.lineWidth = 1.4; ctx.stroke();
-    }
-    // specular streak along the middle where the band faces the light
-    ctx.beginPath();
-    let on = false;
-    pts.forEach((p) => {
-      const m = (p.top + p.bot) / 2 - (p.bot - p.top) * 0.22;
-      if (p.light > 0.55 && Math.abs(p.face) > 0.3) { on ? ctx.lineTo(p.x, m) : ctx.moveTo(p.x, m); on = true; } else on = false;
-    });
-    ctx.strokeStyle = 'rgba(255,255,255,.55)'; ctx.lineWidth = 3; ctx.lineCap = 'round'; ctx.stroke();
-  };
-
-  const draw = (now) => {
-    raf = 0;
-    const time = reduce ? 0 : (now - t0) / 1000;
-    ctx.clearRect(0, 0, W, H);
-    ctx.save(); ctx.filter = 'blur(18px)'; ctx.globalAlpha = 0.25; ctx.translate(0, H * 0.06);
-    ribbons.forEach((rb) => drawRibbon(rb, time)); // soft shadow pass
-    ctx.restore();
-    ribbons.forEach((rb) => drawRibbon(rb, time));
-    if (visible && !reduce) raf = requestAnimationFrame(draw);
-  };
-
-  const onScroll = () => {
-    const r = cv.getBoundingClientRect();
-    scrollP = Math.min(1.4, Math.max(-0.4, (innerHeight - r.top) / (innerHeight + r.height)));
-    if (reduce && !raf) raf = requestAnimationFrame(draw);
-  };
-  new IntersectionObserver(([e]) => {
-    visible = e.isIntersecting;
-    if (visible && !raf) raf = requestAnimationFrame(draw);
-  }).observe(cv);
-  addEventListener('scroll', onScroll, { passive: true });
-  addEventListener('resize', () => { size(); onScroll(); if (!raf) raf = requestAnimationFrame(draw); });
-  size(); onScroll(); raf = requestAnimationFrame(draw);
 })();
