@@ -25,7 +25,7 @@
     if (!e.isIntersecting) return;
     links.forEach((a) => (a.getAttribute('href') === `#${e.target.id}` ? a.setAttribute('aria-current', 'true') : a.removeAttribute('aria-current')));
   }), { rootMargin: '-45% 0px -50% 0px' });
-  ['o-mnie', 'projekty', 'oferta', 'faq'].forEach((id) => { const el = document.getElementById(id); if (el) spy.observe(el); });
+  ['o-mnie', 'projekty', 'wspolpraca', 'faq'].forEach((id) => { const el = document.getElementById(id); if (el) spy.observe(el); });
 
   /* Hero entrance is pure CSS now (see .hero__title .ln in style.css) — no GSAP download */
 
@@ -192,4 +192,38 @@
       });
     });
   }
+})();
+
+/* ---------- Showroom: four areas as tabs on desktop, stacked cards on phones ---------- */
+(() => {
+  const tabs = [...document.querySelectorAll('.show__tab')];
+  const panels = [...document.querySelectorAll('.show__panel')];
+  if (!tabs.length) return;
+  const wide = matchMedia('(min-width: 961px)');
+  const hover = matchMedia('(hover: hover) and (pointer: fine)');
+  let current = 0, hoverT;
+  const select = (i, focus) => {
+    if (i === current && panels[i].hidden === false) return;
+    current = i;
+    tabs.forEach((t, k) => { t.setAttribute('aria-selected', String(k === i)); t.tabIndex = k === i ? 0 : -1; });
+    panels.forEach((p, k) => { p.hidden = k !== i; p.classList.toggle('is-in', k === i); });
+    if (focus) tabs[i].focus();
+  };
+  const layout = () => {
+    if (wide.matches) { panels.forEach((p, k) => { p.hidden = k !== current; }); tabs.forEach((t, k) => { t.tabIndex = k === current ? 0 : -1; }); }
+    else panels.forEach((p) => { p.hidden = false; p.classList.remove('is-in'); });
+  };
+  tabs.forEach((t, i) => {
+    t.addEventListener('click', () => select(i));
+    t.addEventListener('pointerenter', () => { if (!hover.matches) return; clearTimeout(hoverT); hoverT = setTimeout(() => select(i), 140); });
+    t.addEventListener('pointerleave', () => clearTimeout(hoverT));
+    t.addEventListener('keydown', (e) => {
+      const d = e.key === 'ArrowDown' || e.key === 'ArrowRight' ? 1 : e.key === 'ArrowUp' || e.key === 'ArrowLeft' ? -1 : 0;
+      if (d) { e.preventDefault(); select((i + d + tabs.length) % tabs.length, true); }
+      if (e.key === 'Home') { e.preventDefault(); select(0, true); }
+      if (e.key === 'End') { e.preventDefault(); select(tabs.length - 1, true); }
+    });
+  });
+  wide.addEventListener('change', layout);
+  layout();
 })();

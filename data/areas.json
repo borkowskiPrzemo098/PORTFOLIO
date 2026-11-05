@@ -1,0 +1,49 @@
+{
+  "_info": "Obszary na stronie głównej (sekcja 'Co mogę dla Ciebie zbudować') i ich podstrony. 'groups' = id grup z projects.json. 'stage' = co pokazać w ekspozycji (browser + phone albo phones).",
+  "areas": [
+    {
+      "id": "strony",
+      "page": "strony.html",
+      "tab": "Strony i sklepy",
+      "title": "Strony firmowe i sklepy",
+      "em": "sklepy",
+      "lead": "Strona, która buduje zaufanie i prowadzi klienta do rezerwacji, zakupu albo kontaktu.",
+      "bullets": ["Projekt dopasowany do Twojej marki", "Rezerwacje, sklep albo formularz zamówienia", "SEO lokalne i szybkie ładowanie na telefonie"],
+      "groups": ["firmowe", "sklepy"],
+      "stage": { "browser": "AMBRA-RESTAURACJA", "phone": "AMBRA-RESTAURACJA-m", "label": "AMBRA · restauracja degustacyjna" }
+    },
+    {
+      "id": "landing",
+      "page": "landing-page.html",
+      "tab": "Landing page",
+      "title": "Landing page sprzedażowe",
+      "em": "sprzedażowe",
+      "lead": "Jedna strona pod kampanię albo produkt: jasna oferta, argumenty w dobrej kolejności i prosta droga do zamówienia.",
+      "bullets": ["Oferta i cena widoczne od pierwszego ekranu", "Formularz zamówienia z płatnością", "Szybkie ładowanie prosto z reklamy"],
+      "groups": ["landing"],
+      "stage": { "browser": "az-250-lat-usa", "phone": "az-250-lat-usa-m", "label": "250 lat USA · AZ Aurum" }
+    },
+    {
+      "id": "aplikacje",
+      "page": "aplikacje.html",
+      "tab": "Aplikacje i narzędzia",
+      "title": "Aplikacje webowe i mobilne",
+      "em": "mobilne",
+      "lead": "Portale, panele dla firm i aplikacje na telefon, które liczą, porządkują dane i działają nawet bez internetu.",
+      "bullets": ["Aplikacje na telefon (PWA) bez sklepu z aplikacjami", "Panele i narzędzia dla zespołu", "Dane, API, generowanie PDF i praca offline"],
+      "groups": ["portale", "aplikacje", "mobilne"],
+      "stage": { "browser": "NURT-CRM", "phone": "LEAPY-m2", "label": "NURT CRM i Leapy" }
+    },
+    {
+      "id": "gry",
+      "page": "gry.html",
+      "tab": "Gry mobilne",
+      "title": "Gry mobilne",
+      "em": "Gry",
+      "lead": "Gry w przeglądarce, projektowane pod telefon: od szybkiej zręcznościówki po strategię w 3D.",
+      "bullets": ["Grafika 2D i 3D, dźwięk i animacje", "Sterowanie dotykiem i zapis postępów", "Działają od razu, bez instalacji"],
+      "groups": ["gry"],
+      "stage": { "phones": ["ABYSS-m1", "OSADA-m1", "LINIA-m2"], "label": "ABYSS, Osada, Ostatnia Linia" }
+    }
+  ]
+}

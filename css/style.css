@@ -585,3 +585,89 @@ html { -webkit-tap-highlight-color: transparent; }
 }
 @keyframes lnUp { from { transform: translateY(105%); } }
 @keyframes riseIn { from { opacity: 0; translate: 0 20px; } }
+
+/* =====================================================================
+   SHOWROOM + SUBPAGES (2026-11-05). Rollback: git tag "przed-podstronami".
+   Home shows four areas in a tab showroom; projects live on subpages.
+   ===================================================================== */
+.show { display: grid; grid-template-columns: minmax(250px, 320px) minmax(0, 1fr); gap: clamp(28px, 4vw, 56px); align-items: start; }
+.show__tabs { display: grid; gap: 10px; position: sticky; top: calc(var(--nav-h) + 24px); }
+.show__tab {
+  display: grid; grid-template-columns: auto 1fr; grid-template-rows: auto auto; column-gap: 16px; row-gap: 2px; align-items: center;
+  width: 100%; text-align: left; padding: 20px 22px; border-radius: 22px; cursor: pointer;
+  background: rgba(246, 243, 236, .06); border: 1px solid var(--line-dark); color: var(--on-dark);
+  transition: background-color .3s var(--ease), border-color .3s var(--ease), color .3s var(--ease), transform .3s var(--ease);
+}
+.show__tab:hover { background: rgba(246, 243, 236, .11); }
+.show__tab[aria-selected="true"] { background: var(--sand); border-color: var(--sand); color: var(--wine-deep); transform: translateX(6px); }
+.show__num { grid-row: span 2; font: 600 15px/1 var(--f-display); display: grid; place-items: center; width: 42px; height: 42px; border-radius: 50%; border: 1.5px solid currentColor; opacity: .85; }
+.show__name { font: 600 clamp(1.25rem, 1.7vw, 1.5rem)/1.15 var(--f-display); letter-spacing: -.01em; }
+.show__count { font-size: 14px; font-weight: 500; opacity: .75; }
+
+.show__panel { display: grid; gap: clamp(24px, 3vw, 36px); }
+.show__panel[hidden] { display: none; }
+.show__stage { display: block; border-radius: 30px; padding: clamp(22px, 3vw, 40px) clamp(22px, 3vw, 40px) 0; background: linear-gradient(160deg, rgba(246, 243, 236, .16), rgba(246, 243, 236, .05)); border: 1px solid var(--line-dark); overflow: hidden; }
+.stage { position: relative; padding-bottom: clamp(20px, 3vw, 36px); }
+.stage .browser { width: 84%; border-radius: 14px; box-shadow: 0 30px 60px -28px rgba(0, 0, 0, .55); }
+.stage .browser img { aspect-ratio: 16 / 10; }
+.stage__phone { position: absolute; right: 0; bottom: clamp(20px, 3vw, 36px); width: 24%; border-width: 5px; border-radius: 24px; box-shadow: 0 30px 60px -20px rgba(0, 0, 0, .6); }
+.stage--phones { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: clamp(12px, 2vw, 24px); max-width: 640px; margin-inline: auto; }
+.stage--phones .phone { border-width: 5px; border-radius: 26px; box-shadow: 0 30px 60px -24px rgba(0, 0, 0, .6); }
+.stage--phones .phone:nth-child(2) { transform: translateY(-18px); }
+.show__stage .browser, .show__stage .phone { transition: transform .6s var(--ease); }
+.show__stage:hover .browser { transform: translateY(-4px); }
+.show__stage:hover .stage__phone { transform: translateY(-10px) rotate(-1.5deg); }
+.show__panel.is-in .show__stage { animation: stageIn .6s var(--ease); }
+.show__panel.is-in .show__text { animation: riseIn .6s var(--ease) .08s both; }
+@keyframes stageIn { from { opacity: 0; transform: translateY(14px) scale(.985); } }
+
+.show__text { display: grid; grid-template-columns: minmax(0, 1.05fr) minmax(0, 1fr); gap: 20px 40px; align-items: start; }
+.show__text h3 { font-size: clamp(1.9rem, 3vw, 2.6rem); line-height: 1.05; letter-spacing: -.025em; margin-bottom: 12px; }
+.show__text p { color: var(--on-dark-2); font-size: 17px; }
+.show__list { display: grid; gap: 10px; }
+.show__list li { position: relative; padding-left: 26px; font-weight: 500; }
+.show__list li::before { content: ""; position: absolute; left: 0; top: .5em; width: 12px; height: 7px; border-left: 2px solid var(--sand); border-bottom: 2px solid var(--sand); transform: rotate(-45deg); }
+.show__ex { font-size: 15px !important; grid-column: 2; margin-top: -6px; }
+.show__cta { grid-column: 2; justify-self: start; }
+
+@media (max-width: 960px) {
+  .show { grid-template-columns: minmax(0, 1fr); }
+  .show__tabs { display: none; }
+  .show__panels { display: grid; gap: 22px; }
+  .show__panel, .show__panel[hidden] { display: grid; padding: 14px 14px 26px; border-radius: 26px; background: rgba(246, 243, 236, .06); border: 1px solid var(--line-dark); }
+  .show__stage { border-radius: 20px; padding: 16px 16px 0; }
+  .show__text { grid-template-columns: minmax(0, 1fr); padding-inline: 8px; }
+  .show__ex, .show__cta { grid-column: auto; margin-top: 0; }
+  .stage__phone { border-width: 4px; border-radius: 16px; }
+  .stage--phones .phone { border-width: 3px; border-radius: 16px; }
+}
+@media (max-width: 480px) { .show__cta { width: 100%; } }
+
+/* ---------- Subpages ---------- */
+.subhero { padding-top: calc(var(--nav-h) + clamp(40px, 6vw, 72px)); padding-bottom: clamp(40px, 5vw, 64px); }
+.subhero h1 { font-size: clamp(2.8rem, 7vw, 6rem); line-height: .98; letter-spacing: -.035em; margin-top: 28px; max-width: 14em; }
+.subhero h1 em { color: var(--sand); }
+.subhero__lead { margin-top: 20px; max-width: 46ch; color: var(--on-dark-2); font-size: clamp(17px, 1.5vw, 20px); }
+.back { display: inline-flex; align-items: center; gap: 8px; text-decoration: none; font-weight: 600; font-size: 15px; color: var(--on-dark); padding: 10px 16px 10px 12px; border-radius: 999px; border: 1px solid var(--line-dark); transition: border-color .25s var(--ease), color .25s var(--ease); }
+.back:hover { border-color: var(--sand); color: var(--sand); }
+.subnav { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 8px; margin-top: clamp(32px, 4vw, 48px); padding: 6px; border-radius: 22px; background: rgba(82, 22, 36, .6); border: 1px solid var(--line-dark); }
+.subnav__item { display: flex; align-items: center; justify-content: center; gap: 8px; min-height: 48px; padding: 0 12px; border-radius: 16px; text-decoration: none; font-weight: 600; font-size: 15px; color: var(--on-dark); background: rgba(246, 243, 236, .07); transition: background-color .25s var(--ease); text-align: center; }
+.subnav__item b { display: inline-grid; place-items: center; min-width: 24px; height: 24px; padding: 0 7px; border-radius: 999px; background: rgba(246, 243, 236, .14); font-size: 13px; }
+.subnav__item:hover { background: rgba(246, 243, 236, .14); }
+.subnav__item.is-on { background: var(--sand); color: var(--wine-deep); }
+.subnav__item.is-on b { background: rgba(82, 22, 36, .14); }
+@media (max-width: 760px) { .subnav { grid-template-columns: repeat(2, minmax(0, 1fr)); } .subnav__item { font-size: 14px; } }
+.subwork { padding-top: 0; }
+.subwork .group:first-child { margin-top: 0; }
+.group__head h2 { font-size: clamp(1.8rem, 3vw, 2.6rem); letter-spacing: -.02em; }
+.next { display: grid; grid-template-columns: 1fr auto; align-items: center; gap: 4px 20px; margin-top: clamp(56px, 7vw, 96px); padding: clamp(24px, 3vw, 36px); border-radius: 26px; text-decoration: none; color: var(--on-dark); background: rgba(246, 243, 236, .06); border: 1px solid var(--line-dark); transition: background-color .3s var(--ease), border-color .3s var(--ease); }
+.next span { font-size: 15px; color: var(--on-dark-2); grid-column: 1; }
+.next strong { font: 600 clamp(1.6rem, 3vw, 2.4rem)/1.1 var(--f-display); letter-spacing: -.02em; grid-column: 1; }
+.next .i { grid-column: 2; grid-row: 1 / span 2; width: 48px; height: 48px; padding: 12px; border-radius: 50%; background: var(--sand); color: var(--wine-deep); transition: transform .3s var(--ease); }
+.next:hover { background: rgba(246, 243, 236, .1); border-color: var(--sand); }
+.next:hover .i { transform: translateX(4px); }
+/* subpage: one continuous burgundy field (no seam between header and work) */
+.subhero { background-image: var(--grain), radial-gradient(70% 90% at 20% 0%, #7E2738 0%, var(--wine) 55%, var(--wine-deep) 100%); }
+.subwork { background-image: var(--grain), linear-gradient(var(--wine-deep), var(--wine) 40%, var(--wine-deep)); }
+/* phones: keep each area card short */
+@media (max-width: 960px) { .show__list { display: none; } .show__text h3 { margin-bottom: 8px; } }
