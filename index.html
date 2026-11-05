@@ -4,11 +4,11 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <title>PBDesign — Przemysław Borkowski, web designer & developer</title>
-<meta name="description" content="Przemysław Borkowski, PBDesign. Projektuję i koduję strony firmowe, sklepy, landing page’e, aplikacje webowe i mobilne oraz gry. Zobacz wybrane projekty, ofertę i sposób współpracy.">
-<meta name="theme-color" content="#1F4435">
+<meta name="description" content="Przemysław Borkowski, PBDesign. Projektuję i koduję strony firmowe, sklepy, landing page’e, aplikacje webowe i mobilne oraz gry. Zobacz realizacje i porozmawiajmy o Twoim projekcie.">
+<meta name="theme-color" content="#000000">
 <meta property="og:type" content="website">
 <meta property="og:title" content="PBDesign — Przemysław Borkowski">
-<meta property="og:description" content="Projektuję strony, które pracują na Twoją markę. Projekty, oferta i kontakt.">
+<meta property="og:description" content="Strony i aplikacje, które robią wrażenie. Projekt, kod i publikacja w jednych rękach.">
 <meta property="og:image" content="https://borkowskiprzemo098.github.io/PORTFOLIO/assets/og.png">
 <meta property="og:url" content="https://borkowskiprzemo098.github.io/PORTFOLIO/">
 <meta name="twitter:card" content="summary_large_image">
@@ -17,38 +17,40 @@
 <link rel="apple-touch-icon" href="assets/apple-touch-icon.png">
 <link rel="preconnect" href="https://api.fontshare.com">
 <link rel="preconnect" href="https://cdn.fontshare.com" crossorigin>
-<link rel="stylesheet" href="https://api.fontshare.com/v2/css?f[]=clash-grotesk@500,600&f[]=gambetta@400i&f[]=satoshi@400,500,700&display=swap">
+<link rel="stylesheet" href="https://api.fontshare.com/v2/css?f[]=satoshi@400,500,700,900&display=swap">
 <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
 <!--
-THESIS: Heritage-premium portfolio in bottle green and burgundy: a centered statement, then the person (portrait + short bio), then the work told in depth, offer, process, FAQ and full contact details. Simple, confident, colourful sections instead of an empty white page.
-OWN-WORLD: bottle green #1F4435 and burgundy #6B1E2E drench alternating sections over ivory #F6F3EC; sand #E4C99A is the accent on dark grounds. Clash Grotesk display, Gambetta italic for one emphasised word, Satoshi text. 28px radii, soft shadows, pill buttons.
-STORY: statement (hero) → who he is (photo + bio) → what he can build (4-area showroom; projects live on subpages) → how it works → answers → contact details.
-FIRST VIEWPORT: full-height bottle-green stage, headline centered and very large with a sand italic word, name/role line under it, sand primary pill + outline pill centered, scroll cue at the bottom.
-FORM: user-steered redesign v4 (centered hero, about+photo under hero, bottle green + burgundy, competitor-simple structure).
+THESIS: Product-launch portfolio in the Apple keynote register: the work is the product. A cinematic black stage where his real sites play inside a laptop and phone that grow as you scroll, then a quiet statement, a bento of what he builds, a horizontal reel of live work, the person, and one clear way to talk.
+OWN-WORLD: black #000 and Apple-grey #F5F5F7 fields alternating with white; ink #1D1D1F; one brand green #1F7A55 (#5BD6A0 on black) for actions only. Satoshi in every weight (900 display, 500 text), tight tracking, huge type. Hand-drawn CSS laptop/phone hardware, 28px tiles, no borders, soft depth.
+STORY: what he makes, shown (hero devices) → why it is different (lit statement) → what he can build (bento → subpages) → proof (reel) → who (about) → how (steps) → answers → contact.
+FIRST VIEWPORT: black; centered 2-line headline "Strony i aplikacje, / które robią wrażenie." at ~7.5rem, one-line sub, green pill + text link; below, a laptop with a phone beside it cycling his real projects; on scroll the devices rise and scale while the headline drifts away (pinned on desktop).
+FORM: user-pinned "Apple-like premium WOW" (2026-11-05); replaces v4 green/burgundy look. Rollback tag przed-premium.
 FINISH: unreviewed and undocumented is unfinished; this build ends with the finish review, the verdict, and DESIGN.md
 -->
-<a class="skip" href="#o-mnie">Przejdź do treści</a>
+<a class="skip" href="#co-buduje">Przejdź do treści</a>
 
 <header class="nav" id="nav">
   <div class="nav__in">
     <a class="brand" href="#top" aria-label="PBDesign, strona główna">
-      <img src="assets/mark.svg" alt="" width="38" height="38">
+      <img src="assets/mark.svg" alt="" width="30" height="30">
       <span>PB<em>Design</em></span>
     </a>
     <nav class="nav__links" aria-label="Główna nawigacja">
+      <a href="#co-buduje">Co buduję</a>
+      <a href="#realizacje">Realizacje</a>
       <a href="#o-mnie">O mnie</a>
-      <a href="#projekty">Co buduję</a>
       <a href="#wspolpraca">Współpraca</a>
       <a href="#faq">FAQ</a>
     </nav>
-    <a class="btn btn--sand btn--sm" href="#kontakt" data-contact>Kontakt</a>
+    <a class="btn btn--accent btn--sm" href="#kontakt" data-contact>Kontakt</a>
     <button class="nav__burger" type="button" aria-label="Otwórz menu" aria-expanded="false" aria-controls="menu"><span></span><span></span></button>
   </div>
   <div class="menu" id="menu" hidden>
+    <a href="#co-buduje">Co buduję</a>
+    <a href="#realizacje">Realizacje</a>
     <a href="#o-mnie">O mnie</a>
-    <a href="#projekty">Co buduję</a>
     <a href="#wspolpraca">Współpraca</a>
     <a href="#faq">FAQ</a>
     <a href="#kontakt" data-contact>Kontakt</a>
@@ -56,29 +58,129 @@ FINISH: unreviewed and undocumented is unfinished; this build ends with the fini
 </header>
 
 <main id="top">
-  <!-- ============ HERO ============ -->
+  <!-- ============ HERO: devices on a black stage ============ -->
   <section class="hero" aria-labelledby="hero-title">
-    <div class="sketches" aria-hidden="true">
-      <svg class="sketch sk-a" viewBox="0 0 240 170" fill="none" stroke-linecap="round" stroke-linejoin="round"><rect class="d" pathLength="1" x="1" y="1" width="238" height="168" rx="10"/><path class="d" pathLength="1" d="M1 24h238"/><circle class="f" cx="14" cy="12.5" r="3"/><circle class="f" cx="25" cy="12.5" r="3"/><circle class="f" cx="36" cy="12.5" r="3"/><rect class="f" x="18" y="40" width="96" height="12" rx="3"/><path class="d" pathLength="1" d="M18 64h112M18 75h94M18 86h104"/><rect class="d f2" pathLength="1" x="18" y="102" width="58" height="18" rx="9"/><rect class="d" pathLength="1" x="140" y="40" width="82" height="80" rx="6"/><path class="d" pathLength="1" d="M140 120l26-32 18 20 12-12 26 24"/><circle class="d" pathLength="1" cx="198" cy="58" r="8"/><path class="d" pathLength="1" d="M18 142h62M96 142h62M174 142h48"/></svg>
-      <svg class="sketch sk-b" viewBox="0 0 240 170" fill="none" stroke-linecap="round" stroke-linejoin="round"><rect class="d" pathLength="1" x="1" y="1" width="238" height="168" rx="10"/><path class="d" pathLength="1" d="M1 24h238"/><circle class="f" cx="14" cy="12.5" r="3"/><circle class="f" cx="25" cy="12.5" r="3"/><circle class="f" cx="36" cy="12.5" r="3"/><rect class="d" pathLength="1" x="16" y="38" width="64" height="56" rx="6"/><rect class="d" pathLength="1" x="88" y="38" width="64" height="56" rx="6"/><rect class="d" pathLength="1" x="160" y="38" width="64" height="56" rx="6"/><path class="d" pathLength="1" d="M16 106h52M88 106h46M160 106h56M16 117h36M88 117h42M160 117h30"/><rect class="f" x="16" y="136" width="208" height="20" rx="5"/></svg>
-      <svg class="sketch sketch--phone sk-c" viewBox="0 0 100 190" fill="none" stroke-linecap="round" stroke-linejoin="round"><rect class="d" pathLength="1" x="1" y="1" width="98" height="188" rx="18"/><path class="d" pathLength="1" d="M38 12h24"/><rect class="d" pathLength="1" x="12" y="28" width="76" height="52" rx="6"/><path class="d" pathLength="1" d="M12 94h66M12 105h50M12 116h58"/><rect class="f" x="12" y="132" width="76" height="18" rx="9"/><path class="d" pathLength="1" d="M36 174h28"/></svg>
-      <svg class="sketch sketch--code sk-d" viewBox="0 0 150 90" fill="none" stroke-linecap="round" stroke-linejoin="round"><path class="d" pathLength="1" d="M14 18L2 30l12 12M44 18l12 12-12 12M35 14l-10 34"/><path class="d" pathLength="1" d="M70 20h76M84 36h56M84 52h40M70 68h70M84 84h36"/></svg>
-    </div>
-    <div class="wrap hero__in">
-      <h1 id="hero-title" class="hero__title">
-        <span class="ln"><span>Projektuję strony,</span></span>
-        <span class="ln"><span>które <em>pracują</em></span></span>
-        <span class="ln"><span>na Twoją markę.</span></span>
-      </h1>
-      <p class="hero__who"><span>Przemysław Borkowski</span><i></i><span>web designer &amp; developer</span></p>
-      <div class="hero__cta">
-        <a class="btn btn--sand" href="#projekty">Zobacz, co buduję</a>
-        <a class="btn btn--ghost" href="#kontakt" data-contact>Porozmawiajmy</a>
+    <div class="hero__pin">
+      <div class="hero__copy">
+        <h1 id="hero-title" class="hero__title"><span>Strony i aplikacje,</span> <span>które robią wrażenie.</span></h1>
+        <p class="hero__sub">Projektuję i sam koduję. Od pierwszego szkicu po działającą stronę pod Twoim adresem.</p>
+        <div class="hero__cta">
+          <a class="btn btn--accent" href="#kontakt" data-contact>Porozmawiajmy</a>
+          <a class="link-more" href="#realizacje">Zobacz realizacje<svg class="i" viewBox="0 0 20 20" aria-hidden="true"><path d="M7.5 4.5L13 10l-5.5 5.5"/></svg></a>
+        </div>
+      </div>
+      <div class="hero__stage" aria-label="Przykładowe realizacje na komputerze i telefonie">
+        <!-- DEVICES:START -->
+        <div class="devices" data-cycle>
+          <div class="mac">
+            <div class="mac__lid"><div class="mac__screen"><span class="scr is-on" data-title="AMBRA" data-url="https://borkowskiprzemo098.github.io/AMBRA-RESTAURACJA/"><img src="shots/AMBRA-RESTAURACJA.jpg" alt="AMBRA, strona na komputerze" width="1440" height="900" fetchpriority="high" decoding="async"></span><span class="scr" data-title="HORYZONT" data-url="https://borkowskiprzemo098.github.io/HORYZONT-NIERUCHOMOSCI/"><img src="shots/HORYZONT-NIERUCHOMOSCI.jpg" alt="" width="1440" height="900" loading="lazy" decoding="async"></span><span class="scr" data-title="TRZASK" data-url="https://borkowskiprzemo098.github.io/TRZASK-PALARNIA/"><img src="shots/TRZASK-PALARNIA.jpg" alt="" width="1440" height="900" loading="lazy" decoding="async"></span><span class="scr" data-title="PORCELANA" data-url="https://borkowskiprzemo098.github.io/PORCELANA-KLINIKA/"><img src="shots/PORCELANA-KLINIKA.jpg" alt="" width="1440" height="900" loading="lazy" decoding="async"></span><span class="scr" data-title="250 lat USA" data-url="https://azaurum.pl/250_lat_usa,37"><img src="shots/az-250-lat-usa.jpg" alt="" width="1440" height="900" loading="lazy" decoding="async"></span><span class="scr" data-title="NURT CRM" data-url="https://borkowskiprzemo098.github.io/NURT-CRM/"><img src="shots/NURT-CRM.jpg" alt="" width="1440" height="900" loading="lazy" decoding="async"></span><span class="scr" data-title="Miastometr" data-url="https://borkowskiprzemo098.github.io/miastometr/"><img src="shots/miastometr.jpg" alt="" width="1440" height="900" loading="lazy" decoding="async"></span></div></div>
+            <div class="mac__base"><i></i></div>
+          </div>
+          <div class="iphone"><div class="iphone__screen"><span class="scr is-on"><img src="shots/AMBRA-RESTAURACJA-m.jpg" alt="" width="390" height="844" fetchpriority="high" decoding="async"></span><span class="scr"><img src="shots/HORYZONT-NIERUCHOMOSCI-m.jpg" alt="" width="390" height="844" loading="lazy" decoding="async"></span><span class="scr"><img src="shots/TRZASK-PALARNIA-m.jpg" alt="" width="390" height="844" loading="lazy" decoding="async"></span><span class="scr"><img src="shots/PORCELANA-KLINIKA-m.jpg" alt="" width="390" height="844" loading="lazy" decoding="async"></span><span class="scr"><img src="shots/az-250-lat-usa-m.jpg" alt="" width="390" height="844" loading="lazy" decoding="async"></span><span class="scr"><img src="shots/NURT-CRM-m.jpg" alt="" width="390" height="844" loading="lazy" decoding="async"></span><span class="scr"><img src="shots/miastometr-m.jpg" alt="" width="390" height="844" loading="lazy" decoding="async"></span><i class="iphone__island"></i></div></div>
+        </div>
+        <p class="devices__cap">Na ekranie: <a data-cap href="https://borkowskiprzemo098.github.io/AMBRA-RESTAURACJA/" target="_blank" rel="noopener">AMBRA</a></p>
+        <!-- DEVICES:END -->
       </div>
     </div>
-    <a class="hero__scroll" href="#o-mnie" aria-label="Przewiń do sekcji O mnie">
-      <svg class="i" viewBox="0 0 20 20" aria-hidden="true"><path d="M10 3.5v13M4.5 11l5.5 5.5 5.5-5.5"/></svg>
-    </a>
+  </section>
+
+  <!-- ============ STATEMENT ============ -->
+  <section class="statement" aria-label="Jak pracuję">
+    <p class="lit" data-lit>Nie korzystam z gotowych szablonów. Każdą stronę projektuję od zera, koduję ręcznie i dopracowuję na telefonie, bo stamtąd przychodzi większość Twoich klientów. Jedna osoba, pełna odpowiedzialność, zero pośredników.</p>
+  </section>
+
+  <!-- ============ BENTO: what I build ============ -->
+  <section class="bento-sec" id="co-buduje" aria-labelledby="bento-title">
+    <div class="wrap">
+      <h2 id="bento-title" class="big-title">Co mogę dla Ciebie zbudować.</h2>
+      <p class="big-sub">Od wizytówki firmy po aplikację i grę na telefon. Każdy kafel prowadzi do realizacji.</p>
+      <!-- BENTO:START -->
+      <div class="bento">
+        <a class="tile tile--sites" href="strony.html">
+          <span class="tile__txt"><span class="tile__k">Strony i sklepy</span><strong>Strona, która sprzedaje, zanim zadzwonisz.</strong><span class="tile__go">Zobacz 8 realizacji<svg class="i" viewBox="0 0 20 20" aria-hidden="true"><path d="M7.5 4.5L13 10l-5.5 5.5"/></svg></span></span>
+          <span class="tile__shot"><span class="browser"><span class="browser__bar" aria-hidden="true"><i></i><i></i><i></i></span><img src="shots/AMBRA-RESTAURACJA.jpg" alt="" width="1440" height="900" loading="lazy" decoding="async"></span><span class="phone tile__phone"><img src="shots/salonpieknoscinikola-m.jpg" alt="" width="390" height="844" loading="lazy" decoding="async"></span></span>
+        </a>
+        <div class="tile tile--num tile--dark"><b data-count>19</b><span>projektów działa online. Każdy możesz otworzyć i sprawdzić.</span></div>
+        <a class="tile tile--landing" href="landing-page.html">
+          <span class="tile__txt"><span class="tile__k">Landing page</span><strong>Jedna oferta. Jedna droga do zamówienia.</strong><span class="tile__go">Zobacz 2 realizacje<svg class="i" viewBox="0 0 20 20" aria-hidden="true"><path d="M7.5 4.5L13 10l-5.5 5.5"/></svg></span></span>
+          <span class="bphones bphones--one"><span class="phone"><img src="shots/az-250-lat-usa-m.jpg" alt="" width="390" height="844" loading="lazy" decoding="async"></span></span>
+        </a>
+        <a class="tile tile--apps tile--dark" href="aplikacje.html">
+          <span class="tile__txt"><span class="tile__k">Aplikacje</span><strong>Aplikacje, które działają nawet offline.</strong><span class="tile__go">Zobacz 6 realizacji<svg class="i" viewBox="0 0 20 20" aria-hidden="true"><path d="M7.5 4.5L13 10l-5.5 5.5"/></svg></span></span>
+          <span class="bphones "><span class="phone"><img src="shots/LEAPY-m2.jpg" alt="" width="390" height="844" loading="lazy" decoding="async"></span><span class="phone"><img src="shots/LEAPY-m3.jpg" alt="" width="390" height="844" loading="lazy" decoding="async"></span><span class="phone"><img src="shots/SILECZKOMAT-m2.jpg" alt="" width="390" height="844" loading="lazy" decoding="async"></span></span>
+        </a>
+        <a class="tile tile--games" href="gry.html">
+          <span class="tile__txt"><span class="tile__k">Gry mobilne</span><strong>Od zręcznościówki po strategię 3D.</strong><span class="tile__go">Zobacz 3 realizacje<svg class="i" viewBox="0 0 20 20" aria-hidden="true"><path d="M7.5 4.5L13 10l-5.5 5.5"/></svg></span></span>
+          <span class="bphones "><span class="phone"><img src="shots/ABYSS-m1.jpg" alt="" width="390" height="844" loading="lazy" decoding="async"></span><span class="phone"><img src="shots/OSADA-m1.jpg" alt="" width="390" height="844" loading="lazy" decoding="async"></span><span class="phone"><img src="shots/LINIA-m2.jpg" alt="" width="390" height="844" loading="lazy" decoding="async"></span></span>
+        </a>
+        <div class="tile tile--mini"><svg class="tile__ic" viewBox="0 0 32 32" aria-hidden="true"><rect x="9" y="3" width="14" height="26" rx="3"/><path d="M14 7h4M14 25h4"/></svg><strong>Najpierw telefon.</strong><span>Każdy projekt zaczynam od ekranu, który masz w kieszeni.</span></div>
+        <div class="tile tile--mini tile--code"><pre aria-hidden="true"><code>&lt;section class="hero"&gt;
+  &lt;h1&gt;Twoja marka&lt;/h1&gt;
+&lt;/section&gt;</code></pre><strong>Kod pisany ręcznie.</strong><span>Lekko, szybko i bez gotowych szablonów.</span></div>
+        <div class="tile tile--mini tile--me"><img src="assets/portret-avatar.jpg" alt="" width="160" height="160" loading="lazy" decoding="async"><strong>Jedna osoba od A do Z.</strong><span>Projekt, kod i publikacja bez pośredników.</span></div>
+      </div>
+      <!-- BENTO:END -->
+    </div>
+  </section>
+
+  <!-- ============ REEL: live work ============ -->
+  <section class="reel-sec" id="realizacje" aria-labelledby="reel-title">
+    <div class="wrap reel-head">
+      <div>
+        <h2 id="reel-title" class="big-title">Zobacz na żywo.</h2>
+        <p class="big-sub">Wybrane realizacje. Każda działa online, otwórz i sprawdź.</p>
+      </div>
+      <div class="reel-nav">
+        <button class="reel-btn" type="button" data-reel="-1" aria-label="Poprzednie realizacje"><svg class="i" viewBox="0 0 20 20" aria-hidden="true"><path d="M12.5 4.5L7 10l5.5 5.5"/></svg></button>
+        <button class="reel-btn" type="button" data-reel="1" aria-label="Następne realizacje"><svg class="i" viewBox="0 0 20 20" aria-hidden="true"><path d="M7.5 4.5L13 10l-5.5 5.5"/></svg></button>
+      </div>
+    </div>
+    <div class="reel" tabindex="0" aria-label="Realizacje, przewijane w poziomie">
+      <!-- REEL:START -->
+      <div class="reel__track">
+        <a class="rcard" href="https://borkowskiprzemo098.github.io/AMBRA-RESTAURACJA/" target="_blank" rel="noopener">
+          <span class="rcard__media"><img src="shots/AMBRA-RESTAURACJA.jpg" alt="AMBRA, widok strony" width="1440" height="900" loading="lazy" decoding="async"></span>
+          <span class="rcard__body"><span class="rcard__cat">Restauracja degustacyjna · Gdańsk</span><span class="rcard__title">AMBRA</span><span class="rcard__go">Otwórz stronę<svg class="i" viewBox="0 0 20 20" aria-hidden="true"><path d="M6 14L14 6M7.5 6H14v6.5"/></svg></span></span>
+        </a>
+        <a class="rcard" href="https://salonpieknoscinikola.pl/" target="_blank" rel="noopener">
+          <span class="rcard__media"><img src="shots/salonpieknoscinikola.jpg" alt="Salon Piękności Nikola, widok strony" width="1440" height="900" loading="lazy" decoding="async"></span>
+          <span class="rcard__body"><span class="rcard__cat">Strona firmowa · Kościerzyna</span><span class="rcard__title">Salon Piękności Nikola</span><span class="rcard__go">Otwórz stronę<svg class="i" viewBox="0 0 20 20" aria-hidden="true"><path d="M6 14L14 6M7.5 6H14v6.5"/></svg></span></span>
+        </a>
+        <a class="rcard" href="https://borkowskiprzemo098.github.io/HORYZONT-NIERUCHOMOSCI/" target="_blank" rel="noopener">
+          <span class="rcard__media"><img src="shots/HORYZONT-NIERUCHOMOSCI.jpg" alt="HORYZONT, widok strony" width="1440" height="900" loading="lazy" decoding="async"></span>
+          <span class="rcard__body"><span class="rcard__cat">Nieruchomości premium · Gdynia</span><span class="rcard__title">HORYZONT</span><span class="rcard__go">Otwórz stronę<svg class="i" viewBox="0 0 20 20" aria-hidden="true"><path d="M6 14L14 6M7.5 6H14v6.5"/></svg></span></span>
+        </a>
+        <a class="rcard" href="https://azaurum.pl/250_lat_usa,37" target="_blank" rel="noopener">
+          <span class="rcard__media"><img src="shots/az-250-lat-usa.jpg" alt="250 lat USA, widok strony" width="1440" height="900" loading="lazy" decoding="async"></span>
+          <span class="rcard__body"><span class="rcard__cat">Landing page · AZ Aurum</span><span class="rcard__title">250 lat USA</span><span class="rcard__go">Otwórz stronę<svg class="i" viewBox="0 0 20 20" aria-hidden="true"><path d="M6 14L14 6M7.5 6H14v6.5"/></svg></span></span>
+        </a>
+        <a class="rcard" href="https://leapy.pl/" target="_blank" rel="noopener">
+          <span class="rcard__media rcard__media--app"><span class="phone"><img src="shots/LEAPY-m1.jpg" alt="" width="390" height="844" loading="lazy" decoding="async"></span><span class="phone"><img src="shots/LEAPY-m2.jpg" alt="" width="390" height="844" loading="lazy" decoding="async"></span><span class="phone"><img src="shots/LEAPY-m3.jpg" alt="" width="390" height="844" loading="lazy" decoding="async"></span></span>
+          <span class="rcard__body"><span class="rcard__cat">Platforma do nauki · PWA</span><span class="rcard__title">Leapy</span><span class="rcard__go">Otwórz<svg class="i" viewBox="0 0 20 20" aria-hidden="true"><path d="M6 14L14 6M7.5 6H14v6.5"/></svg></span></span>
+        </a>
+        <a class="rcard" href="https://borkowskiprzemo098.github.io/TRZASK-PALARNIA/" target="_blank" rel="noopener">
+          <span class="rcard__media"><img src="shots/TRZASK-PALARNIA.jpg" alt="TRZASK, widok strony" width="1440" height="900" loading="lazy" decoding="async"></span>
+          <span class="rcard__body"><span class="rcard__cat">Palarnia kawy i sklep · Łódź</span><span class="rcard__title">TRZASK</span><span class="rcard__go">Otwórz stronę<svg class="i" viewBox="0 0 20 20" aria-hidden="true"><path d="M6 14L14 6M7.5 6H14v6.5"/></svg></span></span>
+        </a>
+        <a class="rcard" href="https://borkowskiprzemo098.github.io/abyss-hollow-crown/" target="_blank" rel="noopener">
+          <span class="rcard__media rcard__media--app"><span class="phone"><img src="shots/ABYSS-m1.jpg" alt="" width="390" height="844" loading="lazy" decoding="async"></span><span class="phone"><img src="shots/ABYSS-m2.jpg" alt="" width="390" height="844" loading="lazy" decoding="async"></span><span class="phone"><img src="shots/ABYSS-m3.jpg" alt="" width="390" height="844" loading="lazy" decoding="async"></span></span>
+          <span class="rcard__body"><span class="rcard__cat">Dungeon crawler · izometryczna gra akcji</span><span class="rcard__title">ABYSS: The Hollow Crown</span><span class="rcard__go">Zagraj<svg class="i" viewBox="0 0 20 20" aria-hidden="true"><path d="M6 14L14 6M7.5 6H14v6.5"/></svg></span></span>
+        </a>
+        <a class="rcard" href="https://borkowskiprzemo098.github.io/NURT-CRM/" target="_blank" rel="noopener">
+          <span class="rcard__media"><img src="shots/NURT-CRM.jpg" alt="NURT CRM, widok strony" width="1440" height="900" loading="lazy" decoding="async"></span>
+          <span class="rcard__body"><span class="rcard__cat">Panel sprzedaży · aplikacja webowa</span><span class="rcard__title">NURT CRM</span><span class="rcard__go">Otwórz stronę<svg class="i" viewBox="0 0 20 20" aria-hidden="true"><path d="M6 14L14 6M7.5 6H14v6.5"/></svg></span></span>
+        </a>
+        <a class="rcard" href="https://borkowskiprzemo098.github.io/PORCELANA-KLINIKA/" target="_blank" rel="noopener">
+          <span class="rcard__media"><img src="shots/PORCELANA-KLINIKA.jpg" alt="PORCELANA, widok strony" width="1440" height="900" loading="lazy" decoding="async"></span>
+          <span class="rcard__body"><span class="rcard__cat">Klinika stomatologiczna · Sopot</span><span class="rcard__title">PORCELANA</span><span class="rcard__go">Otwórz stronę<svg class="i" viewBox="0 0 20 20" aria-hidden="true"><path d="M6 14L14 6M7.5 6H14v6.5"/></svg></span></span>
+        </a>
+        <div class="rcard rcard--all">
+          <strong>Wszystkie realizacje</strong>
+          <ul><li><a href="strony.html">Strony i sklepy<span>8</span></a></li><li><a href="landing-page.html">Landing page<span>2</span></a></li><li><a href="aplikacje.html">Aplikacje i narzędzia<span>6</span></a></li><li><a href="gry.html">Gry mobilne<span>3</span></a></li></ul>
+        </div>
+      </div>
+      <!-- REEL:END -->
+    </div>
   </section>
 
   <!-- ============ ABOUT ============ -->
@@ -90,122 +192,31 @@ FINISH: unreviewed and undocumented is unfinished; this build ends with the fini
           <!-- PHOTO:END -->
       </figure>
       <div class="about__text">
-        <h2 id="about-title">Cześć, jestem <em>Przemysław</em>.</h2>
-        <p class="about__lead">Projektuję i sam koduję strony internetowe dla firm: od landing page’y pod kampanie, przez strony firmowe i sklepy, po narzędzia online, aplikacje mobilne i gry.</p>
-        <p>Łączę projektowanie z programowaniem, więc nic nie ginie po drodze między pomysłem a działającą stroną. Pracuję konkretnie i szybko, a każdą stronę zaczynam od widoku na telefonie, bo stamtąd przychodzi większość klientów.</p>
+        <h2 id="about-title" class="big-title">Cześć, jestem Przemysław.</h2>
+        <p class="about__lead">Projektuję i sam koduję strony internetowe, aplikacje i gry. Łączę projektowanie z programowaniem, więc nic nie ginie po drodze między pomysłem a działającym produktem.</p>
         <ul class="facts">
           <!-- FACTS:START -->
           <li><b>19</b><span>projektów online</span></li>
-          <li><b>4</b><span>obszary: strony, sklepy, aplikacje, gry</span></li>
+          <li><b>4</b><span>obszary: strony, landing page, aplikacje, gry</span></li>
           <!-- FACTS:END -->
           <li><b>A–Z</b><span>projekt, kod i publikacja</span></li>
         </ul>
         <ul class="stack" aria-label="Technologie">
-          <li>HTML</li><li>CSS</li><li>JavaScript</li><li>TypeScript</li><li>React</li><li>Next.js</li><li>Tailwind CSS</li><li>SEO</li>
+          <li>HTML</li><li>CSS</li><li>JavaScript</li><li>TypeScript</li><li>React</li><li>Next.js</li><li>Three.js</li><li>PWA</li>
         </ul>
       </div>
-    </div>
-  </section>
-
-  <!-- ============ PROJECTS ============ -->
-  <section class="cases showroom" id="projekty" aria-labelledby="show-title">
-    <div class="wrap">
-      <div class="sec-head">
-        <h2 id="show-title">Co mogę dla Ciebie <em>zbudować</em></h2>
-        <p>Cztery rodzaje projektów, które prowadzę od pomysłu do publikacji. Wybierz obszar, a pokażę przykład i wszystkie realizacje.</p>
-      </div>
-      <!-- SHOWROOM:START -->
-      <div class="show">
-        <div class="show__tabs" role="tablist" aria-label="Obszary">
-          <button class="show__tab" type="button" role="tab" id="tab-strony" aria-controls="area-strony" aria-selected="true">
-            <span class="show__num">01</span>
-            <span class="show__name">Strony i sklepy</span>
-            <span class="show__count">8 realizacji</span>
-          </button>
-          <button class="show__tab" type="button" role="tab" id="tab-landing" aria-controls="area-landing" aria-selected="false">
-            <span class="show__num">02</span>
-            <span class="show__name">Landing page</span>
-            <span class="show__count">2 realizacje</span>
-          </button>
-          <button class="show__tab" type="button" role="tab" id="tab-aplikacje" aria-controls="area-aplikacje" aria-selected="false">
-            <span class="show__num">03</span>
-            <span class="show__name">Aplikacje i narzędzia</span>
-            <span class="show__count">6 realizacji</span>
-          </button>
-          <button class="show__tab" type="button" role="tab" id="tab-gry" aria-controls="area-gry" aria-selected="false">
-            <span class="show__num">04</span>
-            <span class="show__name">Gry mobilne</span>
-            <span class="show__count">3 realizacje</span>
-          </button>
-        </div>
-        <div class="show__panels">
-          <article class="show__panel" id="area-strony" role="tabpanel" aria-labelledby="tab-strony">
-            <a class="show__stage" href="strony.html" tabindex="-1" aria-hidden="true"><div class="stage"><span class="browser"><span class="browser__bar" aria-hidden="true"><i></i><i></i><i></i><b>AMBRA · restauracja degustacyjna</b></span><img src="shots/AMBRA-RESTAURACJA.jpg" data-full="shots/AMBRA-RESTAURACJA-full.jpg" alt="" width="1440" height="900" loading="lazy" decoding="async"></span><span class="phone stage__phone"><img src="shots/AMBRA-RESTAURACJA-m.jpg" data-full="shots/AMBRA-RESTAURACJA-m-full.jpg" alt="" width="390" height="844" loading="lazy" decoding="async"></span></div></a>
-            <div class="show__text">
-              <div>
-                <h3>Strony firmowe i sklepy</h3>
-                <p>Strona, która buduje zaufanie i prowadzi klienta do rezerwacji, zakupu albo kontaktu.</p>
-              </div>
-              <ul class="show__list"><li>Projekt dopasowany do Twojej marki</li><li>Rezerwacje, sklep albo formularz zamówienia</li><li>SEO lokalne i szybkie ładowanie na telefonie</li></ul>
-              <p class="show__ex">Np. Salon Piękności Nikola, AMBRA, PORCELANA i 5 innych.</p>
-              <a class="btn btn--sand show__cta" href="strony.html">Zobacz 8 realizacji <svg class="i" viewBox="0 0 20 20" aria-hidden="true"><path d="M3.5 10h13M11 4.5l5.5 5.5-5.5 5.5"/></svg></a>
-            </div>
-          </article>
-          <article class="show__panel" id="area-landing" role="tabpanel" aria-labelledby="tab-landing">
-            <a class="show__stage" href="landing-page.html" tabindex="-1" aria-hidden="true"><div class="stage"><span class="browser"><span class="browser__bar" aria-hidden="true"><i></i><i></i><i></i><b>250 lat USA · AZ Aurum</b></span><img src="shots/az-250-lat-usa.jpg" data-full="shots/az-250-lat-usa-full.jpg" alt="" width="1440" height="900" loading="lazy" decoding="async"></span><span class="phone stage__phone"><img src="shots/az-250-lat-usa-m.jpg" data-full="shots/az-250-lat-usa-m-full.jpg" alt="" width="390" height="844" loading="lazy" decoding="async"></span></div></a>
-            <div class="show__text">
-              <div>
-                <h3>Landing page sprzedażowe</h3>
-                <p>Jedna strona pod kampanię albo produkt: jasna oferta, argumenty w dobrej kolejności i prosta droga do zamówienia.</p>
-              </div>
-              <ul class="show__list"><li>Oferta i cena widoczne od pierwszego ekranu</li><li>Formularz zamówienia z płatnością</li><li>Szybkie ładowanie prosto z reklamy</li></ul>
-              <p class="show__ex">Np. Historia Złotych Euro, 250 lat USA.</p>
-              <a class="btn btn--sand show__cta" href="landing-page.html">Zobacz 2 realizacje <svg class="i" viewBox="0 0 20 20" aria-hidden="true"><path d="M3.5 10h13M11 4.5l5.5 5.5-5.5 5.5"/></svg></a>
-            </div>
-          </article>
-          <article class="show__panel" id="area-aplikacje" role="tabpanel" aria-labelledby="tab-aplikacje">
-            <a class="show__stage" href="aplikacje.html" tabindex="-1" aria-hidden="true"><div class="stage"><span class="browser"><span class="browser__bar" aria-hidden="true"><i></i><i></i><i></i><b>NURT CRM i Leapy</b></span><img src="shots/NURT-CRM.jpg" data-full="shots/NURT-CRM-full.jpg" alt="" width="1440" height="900" loading="lazy" decoding="async"></span><span class="phone stage__phone"><img src="shots/LEAPY-m2.jpg" alt="" width="390" height="844" loading="lazy" decoding="async"></span></div></a>
-            <div class="show__text">
-              <div>
-                <h3>Aplikacje webowe i mobilne</h3>
-                <p>Portale, panele dla firm i aplikacje na telefon, które liczą, porządkują dane i działają nawet bez internetu.</p>
-              </div>
-              <ul class="show__list"><li>Aplikacje na telefon (PWA) bez sklepu z aplikacjami</li><li>Panele i narzędzia dla zespołu</li><li>Dane, API, generowanie PDF i praca offline</li></ul>
-              <p class="show__ex">Np. Miastometr, Generator dokumentów, Kalkulatory Online i 3 inne.</p>
-              <a class="btn btn--sand show__cta" href="aplikacje.html">Zobacz 6 realizacji <svg class="i" viewBox="0 0 20 20" aria-hidden="true"><path d="M3.5 10h13M11 4.5l5.5 5.5-5.5 5.5"/></svg></a>
-            </div>
-          </article>
-          <article class="show__panel" id="area-gry" role="tabpanel" aria-labelledby="tab-gry">
-            <a class="show__stage" href="gry.html" tabindex="-1" aria-hidden="true"><div class="stage stage--phones"><span class="phone"><img src="shots/ABYSS-m1.jpg" alt="" width="390" height="844" loading="lazy" decoding="async"></span><span class="phone"><img src="shots/OSADA-m1.jpg" alt="" width="390" height="844" loading="lazy" decoding="async"></span><span class="phone"><img src="shots/LINIA-m2.jpg" alt="" width="390" height="844" loading="lazy" decoding="async"></span></div></a>
-            <div class="show__text">
-              <div>
-                <h3>Gry mobilne</h3>
-                <p>Gry w przeglądarce, projektowane pod telefon: od szybkiej zręcznościówki po strategię w 3D.</p>
-              </div>
-              <ul class="show__list"><li>Grafika 2D i 3D, dźwięk i animacje</li><li>Sterowanie dotykiem i zapis postępów</li><li>Działają od razu, bez instalacji</li></ul>
-              <p class="show__ex">Np. ABYSS: The Hollow Crown, Osada, Ostatnia Linia.</p>
-              <a class="btn btn--sand show__cta" href="gry.html">Zobacz 3 realizacje <svg class="i" viewBox="0 0 20 20" aria-hidden="true"><path d="M3.5 10h13M11 4.5l5.5 5.5-5.5 5.5"/></svg></a>
-            </div>
-          </article>
-        </div>
-      </div>
-      <!-- SHOWROOM:END -->
     </div>
   </section>
 
   <!-- ============ PROCESS ============ -->
   <section class="process" id="wspolpraca" aria-labelledby="process-title">
     <div class="wrap">
-      <div class="sec-head">
-        <h2 id="process-title">Jak wygląda <em>współpraca</em></h2>
-        <p>Cztery etapy. Na każdym wiesz, co się dzieje i co dostaniesz.</p>
-      </div>
-      <div class="timeline" aria-hidden="true"><span></span></div>
+      <h2 id="process-title" class="big-title">Cztery kroki. Zero niespodzianek.</h2>
       <ol class="steps">
-        <li><span class="steps__n">01</span><h3>Rozmowa</h3><p>Poznaję firmę, klientów i cel strony. Ustalamy zakres i termin.</p></li>
-        <li><span class="steps__n">02</span><h3>Projekt</h3><p>Pokazuję wygląd strony, najpierw na telefonie. Wprowadzam Twoje uwagi.</p></li>
-        <li><span class="steps__n">03</span><h3>Wykonanie</h3><p>Koduję stronę: szybką, dopracowaną w detalu i gotową pod Google.</p></li>
-        <li><span class="steps__n">04</span><h3>Start i opieka</h3><p>Publikuję stronę pod Twoim adresem i szybko wprowadzam poprawki.</p></li>
+        <li><span class="steps__n">1</span><h3>Rozmowa</h3><p>Poznaję firmę, klientów i cel. Ustalamy zakres, termin i cenę.</p></li>
+        <li><span class="steps__n">2</span><h3>Projekt</h3><p>Pokazuję wygląd, najpierw na telefonie. Wprowadzam Twoje uwagi.</p></li>
+        <li><span class="steps__n">3</span><h3>Wykonanie</h3><p>Koduję ręcznie: szybko, dopracowane w detalu, gotowe pod Google.</p></li>
+        <li><span class="steps__n">4</span><h3>Start i opieka</h3><p>Publikuję pod Twoim adresem i szybko wprowadzam poprawki.</p></li>
       </ol>
     </div>
   </section>
@@ -213,16 +224,13 @@ FINISH: unreviewed and undocumented is unfinished; this build ends with the fini
   <!-- ============ FAQ ============ -->
   <section class="faq" id="faq" aria-labelledby="faq-title">
     <div class="wrap faq__in">
-      <div class="sec-head sec-head--stack">
-        <h2 id="faq-title">Częste <em>pytania</em></h2>
-        <p>Nie ma tu odpowiedzi na Twoje pytanie? Napisz, odpowiem bez zobowiązań.</p>
-      </div>
+      <h2 id="faq-title" class="big-title">Częste pytania.</h2>
       <div class="qa">
         <details><summary>Ile trwa wykonanie strony?</summary><p>To zależy od zakresu. Termin podaję po pierwszej rozmowie, kiedy wiem, ile podstron i funkcji potrzebujesz, i trzymam się go.</p></details>
         <details><summary>Ile kosztuje strona?</summary><p>Wycenę przygotowuję indywidualnie po rozmowie o celu i zakresie. Dostajesz jedną, konkretną kwotę bez ukrytych kosztów.</p></details>
         <details><summary>Czy strona będzie działać na telefonie?</summary><p>Tak. Każdy projekt zaczynam od widoku na telefonie, a dopiero potem rozbudowuję go na tablet i komputer.</p></details>
         <details><summary>Czy pomożesz z domeną i publikacją?</summary><p>Tak. Publikuję stronę pod Twoim adresem i pomagam podłączyć domenę, żebyś nie musiał się tym zajmować.</p></details>
-        <details><summary>Czy mogę później wprowadzać zmiany?</summary><p>Tak. Po starcie szybko wprowadzam poprawki, a jeśli potrzebujesz, zostaję przy stronie na dłużej.</p></details>
+        <details><summary>Czy możesz zrobić aplikację albo grę?</summary><p>Tak. Robię aplikacje działające w przeglądarce i na telefonie (także offline) oraz gry mobilne. Przykłady znajdziesz w realizacjach.</p></details>
       </div>
     </div>
   </section>
@@ -231,8 +239,8 @@ FINISH: unreviewed and undocumented is unfinished; this build ends with the fini
   <section class="contact" id="kontakt" aria-labelledby="contact-title">
     <div class="wrap contact__in">
       <div class="contact__main">
-        <h2 id="contact-title">Porozmawiajmy o&nbsp;Twoim <em>projekcie</em>.</h2>
-        <p>Napisz albo zadzwoń. Opowiedz krótko, czego potrzebujesz, a wrócę z propozycją rozwiązania i terminem.</p>
+        <h2 id="contact-title">Porozmawiajmy.</h2>
+        <p>Opowiedz krótko, czego potrzebujesz. Wrócę z propozycją rozwiązania, terminem i ceną.</p>
       </div>
       <div class="contact__card">
         <div class="contact__id">
@@ -253,11 +261,11 @@ FINISH: unreviewed and undocumented is unfinished; this build ends with the fini
 <footer class="foot">
   <div class="wrap foot__in">
     <a class="brand" href="#top" aria-label="PBDesign, na górę strony">
-      <img src="assets/mark.svg" alt="" width="32" height="32">
+      <img src="assets/mark.svg" alt="" width="26" height="26">
       <span>PB<em>Design</em></span>
     </a>
     <nav class="foot__nav" aria-label="Stopka">
-      <a href="#o-mnie">O mnie</a><a href="#projekty">Co buduję</a><a href="#wspolpraca">Współpraca</a><a href="#faq">FAQ</a><a href="#kontakt" data-contact>Kontakt</a>
+      <a href="#co-buduje">Co buduję</a><a href="#realizacje">Realizacje</a><a href="#o-mnie">O mnie</a><a href="#faq">FAQ</a><a href="#kontakt" data-contact>Kontakt</a>
     </nav>
     <div class="foot__contact">
       <!-- FOOTCONTACT:START -->

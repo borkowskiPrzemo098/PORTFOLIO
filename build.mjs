@@ -132,16 +132,91 @@ const dialogHtml = [
       </div>`,
 ].filter(Boolean).join('') + '\n      ';
 
+// ---- premium home (2026-11-05): hero devices, bento, reel
+const allProjects = groups.flatMap((g) => g.projects);
+const byShot = Object.fromEntries(allProjects.map((p) => [p.shot, p]));
+const areaById = Object.fromEntries(areas.map((a) => [a.id, a]));
+const count = (id) => areaProjects(areaById[id]).length;
+const realiz = (n) => `${n} ${pl(n, 'realizacja', 'realizacje', 'realizacji')}`;
+const pic = (src, w, h, alt = '', eager = false) => `<img src="${src}" alt="${esc(alt)}" width="${w}" height="${h}" ${eager ? 'fetchpriority="high"' : 'loading="lazy"'} decoding="async">`;
+
+// hero: laptop + phone cycling through real projects
+const cycle = ['AMBRA-RESTAURACJA', 'HORYZONT-NIERUCHOMOSCI', 'TRZASK-PALARNIA', 'PORCELANA-KLINIKA', 'az-250-lat-usa', 'NURT-CRM', 'miastometr'].filter((s) => byShot[s]);
+const devicesHtml = `
+        <div class="devices" data-cycle>
+          <div class="mac">
+            <div class="mac__lid"><div class="mac__screen">${cycle.map((s, i) => `<span class="scr${i === 0 ? ' is-on' : ''}" data-title="${esc(byShot[s].title)}" data-url="${byShot[s].url}">${pic(`shots/${s}.jpg`, 1440, 900, i === 0 ? `${byShot[s].title}, strona na komputerze` : '', i === 0)}</span>`).join('')}</div></div>
+            <div class="mac__base"><i></i></div>
+          </div>
+          <div class="iphone"><div class="iphone__screen">${cycle.map((s, i) => `<span class="scr${i === 0 ? ' is-on' : ''}">${pic(`shots/${s}-m.jpg`, 390, 844, '', i === 0)}</span>`).join('')}<i class="iphone__island"></i></div></div>
+        </div>
+        <p class="devices__cap">Na ekranie: <a data-cap href="${byShot[cycle[0]].url}" target="_blank" rel="noopener">${esc(byShot[cycle[0]].title)}</a></p>
+        `;
+
+// bento: what I build (each area tile links to its subpage)
+const phones = (list, cls = '') => `<span class="bphones ${cls}">${list.map((s) => `<span class="phone">${pic(`shots/${s}.jpg`, 390, 844)}</span>`).join('')}</span>`;
+const go = (a) => `<span class="tile__go">Zobacz ${realiz(count(a))}<svg class="i" viewBox="0 0 20 20" aria-hidden="true"><path d="M7.5 4.5L13 10l-5.5 5.5"/></svg></span>`;
+const nAll = allProjects.length;
+const bentoHtml = `
+      <div class="bento">
+        <a class="tile tile--sites" href="${areaById.strony.page}">
+          <span class="tile__txt"><span class="tile__k">Strony i sklepy</span><strong>Strona, która sprzedaje, zanim zadzwonisz.</strong>${go('strony')}</span>
+          <span class="tile__shot"><span class="browser"><span class="browser__bar" aria-hidden="true"><i></i><i></i><i></i></span>${pic('shots/AMBRA-RESTAURACJA.jpg', 1440, 900)}</span><span class="phone tile__phone">${pic('shots/salonpieknoscinikola-m.jpg', 390, 844)}</span></span>
+        </a>
+        <div class="tile tile--num tile--dark"><b data-count>${nAll}</b><span>${pl(nAll, 'projekt działa', 'projekty działają', 'projektów działa')} online. Każdy możesz otworzyć i sprawdzić.</span></div>
+        <a class="tile tile--landing" href="${areaById.landing.page}">
+          <span class="tile__txt"><span class="tile__k">Landing page</span><strong>Jedna oferta. Jedna droga do zamówienia.</strong>${go('landing')}</span>
+          ${phones(['az-250-lat-usa-m'], 'bphones--one')}
+        </a>
+        <a class="tile tile--apps tile--dark" href="${areaById.aplikacje.page}">
+          <span class="tile__txt"><span class="tile__k">Aplikacje</span><strong>Aplikacje, które działają nawet offline.</strong>${go('aplikacje')}</span>
+          ${phones(['LEAPY-m2', 'LEAPY-m3', 'SILECZKOMAT-m2'])}
+        </a>
+        <a class="tile tile--games" href="${areaById.gry.page}">
+          <span class="tile__txt"><span class="tile__k">Gry mobilne</span><strong>Od zręcznościówki po strategię 3D.</strong>${go('gry')}</span>
+          ${phones(['ABYSS-m1', 'OSADA-m1', 'LINIA-m2'])}
+        </a>
+        <div class="tile tile--mini"><svg class="tile__ic" viewBox="0 0 32 32" aria-hidden="true"><rect x="9" y="3" width="14" height="26" rx="3"/><path d="M14 7h4M14 25h4"/></svg><strong>Najpierw telefon.</strong><span>Każdy projekt zaczynam od ekranu, który masz w kieszeni.</span></div>
+        <div class="tile tile--mini tile--code"><pre aria-hidden="true"><code>&lt;section class="hero"&gt;
+  &lt;h1&gt;Twoja marka&lt;/h1&gt;
+&lt;/section&gt;</code></pre><strong>Kod pisany ręcznie.</strong><span>Lekko, szybko i bez gotowych szablonów.</span></div>
+        <div class="tile tile--mini tile--me">${pic('assets/portret-avatar.jpg', 160, 160)}<strong>Jedna osoba od A do Z.</strong><span>Projekt, kod i publikacja bez pośredników.</span></div>
+      </div>
+      `;
+
+// reel: horizontal gallery of live work
+const featured = ['AMBRA-RESTAURACJA', 'salonpieknoscinikola', 'HORYZONT-NIERUCHOMOSCI', 'az-250-lat-usa', 'LEAPY', 'TRZASK-PALARNIA', 'ABYSS', 'NURT-CRM', 'PORCELANA-KLINIKA'].filter((s) => byShot[s]);
+const reelHtml = `
+      <div class="reel__track">${featured.map((s) => {
+        const p = byShot[s];
+        const media = p.phones
+          ? `<span class="rcard__media rcard__media--app">${p.phones.map((x) => `<span class="phone">${pic(`shots/${x}.jpg`, 390, 844)}</span>`).join('')}</span>`
+          : `<span class="rcard__media">${pic(`shots/${s}.jpg`, 1440, 900, `${p.title}, widok strony`)}</span>`;
+        return `
+        <a class="rcard" href="${p.url}" target="_blank" rel="noopener">
+          ${media}
+          <span class="rcard__body"><span class="rcard__cat">${esc(p.category)}</span><span class="rcard__title">${esc(p.title)}</span><span class="rcard__go">${p.phones ? (isGame(p) ? 'Zagraj' : 'Otwórz') : 'Otwórz stronę'}<svg class="i" viewBox="0 0 20 20" aria-hidden="true"><path d="M6 14L14 6M7.5 6H14v6.5"/></svg></span></span>
+        </a>`;
+      }).join('')}
+        <div class="rcard rcard--all">
+          <strong>Wszystkie realizacje</strong>
+          <ul>${areas.map((a) => `<li><a href="${a.page}">${esc(a.tab)}<span>${count(a.id)}</span></a></li>`).join('')}</ul>
+        </div>
+      </div>
+      `;
+
 // ---- render index.html
 let html = readFileSync('index.html', 'utf8');
 const putIn = (src, name, body) => src.replace(new RegExp(`(<!-- ${name}:START -->)[\\s\\S]*?(<!-- ${name}:END -->)`), `$1${body}$2`);
 const put = (name, body) => { html = putIn(html, name, body); };
 put('PHOTO', `\n          ${photo}\n          `);
-put('SHOWROOM', showroom);
+put('DEVICES', devicesHtml);
+put('BENTO', bentoHtml);
+put('REEL', reelHtml);
 const nProj = groups.reduce((n, g) => n + g.projects.length, 0);
 put('FACTS', `
           <li><b>${nProj}</b><span>${pl(nProj, 'projekt online', 'projekty online', 'projektów online')}</span></li>
-          <li><b>${areas.length}</b><span>${pl(areas.length, 'obszar', 'obszary', 'obszarów')}: strony, sklepy, aplikacje, gry</span></li>
+          <li><b>${areas.length}</b><span>${pl(areas.length, 'obszar', 'obszary', 'obszarów')}: strony, landing page, aplikacje, gry</span></li>
           `);
 put('CONTACT', contactHtml);
 put('DIALOG', dialogHtml);
@@ -175,7 +250,7 @@ for (const [i, a] of areas.entries()) {
 ${toHome(header)}<main id="top" class="subpage">
   <section class="subhero cases" aria-labelledby="sub-title">
     <div class="wrap">
-      <a class="back" href="index.html#projekty"><svg class="i" viewBox="0 0 20 20" aria-hidden="true"><path d="M16.5 10h-13M9 4.5L3.5 10 9 15.5"/></svg>Strona główna</a>
+      <a class="back" href="index.html#co-buduje"><svg class="i" viewBox="0 0 20 20" aria-hidden="true"><path d="M16.5 10h-13M9 4.5L3.5 10 9 15.5"/></svg>Strona główna</a>
       <h1 id="sub-title">${emTitle(a)}</h1>
       <p class="subhero__lead">${esc(a.lead)}</p>
       <nav class="subnav" aria-label="Obszary realizacji">${switcher}</nav>

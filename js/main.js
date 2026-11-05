@@ -25,7 +25,7 @@
     if (!e.isIntersecting) return;
     links.forEach((a) => (a.getAttribute('href') === `#${e.target.id}` ? a.setAttribute('aria-current', 'true') : a.removeAttribute('aria-current')));
   }), { rootMargin: '-45% 0px -50% 0px' });
-  ['o-mnie', 'projekty', 'wspolpraca', 'faq'].forEach((id) => { const el = document.getElementById(id); if (el) spy.observe(el); });
+  ['co-buduje', 'realizacje', 'o-mnie', 'wspolpraca', 'faq'].forEach((id) => { const el = document.getElementById(id); if (el) spy.observe(el); });
 
   /* Hero entrance is pure CSS now (see .hero__title .ln in style.css) — no GSAP download */
 
@@ -226,4 +226,92 @@
   });
   wide.addEventListener('change', layout);
   layout();
+})();
+
+/* =====================================================================
+   PREMIUM HOME (2026-11-05): pinned hero devices, screen cycler,
+   lit statement, reel arrows. Everything is visible without this code.
+   ===================================================================== */
+(() => {
+  const reduce = matchMedia('(prefers-reduced-motion: reduce)').matches;
+  const $ = (s, r = document) => r.querySelector(s);
+  const $$ = (s, r = document) => [...r.querySelectorAll(s)];
+
+  /* Screens inside the laptop and phone cycle through real projects */
+  const dev = $('[data-cycle]');
+  if (dev) {
+    const mac = $$('.mac .scr', dev), ph = $$('.iphone .scr', dev), cap = $('[data-cap]');
+    let i = 0, timer;
+    const show = (n) => {
+      i = (n + mac.length) % mac.length;
+      mac.forEach((s, k) => s.classList.toggle('is-on', k === i));
+      ph.forEach((s, k) => s.classList.toggle('is-on', k === i));
+      if (cap) { cap.textContent = mac[i].dataset.title; cap.href = mac[i].dataset.url; }
+    };
+    const run = () => { clearInterval(timer); if (!reduce && !document.hidden) timer = setInterval(() => show(i + 1), 3200); };
+    document.addEventListener('visibilitychange', run);
+    // only cycle while the hero is on screen
+    new IntersectionObserver(([e]) => (e.isIntersecting ? run() : clearInterval(timer))).observe(dev);
+  }
+
+  /* Hero: pinned on desktop, devices rise and grow while the headline drifts away */
+  const hero = $('.hero');
+  const pinOK = matchMedia('(min-width: 900px) and (prefers-reduced-motion: no-preference)');
+  if (hero && dev) {
+    const copy = $('.hero__copy', hero);
+    let ticking = false;
+    const update = () => {
+      ticking = false;
+      if (!pinOK.matches) { dev.style.removeProperty('--dev-y'); dev.style.removeProperty('--dev-s'); copy.style.removeProperty('--copy-o'); copy.style.removeProperty('--copy-y'); return; }
+      const r = hero.getBoundingClientRect();
+      const span = hero.offsetHeight - innerHeight;
+      const p = Math.min(1, Math.max(0, -r.top / Math.max(1, span)));
+      const e = 1 - Math.pow(1 - p, 2);
+      dev.style.setProperty('--dev-y', `${(-e * 34).toFixed(2)}vh`);
+      dev.style.setProperty('--dev-s', (1 + e * 0.16).toFixed(4));
+      copy.style.setProperty('--copy-o', Math.max(0, 1 - p * 2.2).toFixed(3));
+      copy.style.setProperty('--copy-y', `${(-p * 80).toFixed(1)}px`);
+    };
+    const setPin = () => { hero.classList.toggle('is-pinned', pinOK.matches); update(); };
+    addEventListener('scroll', () => { if (!ticking) { ticking = true; requestAnimationFrame(update); } }, { passive: true });
+    addEventListener('resize', update);
+    pinOK.addEventListener('change', setPin);
+    setPin();
+  }
+
+  /* Statement: words light up as the paragraph passes the middle of the screen */
+  const lit = $('[data-lit]');
+  if (lit) {
+    const words = lit.textContent.trim().split(/\s+/);
+    lit.innerHTML = words.map((w) => `<span class="w">${w}</span>`).join(' ');
+    const ws = $$('.w', lit);
+    if (reduce) ws.forEach((w) => w.classList.add('on'));
+    else {
+      let ticking = false;
+      const update = () => {
+        ticking = false;
+        const r = lit.getBoundingClientRect();
+        const p = Math.min(1, Math.max(0, (innerHeight * 0.78 - r.top) / (r.height + innerHeight * 0.3)));
+        const n = Math.round(p * ws.length);
+        ws.forEach((w, k) => w.classList.toggle('on', k < n));
+      };
+      addEventListener('scroll', () => { if (!ticking) { ticking = true; requestAnimationFrame(update); } }, { passive: true });
+      update();
+    }
+  }
+
+  /* Reel arrows */
+  const reel = $('.reel');
+  if (reel) {
+    const prev = $('[data-reel="-1"]'), next = $('[data-reel="1"]');
+    const step = () => (reel.querySelector('.rcard')?.offsetWidth || 400) + 20;
+    const sync = () => {
+      if (prev) prev.disabled = reel.scrollLeft < 8;
+      if (next) next.disabled = reel.scrollLeft + reel.clientWidth > reel.scrollWidth - 8;
+    };
+    $$('[data-reel]').forEach((b) => b.addEventListener('click', () => reel.scrollBy({ left: step() * +b.dataset.reel, behavior: reduce ? 'auto' : 'smooth' })));
+    reel.addEventListener('scroll', sync, { passive: true });
+    addEventListener('resize', sync);
+    sync();
+  }
 })();
