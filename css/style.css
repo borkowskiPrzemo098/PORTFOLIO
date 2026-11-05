@@ -524,3 +524,7 @@ a.tile:hover .bphones .phone:nth-child(3) { transform: translateY(-8px) rotate(2
 .wow__video { opacity: 0; transition: opacity 1s ease; }
 .wow__video.is-playing { opacity: 1; }
 .wow__canvas { display: none; }
+/* silk: softer, less visible (hides compression), light ground shows through */
+.has-video { background-color: #f4f6f4; background-image: none; }
+.sec-video.is-playing { opacity: .55; }
+.has-video::before { content: ""; position: absolute; inset: 0; z-index: -3; background: url("../assets/video/silk-poster.jpg") center / cover; opacity: .55; }
